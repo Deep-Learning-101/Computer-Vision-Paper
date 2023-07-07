@@ -14,6 +14,8 @@
 
 [Junlong Li, Yiheng Xu, Tengchao Lv, Lei Cui, Cha Zhang and Furu Wei, "DiT: Self-supervised Pre-training for Document Image Transformer", arXiv:2203.02378, 2022.](./ABCNet_v2.md)
 
+[Yongkun Du, Zhineng Chen, Caiyan Jia, Xiaoting Yin, Tianlun Zheng, Chenxia Li, Yuning Du, Yu-Gang Jiang, "SVTR: Scene Text Recognition with a Single Visual Model", arXiv:2205.00159,2022](./SVTR.md)
+
 
 ## DeepFake Detection (深度偽造偵測)
 H. Zhao, et al., "Multi-attentional Deepfake Detection", Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2021, Nashville, TN, USA, 2021, pp. 2185-2194.
