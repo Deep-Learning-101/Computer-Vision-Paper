@@ -13,6 +13,9 @@
 
 [Yiheng Xu, Tengchao Lv, Lei Cui, Guoxin Wang, Yijuan Lu, Dinei Florencio, Cha Zhang, Furu Wei, "LayoutXLM: Multimodal Pre-training for Multilingual Visually-rich Document Understanding", arXiv:2104.08836](./LayoutXLM.md)
 
+[Yiheng Xu,Minghao Li, Lei Cui, Shaohan Huang, Furu Wei, Ming Zhou,"LayoutLM: Pre-training of Text and Layout for Document Image Understanding",arXiv:1912.13318, 2020]
+
+[Yang Xu, Yiheng Xu, Tengchao Lv, Lei Cui, Furu Wei, Guoxin Wang, Yijuan Lu, Dinei Florencio, Cha Zhang, Wanxiang Che, Min Zhang, Lidong Zhou,"LayoutLMv2: Multi-modal Pre-training for Visually-Rich Document Understanding",arXiv:2012.14740, 2021]
 ## Text Recognition (文字識別)
 [Shancheng Fang, Hongtao Xie, Yuxin Wang, Zhendong Mao, Yongdong Zhang, "Read Like Humans: Autonomous, Bidirectional and Iterative Language Modeling for Scene Text Recognition", arXiv:2103.06495, 2021.](./ABINet.md)
 
