@@ -5,6 +5,15 @@
 [Geewook Kim, Teakgyu Hong, Moonbin Yim, JeongYeon Nam, Jinyoung Park, Jinyeong Yim, Wonseok Hwang, Sangdoo Yun, Dongyoon Han, Seunghyun Park, "OCR-free Document Understanding Transformer", arXiv preprint, arXiv:2111.15664, 2022.](./donut.md)
 
 ## Document Layout Analysis (文件結構分析)
+<details open>
+<summary><strong>LayoutLM series</strong></summary>
+
+- **arXiv-2020**:[LayoutLM: Pre-training of Text and Layout for Document Image Understanding](X)
+- **arXiv-2021**:[LayoutLMv2: Multi-modal Pre-training for Visually-Rich Document Understanding](X)
+- **arXiv-2021**:[LayoutXLM: Multimodal Pre-training for Multilingual Visually-rich Document Understanding](./LayoutXLM.md)
+- **arXiv-2022**:[LayoutLMv3: Pre-training for Document AI with Unified Text and Image Masking](./LayoutLMv3.md)
+</details>
+
 [Minghao Li, Tengchao Lv, Lei Cui, Yijuan Lu, Dinei Florencio, Cha Zhang, Zhoujun Li and Furu Wei, "TrOCR: Transformer-based Optical Character Recognition with Pre-trained Models", arXiv preprint, arXiv:2109.10282, 2021](https://github.com/Deep-Learning-101/Computer-Vision-Paper/blob/main/TrOCR.md)
 
 [Yupan Huang, Tengchao Lv, Lei Cui, Yutong Lu and Furu Wei, "LayoutLMv3: Pre-training for Document AI with Unified Text and Image Masking", arXiv preprint, arXiv:2204.08387, 2022.](https://github.com/Deep-Learning-101/Computer-Vision-Paper/blob/main/LayoutLMv3.md)
