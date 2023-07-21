@@ -8,7 +8,7 @@
 <details open>
 <summary><strong>LayoutLM series</strong></summary>
 
-- **arXiv-2020**:[LayoutLM: Pre-training of Text and Layout for Document Image Understanding](X)
+- **arXiv-2020**:[LayoutLM: Pre-training of Text and Layout for Document Image Understanding](./LayoutLM.md)
 - **arXiv-2021**:[LayoutLMv2: Multi-modal Pre-training for Visually-Rich Document Understanding](X)
 - **arXiv-2021**:[LayoutXLM: Multimodal Pre-training for Multilingual Visually-rich Document Understanding](./LayoutXLM.md)
 - **arXiv-2022**:[LayoutLMv3: Pre-training for Document AI with Unified Text and Image Masking](./LayoutLMv3.md)
