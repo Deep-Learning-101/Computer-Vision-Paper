@@ -5,6 +5,9 @@
 [Geewook Kim, Teakgyu Hong, Moonbin Yim, JeongYeon Nam, Jinyoung Park, Jinyeong Yim, Wonseok Hwang, Sangdoo Yun, Dongyoon Han, Seunghyun Park, "OCR-free Document Understanding Transformer", arXiv preprint, arXiv:2111.15664, 2022.](./donut.md)
 
 ## Document Layout Analysis (文件結構分析)
+
+[Zejiang Shen, Ruochen Zhang, Melissa Dell, Benjamin Charles Germain Lee, Jacob Carlson, Weining Li, "A unified toolkit for Deep Learning Based Document Image Analysis", arXiv preprint, arXiv:2103.15348, 2021.](./LayoutParser.md)
+
 <details open>
 <summary><strong>LayoutLM series</strong></summary>
 
