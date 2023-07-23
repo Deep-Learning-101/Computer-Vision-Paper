@@ -17,9 +17,9 @@
 - **arXiv-2022**:[Yupan Huang, Tengchao Lv, Lei Cui, Yutong Lu and Furu Wei, "LayoutLMv3: Pre-training for Document AI with Unified Text and Image Masking", arXiv preprint, arXiv:2204.08387, 2022.](./LayoutLMv3.md)
 </details>
 
-[Minghao Li, Tengchao Lv, Lei Cui, Yijuan Lu, Dinei Florencio, Cha Zhang, Zhoujun Li and Furu Wei, "TrOCR: Transformer-based Optical Character Recognition with Pre-trained Models", arXiv preprint, arXiv:2109.10282, 2021](https://github.com/Deep-Learning-101/Computer-Vision-Paper/blob/main/TrOCR.md)
+[Minghao Li, Tengchao Lv, Lei Cui, Yijuan Lu, Dinei Florencio, Cha Zhang, Zhoujun Li and Furu Wei, "TrOCR: Transformer-based Optical Character Recognition with Pre-trained Models", arXiv preprint, arXiv:2109.10282, 2021](./TrOCR.md)
 
-[Junlong Li, Yiheng Xu, Tengchao Lv, Lei Cui, Cha Zhang and Furu Wei, "DiT: Self-supervised Pre-training for Document Image Transformer", arXiv preprint, arXiv:2203.02378, 2022.](https://github.com/Deep-Learning-101/Computer-Vision-Paper/blob/main/DiT.md) 
+[Junlong Li, Yiheng Xu, Tengchao Lv, Lei Cui, Cha Zhang and Furu Wei, "DiT: Self-supervised Pre-training for Document Image Transformer", arXiv preprint, arXiv:2203.02378, 2022.](./DiT.md) 
 
 ## Text Recognition (文字識別)
 [Shancheng Fang, Hongtao Xie, Yuxin Wang, Zhendong Mao, Yongdong Zhang, "Read Like Humans: Autonomous, Bidirectional and Iterative Language Modeling for Scene Text Recognition", arXiv:2103.06495, 2021.](./ABINet.md)
