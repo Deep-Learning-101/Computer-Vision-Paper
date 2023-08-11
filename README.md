@@ -12,7 +12,7 @@
 <summary><strong>LayoutLM series</strong></summary>
 
 - **arXiv-2020**:[Yiheng Xu,Minghao Li, Lei Cui, Shaohan Huang, Furu Wei, Ming Zhou,"LayoutLM: Pre-training of Text and Layout for Document Image Understanding",arXiv:1912.13318, 2020](./LayoutLM.md)
-- **arXiv-2021**:Yang Xu, Yiheng Xu, Tengchao Lv, Lei Cui, Furu Wei, Guoxin Wang, Yijuan Lu, Dinei Florencio, Cha Zhang, Wanxiang Che, Min Zhang, Lidong Zhou,"LayoutLMv2: Multi-modal Pre-training for Visually-Rich Document Understanding",arXiv:2012.14740, 2021
+- **arXiv-2021**:[Yang Xu, Yiheng Xu, Tengchao Lv, Lei Cui, Furu Wei, Guoxin Wang, Yijuan Lu, Dinei Florencio, Cha Zhang, Wanxiang Che, Min Zhang, Lidong Zhou,"LayoutLMv2: Multi-modal Pre-training for Visually-Rich Document Understanding",arXiv:2012.14740, 2021](./LayoutLMv2.md)
 - **arXiv-2021**:[Yiheng Xu, Tengchao Lv, Lei Cui, Guoxin Wang, Yijuan Lu, Dinei Florencio, Cha Zhang, Furu Wei, "LayoutXLM: Multimodal Pre-training for Multilingual Visually-rich Document Understanding", arXiv:2104.08836](./LayoutXLM.md)
 - **arXiv-2022**:[Yupan Huang, Tengchao Lv, Lei Cui, Yutong Lu and Furu Wei, "LayoutLMv3: Pre-training for Document AI with Unified Text and Image Masking", arXiv preprint, arXiv:2204.08387, 2022.](./LayoutLMv3.md)
 </details>
