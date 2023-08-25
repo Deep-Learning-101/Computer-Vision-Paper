@@ -59,11 +59,17 @@ Meanwhile, a spatial-aware self-attention mechanism is integrated into the Trans
 * Multi-modal Encoder with Spatial-Aware Self-Attention Mechanism
     * 多模態編碼器：多模態編碼器是 LayoutLMv2 模型的核心部分。它將文本嵌入、視覺嵌入和布局嵌入連接在一起，並使用自注意力機制來捕捉文本、視覺和布局信息之間的關係。
     * 空間感知自注意力機制：空間感知自注意力機制是 LayoutLMv2 模型的一個新穎的貢獻。它可以捕捉文本 token 和視覺 token 的空間布局信息。這可以幫助模型更好地理解文檔的布局，並進行多模態文檔理解。
+
     ![Alt text](<./images/Multi-modal Encoder 1.png>) 
+
     原始自注意力機制：原始自注意力機制可以捕捉文本 token 之間的關係。但是，它不能有效地捕捉文本 token 和視覺 token 之間的關係。這是因為原始自注意力機制只考慮了 token 的絕對位置。而文本 token 和視覺 token 的空間布局信息是重要的。
+
     ![Alt text](<./images/Multi-modal Encoder 2.png>) 
+
     空間感知自注意力機制：空間感知自注意力機制可以捕捉文本 token 和視覺 token 之間的關係。它是原始自注意力機制的擴展。它不僅考慮了 token 的絕對位置，還考慮了 token 的空間布局信息。
+
     ![Alt text](<./images/Multi-modal Encoder 3.png>) 
+    
     空間感知自注意力機制的工作原理：空間感知自注意力機制首先計算原始自注意力機制的注意力分數。然後，它將注意力分數加上空間信息。空間信息由三個部分組成：
 
         * 1D 相對位置信息：1D 相對位置信息表示 token 在序列中的位置。

@@ -17,6 +17,8 @@
 - **arXiv-2022**:[Yupan Huang, Tengchao Lv, Lei Cui, Yutong Lu and Furu Wei, "LayoutLMv3: Pre-training for Document AI with Unified Text and Image Masking", arXiv preprint, arXiv:2204.08387, 2022.](./LayoutLMv3.md)
 </details>
 
+[Geewook Kim, Teakgyu Hong, Moonbin Yim, Jeongyeon Nam, Jinyoung Park, Jinyeong Yim, Wonseok Hwang, Sangdoo Yun, Dongyoon Han, Seunghyun Park,"OCR-free Document Understanding Transformer",arXiv:2111.15664,2022](./donut.md)
+
 [Minghao Li, Tengchao Lv, Lei Cui, Yijuan Lu, Dinei Florencio, Cha Zhang, Zhoujun Li and Furu Wei, "TrOCR: Transformer-based Optical Character Recognition with Pre-trained Models", arXiv preprint, arXiv:2109.10282, 2021](./TrOCR.md)
 
 [Junlong Li, Yiheng Xu, Tengchao Lv, Lei Cui, Cha Zhang and Furu Wei, "DiT: Self-supervised Pre-training for Document Image Transformer", arXiv preprint, arXiv:2203.02378, 2022.](./DiT.md) 
