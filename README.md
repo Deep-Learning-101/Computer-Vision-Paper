@@ -22,6 +22,9 @@
 [Junlong Li, Yiheng Xu, Tengchao Lv, Lei Cui, Cha Zhang and Furu Wei, "DiT: Self-supervised Pre-training for Document Image Transformer", arXiv preprint, arXiv:2203.02378, 2022.](./DiT.md) 
 
 ## Text Recognition (文字識別)
+Lukas Blecher, Guillem Cucurull, Thomas Scialom and Robert Stojnic, "Nougat: Neural Optical Understanding for Academic Documents", arXiv:2308.13418, 2023.
+https://facebookresearch.github.io/nougat/
+
 [Shancheng Fang, Hongtao Xie, Yuxin Wang, Zhendong Mao, Yongdong Zhang, "Read Like Humans: Autonomous, Bidirectional and Iterative Language Modeling for Scene Text Recognition", arXiv:2103.06495, 2021.](./ABINet.md)
 
 [Shancheng Fang, Zhendong Mao, Hongtao Xie, Yuxin Wang, Chenggang Yan, Yongdong Zhang,"ABINet++: Autonomous, Bidirectional and Iterative Language Modeling for Scene Text Spotting",arXiv:2211.10578, 2022](./ABINet%2B%2B.md)
