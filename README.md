@@ -26,6 +26,7 @@
 ## Text Recognition (文字識別)
 Lukas Blecher, Guillem Cucurull, Thomas Scialom and Robert Stojnic, "Nougat: Neural Optical Understanding for Academic Documents", arXiv:2308.13418, 2023.
 https://facebookresearch.github.io/nougat/
+https://www.jiqizhixin.com/articles/2023-08-30-3
 
 [Shancheng Fang, Hongtao Xie, Yuxin Wang, Zhendong Mao, Yongdong Zhang, "Read Like Humans: Autonomous, Bidirectional and Iterative Language Modeling for Scene Text Recognition", arXiv:2103.06495, 2021.](./ABINet.md)
 
