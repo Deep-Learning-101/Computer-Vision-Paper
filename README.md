@@ -1,5 +1,8 @@
 # Computer-Vision (電腦視覺)
 
+## Optical Character Recognition (光學文字識別)
+[12個流行的開源免費OCR項目](https://mp.weixin.qq.com/s/7EuhnQedAX6injBL_Dg_sQ)
+
 ## Document Understanding (文件理解)
 
 [Geewook Kim, Teakgyu Hong, Moonbin Yim, JeongYeon Nam, Jinyoung Park, Jinyeong Yim, Wonseok Hwang, Sangdoo Yun, Dongyoon Han, Seunghyun Park, "OCR-free Document Understanding Transformer", arXiv preprint, arXiv:2111.15664, 2022.](./donut.md)
@@ -35,7 +38,6 @@ https://www.jiqizhixin.com/articles/2023-08-30-3
 [Yuliang Liu, Chunhua Shen, Lianwen Jin, Tong He, Peng Chen, Chongyu Liu, Hao Chen, "ABCNet v2: Adaptive Bezier-Curve Network for Real-time End-to-end Text Spotting", arXiv preprint, 	arXiv:2105.03620, 2021.](./ABCNet_v2.md)
 
 [Yongkun Du, Zhineng Chen, Caiyan Jia, Xiaoting Yin, Tianlun Zheng, Chenxia Li, Yuning Du, Yu-Gang Jiang, "SVTR: Scene Text Recognition with a Single Visual Model", arXiv:2205.00159,2022](./SVTR.md)
-
 
 ## DeepFake Detection (深度偽造偵測)
 H. Zhao, et al., "Multi-attentional Deepfake Detection", Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2021, Nashville, TN, USA, 2021, pp. 2185-2194.
