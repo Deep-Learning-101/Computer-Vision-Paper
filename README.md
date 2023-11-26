@@ -1,7 +1,14 @@
 # Computer-Vision (電腦視覺)
 
 ## Optical Character Recognition (光學文字識別)
+
+**[針對物件或場景影像進行分析與偵測](https://www.twman.org/AI/CV)**
+
 [12個流行的開源免費OCR項目](https://mp.weixin.qq.com/s/7EuhnQedAX6injBL_Dg_sQ)
+
+[用PaddleOCR的PPOCRLabel來微調醫療診斷書和收據](https://blog.twman.org/2023/07/wsl.html)
+
+[TableStructureRec: 表格結構辨識推理庫來了](https://zhuanlan.zhihu.com/p/668484933)：https://github.com/RapidAI/TableStructureRec
 
 ## Document Understanding (文件理解)
 
