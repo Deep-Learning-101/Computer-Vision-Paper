@@ -1,5 +1,15 @@
 # Computer-Vision (電腦視覺)
 
+## Image Recognition (圖像識別)
+
+**[ViT（Vision Transformer）解析](https://zhuanlan.zhihu.com/p/445122996)：https://github.com/google-research/vision_transformer**
+
+**[2040張圖片訓練出的ViT，準確率96.7%，連遷移表現都令人驚訝](https://zhuanlan.zhihu.com/p/463608959)**
+
+**[Swin Transformer: 用CNN的方式打敗CNN](https://zhuanlan.zhihu.com/p/362690149)：https://github.com/microsoft/Swin-Transformer
+
+**[EfficientNetV2震撼發布！更小的模型，更快的訓練](https://zhuanlan.zhihu.com/p/361873583)：https://github.com/d-li14/efficientnetv2.pytorch**
+
 ## Optical Character Recognition (光學文字識別)
 
 **[針對物件或場景影像進行分析與偵測](https://www.twman.org/AI/CV)**
