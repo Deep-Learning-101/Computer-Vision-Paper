@@ -6,7 +6,7 @@
 
 **[2040張圖片訓練出的ViT，準確率96.7%，連遷移表現都令人驚訝](https://zhuanlan.zhihu.com/p/463608959)**
 
-**[Swin Transformer: 用CNN的方式打敗CNN](https://zhuanlan.zhihu.com/p/362690149)：https://github.com/microsoft/Swin-Transformer
+**[Swin Transformer: 用CNN的方式打敗CNN](https://zhuanlan.zhihu.com/p/362690149)：https://github.com/microsoft/Swin-Transformer**
 
 **[EfficientNetV2震撼發布！更小的模型，更快的訓練](https://zhuanlan.zhihu.com/p/361873583)：https://github.com/d-li14/efficientnetv2.pytorch**
 
