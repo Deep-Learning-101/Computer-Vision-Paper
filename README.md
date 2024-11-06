@@ -1,3 +1,31 @@
+#
+https://www.twman.org/AI/CV
+
+https://huggingface.co/DeepLearning101
+#
+
+<details open>
+<summary><strong>手把手帶你一起踩AI坑：https://reurl.cc/g6GlZX</strong></summary>
+   
+- [白話文手把手帶你科普 GenAI](https://blog.twman.org/2024/08/LLM.html)
+   
+- [ComfyUI + Stable Diffuision](https://blog.twman.org/2024/11/diffusion.html)
+  
+- [大型語言模型直接就打完收工？](https://blog.twman.org/2024/09/LLM.html)
+  
+- [那些檢索增強生成要踩的坑](https://blog.twman.org/2024/07/RAG.html)
+  
+- [那些大型語言模型要踩的坑](https://blog.twman.org/2024/02/LLM.html)
+  
+- [Large Language Model，LLM](https://blog.twman.org/2023/04/GPT.html)
+  
+- [那些自然語言處理踩的坑](https://blog.twman.org/2021/04/NLP.html)
+
+- [那些語音處理 (Speech Processing) 踩的坑](https://blog.twman.org/2021/04/ASR.html)
+
+- [那些ASR和TTS可能會踩的坑](https://blog.twman.org/2024/02/asr-tts.html)
+</details>
+
 # Computer-Vision (電腦視覺)
 
 ## Image Recognition (圖像識別)
