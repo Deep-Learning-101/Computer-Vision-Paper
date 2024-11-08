@@ -46,7 +46,10 @@ https://huggingface.co/DeepLearning101
 
 - 2024-09-11：[GOT-OCR-2.0模型开源](https://mp.weixin.qq.com/s/rQL-Q0TGhT6e8Ti4zZalrg)
 
+- 2024-08-20：[萬物皆可AI化！剛開源就有12000人圍觀的OCR 掃描PDF 開源工具！還可轉換為MarkDown！](https://www.53ai.com/news/MultimodalLargeModel/2024082059736.html)
+
 - [advancedliteratemachinery/OCR/OmniParser](https://github.com/AlibabaResearch/AdvancedLiterateMachinery/tree/main/OCR/OmniParser)
+- 2024-10-29：[Alibaba出品:OmniParser通用文檔複雜場景下OCR抽取](https://mp.weixin.qq.com/s/_1Aatpna7poIVRhfYk4aAQ)
 
 - [RapidOCR](https://github.com/RapidAI/RapidOCR/blob/main/docs/README_zh.md)
 
