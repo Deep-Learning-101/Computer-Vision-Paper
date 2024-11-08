@@ -30,23 +30,31 @@ https://huggingface.co/DeepLearning101
 
 ## Image Recognition (圖像識別)
 
-**[ViT（Vision Transformer）解析](https://zhuanlan.zhihu.com/p/445122996)：https://github.com/google-research/vision_transformer**
+- [ViT（Vision Transformer）解析](https://zhuanlan.zhihu.com/p/445122996)：https://github.com/google-research/vision_transformer
 
-**[2040張圖片訓練出的ViT，準確率96.7%，連遷移表現都令人驚訝](https://zhuanlan.zhihu.com/p/463608959)**
+- [2040張圖片訓練出的ViT，準確率96.7%，連遷移表現都令人驚訝](https://zhuanlan.zhihu.com/p/463608959)
 
-**[Swin Transformer: 用CNN的方式打敗CNN](https://zhuanlan.zhihu.com/p/362690149)：https://github.com/microsoft/Swin-Transformer**
+- [Swin Transformer: 用CNN的方式打敗CNN](https://zhuanlan.zhihu.com/p/362690149)：https://github.com/microsoft/Swin-Transformer
 
-**[EfficientNetV2震撼發布！更小的模型，更快的訓練](https://zhuanlan.zhihu.com/p/361873583)：https://github.com/d-li14/efficientnetv2.pytorch**
+- [EfficientNetV2震撼發布！更小的模型，更快的訓練](https://zhuanlan.zhihu.com/p/361873583)：https://github.com/d-li14/efficientnetv2.pytorch
 
 ## Optical Character Recognition (光學文字識別)
 
 **[針對物件或場景影像進行分析與偵測](https://www.twman.org/AI/CV)**
 
-[12個流行的開源免費OCR項目](https://mp.weixin.qq.com/s/7EuhnQedAX6injBL_Dg_sQ)
+- 2024-09-22：[OCR2.0时代-GOT来啦！](https://mp.weixin.qq.com/s/W-Ult-F3pU6Wvx3fHEN8yA)
 
-[用PaddleOCR的PPOCRLabel來微調醫療診斷書和收據](https://blog.twman.org/2023/07/wsl.html)
+- 2024-09-11：[GOT-OCR-2.0模型开源](https://mp.weixin.qq.com/s/rQL-Q0TGhT6e8Ti4zZalrg)
 
-[TableStructureRec: 表格結構辨識推理庫來了](https://zhuanlan.zhihu.com/p/668484933)：https://github.com/RapidAI/TableStructureRec
+- [advancedliteratemachinery/OCR/OmniParser](https://github.com/AlibabaResearch/AdvancedLiterateMachinery/tree/main/OCR/OmniParser)
+
+- [RapidOCR](https://github.com/RapidAI/RapidOCR/blob/main/docs/README_zh.md)
+
+- [12個流行的開源免費OCR項目](https://mp.weixin.qq.com/s/7EuhnQedAX6injBL_Dg_sQ)
+
+- [用PaddleOCR的PPOCRLabel來微調醫療診斷書和收據](https://blog.twman.org/2023/07/wsl.html)
+
+- [TableStructureRec: 表格結構辨識推理庫來了](https://zhuanlan.zhihu.com/p/668484933)：https://github.com/RapidAI/TableStructureRec
 
 ## Document Understanding (文件理解)
 
