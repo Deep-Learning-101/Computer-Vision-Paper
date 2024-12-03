@@ -28,6 +28,31 @@ https://huggingface.co/DeepLearning101
 
 # Computer-Vision (電腦視覺)
 
+## Diffusion model (擴散模型)
+
+- [Flux](https://huggingface.co/black-forest-labs)
+   - [Flux.1-canny-dev](https://huggingface.co/spaces/black-forest-labs/FLUX.1-canny-dev)：[https://huggingface.co/black-forest-labs/FLUX.1-Canny-dev/](https://huggingface.co/black-forest-labs/FLUX.1-Canny-dev/)
+   - [Flux.1-depth-dev](https://huggingface.co/spaces/black-forest-labs/FLUX.1-Depth-dev)：[https://huggingface.co/black-forest-labs/FLUX.1-Depth-dev/](https://huggingface.co/black-forest-labs/FLUX.1-Depth-dev/)
+   - [Flux.1-fill-dev](https://huggingface.co/spaces/black-forest-labs/FLUX.1-Fill-dev)：[https://huggingface.co/black-forest-labs/FLUX.1-Fill-dev/](https://huggingface.co/black-forest-labs/FLUX.1-Fill-dev/)
+   - [Flux.1-redux-dev](https://huggingface.co/spaces/black-forest-labs/FLUX.1-Redux-dev)：[https://huggingface.co/black-forest-labs/FLUX.1-Redux-dev/](https://huggingface.co/black-forest-labs/FLUX.1-Redux-dev/)
+      - 2024-11-26：[Flux官方重繪+擴圖+風格參考+ControlNet](https://mp.weixin.qq.com/s/Kj1nyJNTpoZ94JjO4FMw_g)
+      - 2024-11-25：[最新flux_fill_inpaint模型體驗。](https://mp.weixin.qq.com/s/OPknDJXH1_oezSR86c_png)
+- 2024-11-29：[PuLID, Pure and Lightning ID Customization via Contrastive Alignment](https://github.com/ToTheBeginning/PuLID)：[https://github.com/balazik/ComfyUI-PuLID-Flux](https://github.com/balazik/ComfyUI-PuLID-Flux)
+   - 2024-11-07：[搞定ComfyUI-PuLID-Flux節點只要這幾步！附一鍵壓縮包](https://mp.weixin.qq.com/s/07BMFHaSasl7-PFtkN6_Zg)
+   - 2024-10-08：[一文搞懂PuLID FLUX人物換臉&風格遷移](https://mp.weixin.qq.com/s/V-2Cp8_xFnHQNFn35aGdLg)
+- 2024-11-26：[MagicQuill](https://github.com/magic-quill/MagicQuill)：[https://huggingface.co/spaces/AI4Editing/MagicQuill](https://huggingface.co/spaces/AI4Editing/MagicQuill)
+   - [MagicQuill，登上Huggingface趨勢榜榜首的AI P圖神器](https://mp.weixin.qq.com/s/Pc3xRP8_9BxkVSRNznkplw)
+- 2024-11-26：[OOTDiffusion](https://github.com/levihsu/OOTDiffusion)：[https://huggingface.co/spaces/levihsu/OOTDiffusion](https://huggingface.co/spaces/levihsu/OOTDiffusion)
+   - [開源AI換裝神器OOTDiffusion](https://mp.weixin.qq.com/s/B2rNCjJLo8coYzoHGPnVaw)
+- 2024-11-24：[Comfyui Impact Pack](https://github.com/ltdrdata/ComfyUI-Impact-Pack)
+   - [Comfyui 最強臉部修復工具Impact Pack](https://mp.weixin.qq.com/s/hNQ9BfdGbRQ_Osus-yMJWg)
+- 2024-11-05：[ComfyUI OmniGen @ 北京人工智慧研究院](https://github.com/AIFSH/OmniGen-ComfyUI)：[https://huggingface.co/spaces/Shitao/OmniGen](https://huggingface.co/spaces/Shitao/OmniGen)
+   - [ComfyUI 影像生成模型OmniGen，人物一致性處理的也太好了](https://mp.weixin.qq.com/s/msGK0FmNs3T3jbUBHfR9DA)
+   - [全能影像生成模型OmniGen：告別ControlNet、ipadapter等插件，僅憑提示即可控制影像生成與編輯](https://mp.weixin.qq.com/s/48HmqRGBOK1uBdzlprdKSA)
+
+
+
+
 ## Image Recognition (圖像識別)
 
 - [ViT（Vision Transformer）解析](https://zhuanlan.zhihu.com/p/445122996)：https://github.com/google-research/vision_transformer
