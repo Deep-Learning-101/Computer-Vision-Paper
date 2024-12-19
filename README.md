@@ -28,6 +28,25 @@ https://huggingface.co/DeepLearning101
 
 # Computer-Vision (電腦視覺)
 
+
+## Segmentation (圖像分割)
+
+- [Meta Segment Anything Model 2 (SAM 2)](https://ai.meta.com/sam2/)
+   - [60行程式碼訓練/微調Segment Anything 2](https://mp.weixin.qq.com/s/YfgYCzvi0cXxOFIfQvE_9w)
+   - [CLIPSeg: Image Segmentation Using Text and Image Prompts](CLIPSeg: Image Segmentation Using Text and Image Prompts)：[Huggingface Space](https://huggingface.co/spaces/taesiri/CLIPSeg)
+      - [哥廷根大學提出CLIPSeg，能同時作三個分割任務的模型](https://mp.weixin.qq.com/s/evKssKulZiUssLN71t6_Lw)
+      - [SAM與CLIP強強聯手，實現22000類的分割與識別](https://mp.weixin.qq.com/s/evKssKulZiUssLN71t6_Lw)
+- [SAMURAI](https://yangchris11.github.io/samurai/)
+   - [無需訓練或微調即可得到穩定、準確的追蹤效果！ KF + SAM2 解決快速移動或自遮擋的物件追蹤問題](https://mp.weixin.qq.com/s/iU3Bk_uO01GWUxAtIBsrWQ)
+   - [經典卡爾曼濾波器改進影片版「分割一切」，網友：好優雅的方法](https://www.qbitai.com/2024/11/223020.html)
+- [Grounded SAM 2: Ground and Track Anything in Videos](https://github.com/IDEA-Research/Grounded-SAM-2)
+   - [Grounded-Segment-Anything](https://huggingface.co/spaces/yizhangliu/Grounded-Segment-Anything)
+- [SAM2Long](https://github.com/Mark12Ding/SAM2Long)：[大幅提升SAM 2性能！港中文提出SAM2Long，複雜長視頻的分割模型](https://mp.weixin.qq.com/s/henvaxGoNgx24NLQV1Qj2w)
+- [SAM2-Adapter](https://github.com/tianrun-chen/SAM-Adapter-PyTorch)：[SAM 2無法分割一切？ SAM2-Adapter：首次讓SAM 2在下游任務適應調校！](https://mp.weixin.qq.com/s/3z-LshKAgbSzNCzyoLOuag)
+- [SAM2Point](https://github.com/ZiyuGuo99/SAM2Point)：[可提示3D 分割研究里程碑！ SAM2Point：SAM2加持可泛化任3D場景、任意提示！](https://mp.weixin.qq.com/s/TnTK5UE7O_hcrNzloxBmAw)
+
+
+
 ## Diffusion model (擴散模型)
 
 - [Flux](https://huggingface.co/black-forest-labs)
@@ -37,6 +56,7 @@ https://huggingface.co/DeepLearning101
    - [Flux.1-redux-dev](https://huggingface.co/spaces/black-forest-labs/FLUX.1-Redux-dev)：[https://huggingface.co/black-forest-labs/FLUX.1-Redux-dev/](https://huggingface.co/black-forest-labs/FLUX.1-Redux-dev/)
       - 2024-11-26：[Flux官方重繪+擴圖+風格參考+ControlNet](https://mp.weixin.qq.com/s/Kj1nyJNTpoZ94JjO4FMw_g)
       - 2024-11-25：[最新flux_fill_inpaint模型體驗。](https://mp.weixin.qq.com/s/OPknDJXH1_oezSR86c_png)
+- 2024-12-17：[Leffa](https://github.com/franciszzj/Leffa)：[Leffa：Meta AI 開源精確控制人物外觀和姿勢的圖像生成框架，在生成穿著的同時保持人物特徵](https://juejin.cn/post/7449325873725276196)
 - 2024-11-29：[PuLID, Pure and Lightning ID Customization via Contrastive Alignment](https://github.com/ToTheBeginning/PuLID)：[https://github.com/balazik/ComfyUI-PuLID-Flux](https://github.com/balazik/ComfyUI-PuLID-Flux)
    - 2024-11-07：[搞定ComfyUI-PuLID-Flux節點只要這幾步！附一鍵壓縮包](https://mp.weixin.qq.com/s/07BMFHaSasl7-PFtkN6_Zg)
    - 2024-10-08：[一文搞懂PuLID FLUX人物換臉&風格遷移](https://mp.weixin.qq.com/s/V-2Cp8_xFnHQNFn35aGdLg)
@@ -49,8 +69,6 @@ https://huggingface.co/DeepLearning101
 - 2024-11-05：[ComfyUI OmniGen @ 北京人工智慧研究院](https://github.com/AIFSH/OmniGen-ComfyUI)：[https://huggingface.co/spaces/Shitao/OmniGen](https://huggingface.co/spaces/Shitao/OmniGen)
    - [ComfyUI 影像生成模型OmniGen，人物一致性處理的也太好了](https://mp.weixin.qq.com/s/msGK0FmNs3T3jbUBHfR9DA)
    - [全能影像生成模型OmniGen：告別ControlNet、ipadapter等插件，僅憑提示即可控制影像生成與編輯](https://mp.weixin.qq.com/s/48HmqRGBOK1uBdzlprdKSA)
-
-
 
 
 ## Image Recognition (圖像識別)
@@ -66,22 +84,14 @@ https://huggingface.co/DeepLearning101
 ## Optical Character Recognition (光學文字識別)
 
 **[針對物件或場景影像進行分析與偵測](https://www.twman.org/AI/CV)**
-
 - 2024-09-22：[OCR2.0时代-GOT来啦！](https://mp.weixin.qq.com/s/W-Ult-F3pU6Wvx3fHEN8yA)
-
 - 2024-09-11：[GOT-OCR-2.0模型开源](https://mp.weixin.qq.com/s/rQL-Q0TGhT6e8Ti4zZalrg)
-
 - 2024-08-20：[萬物皆可AI化！剛開源就有12000人圍觀的OCR 掃描PDF 開源工具！還可轉換為MarkDown！](https://www.53ai.com/news/MultimodalLargeModel/2024082059736.html)
-
 - [advancedliteratemachinery/OCR/OmniParser](https://github.com/AlibabaResearch/AdvancedLiterateMachinery/tree/main/OCR/OmniParser)
 - 2024-10-29：[Alibaba出品:OmniParser通用文檔複雜場景下OCR抽取](https://mp.weixin.qq.com/s/_1Aatpna7poIVRhfYk4aAQ)
-
 - [RapidOCR](https://github.com/RapidAI/RapidOCR/blob/main/docs/README_zh.md)
-
 - [12個流行的開源免費OCR項目](https://mp.weixin.qq.com/s/7EuhnQedAX6injBL_Dg_sQ)
-
 - [用PaddleOCR的PPOCRLabel來微調醫療診斷書和收據](https://blog.twman.org/2023/07/wsl.html)
-
 - [TableStructureRec: 表格結構辨識推理庫來了](https://zhuanlan.zhihu.com/p/668484933)：https://github.com/RapidAI/TableStructureRec
 
 ## Document Understanding (文件理解)
