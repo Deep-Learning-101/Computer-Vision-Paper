@@ -33,7 +33,7 @@ https://huggingface.co/DeepLearning101
 
 - [Meta Segment Anything Model 2 (SAM 2)](https://ai.meta.com/sam2/)
    - [60行程式碼訓練/微調Segment Anything 2](https://mp.weixin.qq.com/s/YfgYCzvi0cXxOFIfQvE_9w)
-   - [CLIPSeg: Image Segmentation Using Text and Image Prompts](CLIPSeg: Image Segmentation Using Text and Image Prompts)：[Huggingface Space](https://huggingface.co/spaces/taesiri/CLIPSeg)
+   - [CLIPSeg：Image Segmentation Using Text and Image Prompts](https://github.com/timojl/clipseg)：[Huggingface Space](https://huggingface.co/spaces/taesiri/CLIPSeg)
       - [哥廷根大學提出CLIPSeg，能同時作三個分割任務的模型](https://mp.weixin.qq.com/s/evKssKulZiUssLN71t6_Lw)
       - [SAM與CLIP強強聯手，實現22000類的分割與識別](https://mp.weixin.qq.com/s/evKssKulZiUssLN71t6_Lw)
 - [SAMURAI](https://yangchris11.github.io/samurai/)
