@@ -71,6 +71,17 @@ https://huggingface.co/DeepLearning101
    - [全能影像生成模型OmniGen：告別ControlNet、ipadapter等插件，僅憑提示即可控制影像生成與編輯](https://mp.weixin.qq.com/s/48HmqRGBOK1uBdzlprdKSA)
 
 
+## Digital Human (虛擬數字人)
+- [Linly-Talker](https://github.com/Kedreamix/Linly-Talker)：an intelligent AI system that combines large language models (LLMs) with visual models to create a novel human-AI interaction method. 
+- [EchoMimicV2](https://github.com/antgroup/echomimic_v2)：[CVPR 2025] EchoMimicV2: Towards Striking, Simplified, and Semi-Body Human Animation
+- [Hallo3](https://github.com/fudan-generative-vision/hallo3)：[CVPR 2025] Highly Dynamic and Realistic Portrait Image Animation with Diffusion Transformer Networks
+- [MimicTalk](https://github.com/yerfor/MimicTalk)：[NeurIPS 2024] MimicTalk: Mimicking a personalized and expressive 3D talking face in minutes
+- [JoyGen](https://github.com/JOY-MM/JoyGen)：Audio-Driven 3D Depth-Aware Talking-Face Video Editing
+- [Latentsync](https://github.com/bytedance/LatentSync)
+- [MuseTalk](https://github.com/TMElyralab/MuseTalk)
+
+
+
 ## Image Recognition (圖像識別)
 
 - [ViT（Vision Transformer）解析](https://zhuanlan.zhihu.com/p/445122996)：https://github.com/google-research/vision_transformer
