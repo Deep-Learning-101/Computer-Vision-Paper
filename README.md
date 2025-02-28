@@ -49,7 +49,7 @@ https://huggingface.co/DeepLearning101
 
 ## Diffusion model (擴散模型)
 
-- 2025-02-25：[Wan-Video](https://github.com/Wan-Video/Wan2.1))：[超越Sora！阿里萬相大模型正式開源！全模態、全尺寸大模型開源](https://finance.sina.com.cn/jjxw/2025-02-26/doc-inemukxr9127437.shtml)
+- 2025-02-25：[Wan-Video](https://github.com/Wan-Video/Wan2.1)：[超越Sora！阿里萬相大模型正式開源！全模態、全尺寸大模型開源](https://finance.sina.com.cn/jjxw/2025-02-26/doc-inemukxr9127437.shtml)
 - 2025-02-14：[FlashVideo](https://github.com/FoundationVision/FlashVideo)：[來自位元組的視訊增強全新開源演算法，102秒產生1080P視頻](https://zhuanlan.zhihu.com/p/23702953115)
 - 2025-01-28：[Sana](https://github.com/NVlabs/Sana)：[ICLR 2025 Oral] Efficient High-Resolution Image Synthesis with Linear Diffusion Transformer；[比FLUX快100倍！英偉達聯手MIT、清華開源超快AI影像產生模型](https://zhuanlan.zhihu.com/p/19489214543)
 - [Flux](https://huggingface.co/black-forest-labs)
