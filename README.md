@@ -98,6 +98,9 @@ https://huggingface.co/DeepLearning101
 ## Optical Character Recognition (光學文字識別)
 
 **[針對物件或場景影像進行分析與偵測](https://www.twman.org/AI/CV)**
+- 2025-03-03：[olmocr](https://github.com/allenai/olmocr)：[🚀本地部署最强OCR大模型olmOCR！支持结构化精准提取复杂PDF文件内容！](https://www.aivi.fyi/llms/deploy-olmOCR)
+- 2025-02-05：[MinerU](https://github.com/opendatalab/MinerU)：[將PDF轉換為機器可讀格式的神器](https://mp.weixin.qq.com/s/ci5wp6gICTCtaRZfn5yWUQ)
+- 2024-12-15：[markitdown](https://github.com/microsoft/markitdown)
 - 2024-09-22：[OCR2.0时代-GOT来啦！](https://mp.weixin.qq.com/s/W-Ult-F3pU6Wvx3fHEN8yA)
 - 2024-09-11：[GOT-OCR-2.0模型开源](https://mp.weixin.qq.com/s/rQL-Q0TGhT6e8Ti4zZalrg)
 - 2024-08-20：[萬物皆可AI化！剛開源就有12000人圍觀的OCR 掃描PDF 開源工具！還可轉換為MarkDown！](https://www.53ai.com/news/MultimodalLargeModel/2024082059736.html)
