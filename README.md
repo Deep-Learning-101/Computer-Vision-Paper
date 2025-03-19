@@ -49,6 +49,7 @@ https://huggingface.co/DeepLearning101
 
 ## Diffusion model (擴散模型)
 
+- 2025-03-10[HunyuanVideo-I2V](https://github.com/Tencent/HunyuanVideo-I2V)：[騰訊開源HunyuanVideo-I2V圖生視訊模型+LoRA訓練腳本，社群部署、推理實戰教學來吧](https://zhuanlan.zhihu.com/p/29110060025)
 - 2025-02-25：[Wan-Video](https://github.com/Wan-Video/Wan2.1)：[超越Sora！阿里萬相大模型正式開源！全模態、全尺寸大模型開源](https://finance.sina.com.cn/jjxw/2025-02-26/doc-inemukxr9127437.shtml)
 - 2025-02-14：[FlashVideo](https://github.com/FoundationVision/FlashVideo)：[來自位元組的視訊增強全新開源演算法，102秒產生1080P視頻](https://zhuanlan.zhihu.com/p/23702953115)
 - 2025-01-28：[Sana](https://github.com/NVlabs/Sana)：[ICLR 2025 Oral] Efficient High-Resolution Image Synthesis with Linear Diffusion Transformer；[比FLUX快100倍！英偉達聯手MIT、清華開源超快AI影像產生模型](https://zhuanlan.zhihu.com/p/19489214543)
@@ -98,6 +99,7 @@ https://huggingface.co/DeepLearning101
 ## Optical Character Recognition (光學文字識別)
 
 **[針對物件或場景影像進行分析與偵測](https://www.twman.org/AI/CV)**
+- 2025-03-05：[PP-DocBee](https://github.com/PaddlePaddle/PaddleMIX/tree/develop/deploy/ppdocbee)：[百度推出文件影像理解PP-DocBee](https://zhuanlan.zhihu.com/p/28715553656)
 - 2025-03-03：[olmocr](https://github.com/allenai/olmocr)：[🚀本地部署最强OCR大模型olmOCR！支持结构化精准提取复杂PDF文件内容！](https://www.aivi.fyi/llms/deploy-olmOCR)
 - 2025-02-05：[MinerU](https://github.com/opendatalab/MinerU)：[將PDF轉換為機器可讀格式的神器](https://mp.weixin.qq.com/s/ci5wp6gICTCtaRZfn5yWUQ)
 - 2024-12-15：[markitdown](https://github.com/microsoft/markitdown)
