@@ -113,6 +113,8 @@ https://huggingface.co/DeepLearning101
 
 
 ## Digital Human (虛擬數字人)
+- [HeyGem](https://github.com/GuijiAI/HeyGem.ai)：[開源數位人克隆神器](https://zhuanlan.zhihu.com/p/29274862393)
+- [Duix](https://github.com/GuijiAI/duix.ai)：[全球首個真人數位人，開源了](https://zhuanlan.zhihu.com/p/716583514)
 - [Linly-Talker](https://github.com/Kedreamix/Linly-Talker)：an intelligent AI system that combines large language models (LLMs) with visual models to create a novel human-AI interaction method. 
 - [EchoMimicV2](https://github.com/antgroup/echomimic_v2)：[CVPR 2025] EchoMimicV2: Towards Striking, Simplified, and Semi-Body Human Animation
 - [Hallo3](https://github.com/fudan-generative-vision/hallo3)：[CVPR 2025] Highly Dynamic and Realistic Portrait Image Animation with Diffusion Transformer Networks
