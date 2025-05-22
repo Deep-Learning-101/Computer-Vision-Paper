@@ -96,6 +96,7 @@
 
 ## Object Detection (目標偵測)
 - [AAAI2025, Multi-clue Consistency Learning to Bridge Gaps Between General and Oriented Object in Semi-supervised Detection](https://www.alphaxiv.org/abs/2407.05909)；[Github](https://github.com/facias914/sood-mcl)；[AAAI2025 一個遙感半監督目標偵測（半監督旋轉目標偵測）方法](https://zhuanlan.zhihu.com/p/26788012528)
+- 2025-03-14：[Falcon: A Remote Sensing Vision-Language Foundation Model](https://www.alphaxiv.org/abs/2503.11070)；[DeepWiki](https://deepwiki.com/TianHuiLab/Falcon)
 
 ## Segmentation (圖像分割)
 - [RESAnything: Attribute Prompting for Arbitrary Referring Segmentation](https://www.alphaxiv.org/abs/2505.02867)；[Project](https://suikei-wang.github.io/RESAnything/)
@@ -120,6 +121,7 @@
 
 ## Diffusion model (擴散模型)
 
+- 2025-05-19：[Index-AniSora](https://deepwiki.com/bilibili/Index-anisora)；[Aligning Anime Video Generation with Human Feedback](https://www.alphaxiv.org/overview/2504.10044)；[B站開源SOTA動畫影片生成模型Index-AniSora！](https://zhuanlan.zhihu.com/p/1908150671540224717)
 - 2025-04-24：[字節Phantom](https://github.com/Phantom-video/Phantom)：[1280x720影片生成革命！位元組Phantom模型實測：10G顯存效果不輸某靈付費版](https://zhuanlan.zhihu.com/p/1898688574477545694)
 - 2025-04-22：[MAGI-1](https://github.com/SandAI-org/Magi-1)：[Sand AI 創業團隊推出了全球首個自回歸影片生成大模型MAGI-1，該模型有哪些效能亮點？](https://www.zhihu.com/question/1898030232184795448)
 - 2025-04-22：[SkyReels V2](https://github.com/SkyworkAI/SkyReels-V2)：[全球首個無限時長影片生成！新擴散模式引爆兆市場，電影級理解，全面開源](https://www.qbitai.com/2025/04/275531.html)
