@@ -93,6 +93,8 @@
 - 2025-05-15：[AdaptCLIP: Adapting CLIP for Universal Visual Anomaly Detection](https://www.alphaxiv.org/overview/2407.15795)；[Github](https://github.com/aiiu-lab/AdaptCLIP)；[騰訊開源AdaptCLIP 模型刷新多領域SOTA](https://mp.weixin.qq.com/s/w5x6T18aSZt9jxqMIdf-Yg)
 - 2025-05-05：[Detect, Classify, Act: Categorizing Industrial Anomalies with Multi-Modal Large Language Models](https://www.alphaxiv.org/zh/overview/2505.02626)；[DeepWiki](https://deepwiki.com/Sassanmtr/VELM)；[數據集](https://www.mvtec.com/company/research/datasets/mvtec-ad)
 - 2025-04-27：[AnomalyCLIP: Object-agnostic Prompt Learning for Zero-shot Anomaly Detection](https://www.alphaxiv.org/overview/2310.18961)；[DeepWiki](https://deepwiki.com/zqhang/AnomalyCLIP)
+- 2025-04-12：[Anomaly-Aware CLIP, AA-CLIP: Enhancing Zero-shot Anomaly Detection via Anomaly-Aware CLIP](https://www.alphaxiv.org/zh/overview/2503.06661)；[DeepWiki](https://deepwiki.com/Mwxinnn/AA-CLIP)
+
 
 ## Object Detection (目標偵測)
 - [AAAI2025, Multi-clue Consistency Learning to Bridge Gaps Between General and Oriented Object in Semi-supervised Detection](https://www.alphaxiv.org/abs/2407.05909)；[Github](https://github.com/facias914/sood-mcl)；[AAAI2025 一個遙感半監督目標偵測（半監督旋轉目標偵測）方法](https://zhuanlan.zhihu.com/p/26788012528)
