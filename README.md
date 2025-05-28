@@ -129,6 +129,7 @@
 - 2025-04-22：[SkyReels V2](https://github.com/SkyworkAI/SkyReels-V2)：[全球首個無限時長影片生成！新擴散模式引爆兆市場，電影級理解，全面開源](https://www.qbitai.com/2025/04/275531.html)
 - 2025-04-14：[FramePack](https://github.com/kijai/ComfyUI-FramePackWrapper)：[不是可靈用不起，而是FramePack更有性價比！開源專案：6G顯存跑13B模型，支援1分鐘影片產生](https://zhuanlan.zhihu.com/p/1896487969470251546)
 - 2025-04-14：[fantasy-talking](https://fantasy-amap.github.io/fantasy-talking/)：[解讀最新基於Wan2.1的音訊驅動數位人FantasyTalking](https://zhuanlan.zhihu.com/p/1892895916354148118)
+- 2025-04-05：[SkyReels-A2](https://www.alphaxiv.org/zh/overview/2504.02436)；[DeepWiki](https://deepwiki.com/SkyworkAI/SkyReels-A2)；[SkyReels-A2：用AI重新定义视频创作的未来！](https://zhuanlan.zhihu.com/p/1892709305301590652)
 - 2025-03-10：[HunyuanVideo-I2V](https://github.com/Tencent/HunyuanVideo-I2V)：[騰訊開源HunyuanVideo-I2V圖生視訊模型+LoRA訓練腳本，社群部署、推理實戰教學來吧](https://zhuanlan.zhihu.com/p/29110060025)
 - 2025-02-25：[Wan-Video](https://github.com/Wan-Video/Wan2.1)：[超越Sora！阿里萬相大模型正式開源！全模態、全尺寸大模型開源](https://finance.sina.com.cn/jjxw/2025-02-26/doc-inemukxr9127437.shtml)
 - 2025-02-14：[FlashVideo](https://github.com/FoundationVision/FlashVideo)：[來自位元組的視訊增強全新開源演算法，102秒產生1080P視頻](https://zhuanlan.zhihu.com/p/23702953115)
