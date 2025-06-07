@@ -93,6 +93,7 @@
 - 2025-05-15：[AdaptCLIP: Adapting CLIP for Universal Visual Anomaly Detection](https://www.alphaxiv.org/overview/2407.15795)；[Github](https://github.com/aiiu-lab/AdaptCLIP)；[騰訊開源AdaptCLIP 模型刷新多領域SOTA](https://mp.weixin.qq.com/s/w5x6T18aSZt9jxqMIdf-Yg)
 - 2025-05-05：[Detect, Classify, Act: Categorizing Industrial Anomalies with Multi-Modal Large Language Models](https://www.alphaxiv.org/zh/overview/2505.02626)；[DeepWiki](https://deepwiki.com/Sassanmtr/VELM)；[數據集](https://www.mvtec.com/company/research/datasets/mvtec-ad)
 - 2025-04-27：[AnomalyCLIP: Object-agnostic Prompt Learning for Zero-shot Anomaly Detection](https://www.alphaxiv.org/overview/2310.18961)；[DeepWiki](https://deepwiki.com/zqhang/AnomalyCLIP)
+- 2025-04-26：[PaDim](https://www.alphaxiv.org/zh/overview/2011.08785)；[DeepWiki](https://deepwiki.com/xiahaifeng1995/PaDiM-Anomaly-Detection-Localization-master)  
 - 2025-04-12：[Anomaly-Aware CLIP, AA-CLIP: Enhancing Zero-shot Anomaly Detection via Anomaly-Aware CLIP](https://www.alphaxiv.org/zh/overview/2503.06661)；[DeepWiki](https://deepwiki.com/Mwxinnn/AA-CLIP)
 
 
@@ -123,7 +124,9 @@
 
 ## Diffusion model (擴散模型)
 
+- 2025-05-23：[HivisionIDPhotos －智慧證件照產生神器](https://deepwiki.com/Zeyi-Lin/HivisionIDPhotos)；[AI證件照，摳圖、換背景、任意尺寸](https://zhuanlan.zhihu.com/p/718725351)
 - 2025-05-19：[Index-AniSora](https://deepwiki.com/bilibili/Index-anisora)；[Aligning Anime Video Generation with Human Feedback](https://www.alphaxiv.org/overview/2504.10044)；[B站開源SOTA動畫影片生成模型Index-AniSora！](https://zhuanlan.zhihu.com/p/1908150671540224717)
+- 2025-04-26：[Insert Anything](https://www.alphaxiv.org/zh/overview/2504.15009)；[DeepWiki](https://deepwiki.com/song-wensong/insert-anything)  
 - 2025-04-24：[字節Phantom](https://github.com/Phantom-video/Phantom)：[1280x720影片生成革命！位元組Phantom模型實測：10G顯存效果不輸某靈付費版](https://zhuanlan.zhihu.com/p/1898688574477545694)
 - 2025-04-22：[MAGI-1](https://github.com/SandAI-org/Magi-1)：[Sand AI 創業團隊推出了全球首個自回歸影片生成大模型MAGI-1，該模型有哪些效能亮點？](https://www.zhihu.com/question/1898030232184795448)
 - 2025-04-22：[SkyReels V2](https://github.com/SkyworkAI/SkyReels-V2)：[全球首個無限時長影片生成！新擴散模式引爆兆市場，電影級理解，全面開源](https://www.qbitai.com/2025/04/275531.html)
