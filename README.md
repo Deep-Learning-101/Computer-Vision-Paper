@@ -185,6 +185,7 @@
 ## Optical Character Recognition (光學文字識別)
 
 **[針對物件或場景影像進行分析與偵測](https://www.twman.org/AI/CV)**
+- 2025-06-05：[MonkeyOCR](https://deepwiki.com/Yuliang-Liu/MonkeyOCR)；[Document Parsing with a Structure-Recognition-Relation Triplet Paradigm](https://www.alphaxiv.org/overview/2506.05218)
 - 2025-03-05：[PP-DocBee](https://github.com/PaddlePaddle/PaddleMIX/tree/develop/deploy/ppdocbee)：[百度推出文件影像理解PP-DocBee](https://zhuanlan.zhihu.com/p/28715553656)
 - 2025-03-03：[olmocr](https://github.com/allenai/olmocr)：[🚀本地部署最强OCR大模型olmOCR！支持结构化精准提取复杂PDF文件内容！](https://www.aivi.fyi/llms/deploy-olmOCR)
 - 2025-02-05：[MinerU](https://github.com/opendatalab/MinerU)：[將PDF轉換為機器可讀格式的神器](https://mp.weixin.qq.com/s/ci5wp6gICTCtaRZfn5yWUQ)
