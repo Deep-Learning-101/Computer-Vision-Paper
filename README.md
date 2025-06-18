@@ -12,11 +12,12 @@
     <a href="https://www.buymeacoffee.com/DeepLearning101" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-red.png" alt="Buy Me A Coffee" style="height: 100px !important;width: 180px !important;" ></a>
 </p>
 <p align="center">
-  <a href="https://www.youtube.com/@DeepLearning101" target="_blank">YouTube</a> |
+  <a href="https://www.youtube.com/@DeepLearning101" target="_blank">去 YouTube 訂閱</a> |
   <a href="https://www.facebook.com/groups/525579498272187/" target="_blank">Facebook</a> |
   <a href="https://deep-learning-101.github.io/"> 回 GitHub Pages</a> |
-  <a href="http://DeepLearning101.TWMAN.ORG" target="_blank">網站</a> |
-  <a href="https://huggingface.co/DeepLearning101" target="_blank">Hugging Face Space</a>
+  <a href="https://github.com/Deep-Learning-101" target="_blank"> 到 GitHub 點星</a> |  
+  <a href="https://www.twman.org/DeepLearning101" target="_blank">網站</a> |
+  <a href="https://huggingface.co/DeepLearning101" target="_blank">到 Hugging Face Space 按愛心</a>
 </p>
 
 ---
@@ -99,6 +100,9 @@
 
 ## Object Detection (目標偵測)
 - [AAAI2025, Multi-clue Consistency Learning to Bridge Gaps Between General and Oriented Object in Semi-supervised Detection](https://www.alphaxiv.org/abs/2407.05909)；[Github](https://github.com/facias914/sood-mcl)；[AAAI2025 一個遙感半監督目標偵測（半監督旋轉目標偵測）方法](https://zhuanlan.zhihu.com/p/26788012528)
+- 2025-06-15：[GeoPix](https://github.com/Norman-Ou/GeoPix)；[像素級遙感多模態大模型](https://3slab.pku.edu.cn/info/1026/2121.htm)
+- 2025-05-30：[GeoVision Labeler](https://deepwiki.com/microsoft/geo-vision-labeler)；[Zero-Shot Geospatial Classification with Vision and Language Models](https://www.alphaxiv.org/abs/2505.24340v1)；[微軟開源GeoVision Labeler零樣本分類框架，攻克複雜遙感場景分類](https://mp.weixin.qq.com/s/HMOW9Tha3s0CEZ6DtCXeiQ)
+- 2025-05-23：[VisionReasoner](https://github.com/dvlab-research/VisionReasoner)；[偵測、分割、計數、問答全拿下？對標Qwen2.5-VL！ VisionReasoner用強化學習統一視覺感知與推理](https://mp.weixin.qq.com/s/vECz3i_-dzvlDr3BdRLPWQ)
 - 2025-03-14：[Falcon: A Remote Sensing Vision-Language Foundation Model](https://www.alphaxiv.org/abs/2503.11070)；[DeepWiki](https://deepwiki.com/TianHuiLab/Falcon)
 
 ## Segmentation (圖像分割)
@@ -124,6 +128,8 @@
 
 ## Diffusion model (擴散模型)
 
+- 2025-05-28：[視覺理解&生成大一統模型 Jodi](https://vipl-genun.github.io/Project-Jodi/)；[alphaXiv](https://www.alphaxiv.org/zh/overview/2505.19084)
+- 2025-05-27：[AnomalyAny](https://hansunhayden.github.io/AnomalyAny.github.io/)；[CVPR2025｜突破資料瓶頸！ Stable Diffusion 協助視覺異常檢測，無需訓練即可產生真實多樣異常樣本](https://zhuanlan.zhihu.com/p/1910284073231942689)
 - 2025-05-23：[HivisionIDPhotos －智慧證件照產生神器](https://deepwiki.com/Zeyi-Lin/HivisionIDPhotos)；[AI證件照，摳圖、換背景、任意尺寸](https://zhuanlan.zhihu.com/p/718725351)
 - 2025-05-19：[Index-AniSora](https://deepwiki.com/bilibili/Index-anisora)；[Aligning Anime Video Generation with Human Feedback](https://www.alphaxiv.org/overview/2504.10044)；[B站開源SOTA動畫影片生成模型Index-AniSora！](https://zhuanlan.zhihu.com/p/1908150671540224717)
 - 2025-04-26：[Insert Anything](https://www.alphaxiv.org/zh/overview/2504.15009)；[DeepWiki](https://deepwiki.com/song-wensong/insert-anything)  
@@ -175,17 +181,15 @@
 ## Image Recognition (圖像識別)
 
 - [ViT（Vision Transformer）解析](https://zhuanlan.zhihu.com/p/445122996)：https://github.com/google-research/vision_transformer
-
 - [2040張圖片訓練出的ViT，準確率96.7%，連遷移表現都令人驚訝](https://zhuanlan.zhihu.com/p/463608959)
-
 - [Swin Transformer: 用CNN的方式打敗CNN](https://zhuanlan.zhihu.com/p/362690149)：https://github.com/microsoft/Swin-Transformer
-
 - [EfficientNetV2震撼發布！更小的模型，更快的訓練](https://zhuanlan.zhihu.com/p/361873583)：https://github.com/d-li14/efficientnetv2.pytorch
 
 ## Optical Character Recognition (光學文字識別)
 
 **[針對物件或場景影像進行分析與偵測](https://www.twman.org/AI/CV)**
 - 2025-06-05：[MonkeyOCR](https://deepwiki.com/Yuliang-Liu/MonkeyOCR)；[Document Parsing with a Structure-Recognition-Relation Triplet Paradigm](https://www.alphaxiv.org/overview/2506.05218)
+- 2025-05-21：[PaddleOCR 3.0](https://github.com/PaddlePaddle/PaddleOCR/tree/release/3.0)；[OCR精準度躍升13%，支援多語種、手寫體與高精準度文件解析](https://zhuanlan.zhihu.com/p/1908447391784342470)
 - 2025-03-05：[PP-DocBee](https://github.com/PaddlePaddle/PaddleMIX/tree/develop/deploy/ppdocbee)：[百度推出文件影像理解PP-DocBee](https://zhuanlan.zhihu.com/p/28715553656)
 - 2025-03-03：[olmocr](https://github.com/allenai/olmocr)：[🚀本地部署最强OCR大模型olmOCR！支持结构化精准提取复杂PDF文件内容！](https://www.aivi.fyi/llms/deploy-olmOCR)
 - 2025-02-05：[MinerU](https://github.com/opendatalab/MinerU)：[將PDF轉換為機器可讀格式的神器](https://mp.weixin.qq.com/s/ci5wp6gICTCtaRZfn5yWUQ)
