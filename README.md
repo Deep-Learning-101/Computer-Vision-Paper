@@ -91,6 +91,7 @@
 # Computer Vision (電腦視覺)
 
 ## Anomaly Detection (異常檢測)
+- 2025-06-13：[One-to-Normal Anomaly Personalization](https://www.alphaxiv.org/abs/2502.01201)；[少樣本異常辨識新突破，擴散模型協助精準偵測](https://zhuanlan.zhihu.com/p/1916799842879018831)
 - 2025-05-15：[AdaptCLIP: Adapting CLIP for Universal Visual Anomaly Detection](https://www.alphaxiv.org/overview/2407.15795)；[Github](https://github.com/aiiu-lab/AdaptCLIP)；[騰訊開源AdaptCLIP 模型刷新多領域SOTA](https://mp.weixin.qq.com/s/w5x6T18aSZt9jxqMIdf-Yg)
 - 2025-05-05：[Detect, Classify, Act: Categorizing Industrial Anomalies with Multi-Modal Large Language Models](https://www.alphaxiv.org/zh/overview/2505.02626)；[DeepWiki](https://deepwiki.com/Sassanmtr/VELM)；[數據集](https://www.mvtec.com/company/research/datasets/mvtec-ad)
 - 2025-04-27：[AnomalyCLIP: Object-agnostic Prompt Learning for Zero-shot Anomaly Detection](https://www.alphaxiv.org/overview/2310.18961)；[DeepWiki](https://deepwiki.com/zqhang/AnomalyCLIP)
@@ -106,6 +107,8 @@
 - 2025-03-14：[Falcon: A Remote Sensing Vision-Language Foundation Model](https://www.alphaxiv.org/abs/2503.11070)；[DeepWiki](https://deepwiki.com/TianHuiLab/Falcon)
 
 ## Segmentation (圖像分割)
+- [RemoteSAM](https://www.alphaxiv.org/abs/2505.18022v3)：[Towards Segment Anything for Earth Observation](https://deepwiki.com/1e12Leon/RemoteSAM)
+- [InstructSAM](https://voyagerxvoyagerx.github.io/InstructSAM/)：[A Training-Free Framework for Instruction-Oriented Remote Sensing Object Recognition](https://www.alphaxiv.org/zh/overview/2505.15818v1)；[DeepWiki](https://deepwiki.com/VoyagerXvoyagerx/InstructSAM)
 - [RESAnything: Attribute Prompting for Arbitrary Referring Segmentation](https://www.alphaxiv.org/abs/2505.02867)；[Project](https://suikei-wang.github.io/RESAnything/)
 - [CVPR 2025, Segment Any Motion in Videos, Segment Any Motion in Videos](https://www.alphaxiv.org/zh/overview/2503.22268)；[Github](https://github.com/nnanhuang/SegAnyMo)
 - [CVPR 2025 Highlight, Exact: Exploring Space-Time Perceptive Clues for Weakly Supervised Satellite Image Time Series Semantic Segmentation](https://www.alphaxiv.org/zh/overview/2412.03968)；[Github](https://github.com/MiSsU-HH/Exact)；[Exact：基於遙感影像時間序列弱監督學習的作物提取方法](https://zhuanlan.zhihu.com/p/38754229963)
