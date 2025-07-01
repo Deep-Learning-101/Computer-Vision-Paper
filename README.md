@@ -92,6 +92,7 @@
 
 ## Anomaly Detection (異常檢測)
 - 2025-06-13：[One-to-Normal Anomaly Personalization](https://www.alphaxiv.org/abs/2502.01201)；[少樣本異常辨識新突破，擴散模型協助精準偵測](https://zhuanlan.zhihu.com/p/1916799842879018831)
+- 2025-06-06：[CVPR2025, Dual-Interrelated Diffusion Model for Few-Shot Anomaly Image Generation](https://www.alphaxiv.org/abs/2408.13509v3)；[以大模型檢測工業品異常，復旦騰訊優圖新演算法入選CVPR 2025](https://www.qbitai.com/2025/06/291359.html)
 - 2025-05-15：[AdaptCLIP: Adapting CLIP for Universal Visual Anomaly Detection](https://www.alphaxiv.org/overview/2407.15795)；[Github](https://github.com/aiiu-lab/AdaptCLIP)；[騰訊開源AdaptCLIP 模型刷新多領域SOTA](https://mp.weixin.qq.com/s/w5x6T18aSZt9jxqMIdf-Yg)
 - 2025-05-05：[Detect, Classify, Act: Categorizing Industrial Anomalies with Multi-Modal Large Language Models](https://www.alphaxiv.org/zh/overview/2505.02626)；[DeepWiki](https://deepwiki.com/Sassanmtr/VELM)；[數據集](https://www.mvtec.com/company/research/datasets/mvtec-ad)
 - 2025-04-27：[AnomalyCLIP: Object-agnostic Prompt Learning for Zero-shot Anomaly Detection](https://www.alphaxiv.org/overview/2310.18961)；[DeepWiki](https://deepwiki.com/zqhang/AnomalyCLIP)
@@ -101,12 +102,14 @@
 
 ## Object Detection (目標偵測)
 - [AAAI2025, Multi-clue Consistency Learning to Bridge Gaps Between General and Oriented Object in Semi-supervised Detection](https://www.alphaxiv.org/abs/2407.05909)；[Github](https://github.com/facias914/sood-mcl)；[AAAI2025 一個遙感半監督目標偵測（半監督旋轉目標偵測）方法](https://zhuanlan.zhihu.com/p/26788012528)
+- 2025-06-18：[CountVid: Open-World Object Counting in Videos](https://www.alphaxiv.org/abs/2506.15368)；[牛津大學開源類別無關的影片目標計數，影片中也能「指哪數哪」](https://mp.weixin.qq.com/s/hICrrfEgriyktoIxnbjPEQ)
 - 2025-06-15：[GeoPix](https://github.com/Norman-Ou/GeoPix)；[像素級遙感多模態大模型](https://3slab.pku.edu.cn/info/1026/2121.htm)
 - 2025-05-30：[GeoVision Labeler](https://deepwiki.com/microsoft/geo-vision-labeler)；[Zero-Shot Geospatial Classification with Vision and Language Models](https://www.alphaxiv.org/abs/2505.24340v1)；[微軟開源GeoVision Labeler零樣本分類框架，攻克複雜遙感場景分類](https://mp.weixin.qq.com/s/HMOW9Tha3s0CEZ6DtCXeiQ)
 - 2025-05-23：[VisionReasoner](https://github.com/dvlab-research/VisionReasoner)；[偵測、分割、計數、問答全拿下？對標Qwen2.5-VL！ VisionReasoner用強化學習統一視覺感知與推理](https://mp.weixin.qq.com/s/vECz3i_-dzvlDr3BdRLPWQ)
 - 2025-03-14：[Falcon: A Remote Sensing Vision-Language Foundation Model](https://www.alphaxiv.org/abs/2503.11070)；[DeepWiki](https://deepwiki.com/TianHuiLab/Falcon)
 
 ## Segmentation (圖像分割)
+- 2025-06-21：[Perceive Anything Model：Recognize, Explain, Caption, and Segment Anything in Images and Videos](https://www.alphaxiv.org/zh/overview/2506.05302v1)；[對標SAM2 + LLM融合版！港中文開源感知一切模型與百萬級影像描述資料集：辨識、解釋、描述、分割一體化輸出](https://zhuanlan.zhihu.com/p/1919709726209446971)
 - [RemoteSAM](https://www.alphaxiv.org/abs/2505.18022v3)：[Towards Segment Anything for Earth Observation](https://deepwiki.com/1e12Leon/RemoteSAM)
 - [InstructSAM](https://voyagerxvoyagerx.github.io/InstructSAM/)：[A Training-Free Framework for Instruction-Oriented Remote Sensing Object Recognition](https://www.alphaxiv.org/zh/overview/2505.15818v1)；[DeepWiki](https://deepwiki.com/VoyagerXvoyagerx/InstructSAM)
 - [RESAnything: Attribute Prompting for Arbitrary Referring Segmentation](https://www.alphaxiv.org/abs/2505.02867)；[Project](https://suikei-wang.github.io/RESAnything/)
