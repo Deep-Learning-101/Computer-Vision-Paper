@@ -91,18 +91,23 @@
 # Computer Vision (電腦視覺)
 
 ## Anomaly Detection (異常檢測)
+- 2025-07-16：[CostFilter-AD](https://github.com/ZHE-SAPI/CostFilter-AD)；[刷新無監督異常檢測上限！ CostFilter-AD：首個即插即用的代價濾波for異常檢測範式](https://zhuanlan.zhihu.com/p/1928870223529882075)
+- 2025-07-07：[CVPR 2025 異常檢測論文總結](https://zhuanlan.zhihu.com/p/30204993641)
 - 2025-06-13：[One-to-Normal Anomaly Personalization](https://www.alphaxiv.org/abs/2502.01201)；[少樣本異常辨識新突破，擴散模型協助精準偵測](https://zhuanlan.zhihu.com/p/1916799842879018831)
 - 2025-06-06：[CVPR2025, Dual-Interrelated Diffusion Model for Few-Shot Anomaly Image Generation](https://www.alphaxiv.org/abs/2408.13509v3)；[以大模型檢測工業品異常，復旦騰訊優圖新演算法入選CVPR 2025](https://www.qbitai.com/2025/06/291359.html)
 - 2025-05-15：[AdaptCLIP: Adapting CLIP for Universal Visual Anomaly Detection](https://www.alphaxiv.org/overview/2407.15795)；[Github](https://github.com/aiiu-lab/AdaptCLIP)；[騰訊開源AdaptCLIP 模型刷新多領域SOTA](https://mp.weixin.qq.com/s/w5x6T18aSZt9jxqMIdf-Yg)
 - 2025-05-05：[Detect, Classify, Act: Categorizing Industrial Anomalies with Multi-Modal Large Language Models](https://www.alphaxiv.org/zh/overview/2505.02626)；[DeepWiki](https://deepwiki.com/Sassanmtr/VELM)；[數據集](https://www.mvtec.com/company/research/datasets/mvtec-ad)
 - 2025-04-27：[AnomalyCLIP: Object-agnostic Prompt Learning for Zero-shot Anomaly Detection](https://www.alphaxiv.org/overview/2310.18961)；[DeepWiki](https://deepwiki.com/zqhang/AnomalyCLIP)
-- 2025-04-26：[PaDim](https://www.alphaxiv.org/zh/overview/2011.08785)；[DeepWiki](https://deepwiki.com/xiahaifeng1995/PaDiM-Anomaly-Detection-Localization-master)  
+- 2025-04-26：[PaDim](https://www.alphaxiv.org/zh/overview/2011.08785)；[DeepWiki](https://deepwiki.com/xiahaifeng1995/PaDiM-Anomaly-Detection-Localization-master)
 - 2025-04-12：[Anomaly-Aware CLIP, AA-CLIP: Enhancing Zero-shot Anomaly Detection via Anomaly-Aware CLIP](https://www.alphaxiv.org/zh/overview/2503.06661)；[DeepWiki](https://deepwiki.com/Mwxinnn/AA-CLIP)
+- 2025-03-25：[Dinomaly](https://github.com/guojiajeremy/Dinomaly)；[無監督異常檢測（Unsupervised Anomaly Detection，UAD）](https://zhuanlan.zhihu.com/p/1886364053259146390)
+
 
 
 ## Object Detection (目標偵測)
 - [AAAI2025, Multi-clue Consistency Learning to Bridge Gaps Between General and Oriented Object in Semi-supervised Detection](https://www.alphaxiv.org/abs/2407.05909)；[Github](https://github.com/facias914/sood-mcl)；[AAAI2025 一個遙感半監督目標偵測（半監督旋轉目標偵測）方法](https://zhuanlan.zhihu.com/p/26788012528)
 - 2025-06-18：[CountVid: Open-World Object Counting in Videos](https://www.alphaxiv.org/abs/2506.15368)；[牛津大學開源類別無關的影片目標計數，影片中也能「指哪數哪」](https://mp.weixin.qq.com/s/hICrrfEgriyktoIxnbjPEQ)
+- 2025-07-24：[OV-DINO](https://github.com/wanghao9610/OV-DINO)；[開源工業開放詞彙目標偵測](https://mp.weixin.qq.com/s/gLAVYFAH_39gT4XC0zWN0A)
 - 2025-06-15：[GeoPix](https://github.com/Norman-Ou/GeoPix)；[像素級遙感多模態大模型](https://3slab.pku.edu.cn/info/1026/2121.htm)
 - 2025-05-30：[GeoVision Labeler](https://deepwiki.com/microsoft/geo-vision-labeler)；[Zero-Shot Geospatial Classification with Vision and Language Models](https://www.alphaxiv.org/abs/2505.24340v1)；[微軟開源GeoVision Labeler零樣本分類框架，攻克複雜遙感場景分類](https://mp.weixin.qq.com/s/HMOW9Tha3s0CEZ6DtCXeiQ)
 - 2025-05-23：[VisionReasoner](https://github.com/dvlab-research/VisionReasoner)；[偵測、分割、計數、問答全拿下？對標Qwen2.5-VL！ VisionReasoner用強化學習統一視覺感知與推理](https://mp.weixin.qq.com/s/vECz3i_-dzvlDr3BdRLPWQ)
@@ -130,7 +135,26 @@
 - [SAM2-Adapter](https://github.com/tianrun-chen/SAM-Adapter-PyTorch)：[SAM 2無法分割一切？ SAM2-Adapter：首次讓SAM 2在下游任務適應調校！](https://mp.weixin.qq.com/s/3z-LshKAgbSzNCzyoLOuag)
 - [SAM2Point](https://github.com/ZiyuGuo99/SAM2Point)：[可提示3D 分割研究里程碑！ SAM2Point：SAM2加持可泛化任3D場景、任意提示！](https://mp.weixin.qq.com/s/TnTK5UE7O_hcrNzloxBmAw)
 
+## Optical Character Recognition (光學文字識別)
 
+**[針對物件或場景影像進行分析與偵測](https://www.twman.org/AI/CV)**  
+
+- 2025-08-03：[dots.ocr](https://github.com/rednote-hilab/dots.ocr)；[本地部署1.7B參數超強OCR大模型dots.ocr！超越GPT-4o和olmOCR](https://zhuanlan.zhihu.com/p/1935120171573413613)
+- 2025-06-05：[MonkeyOCR](https://deepwiki.com/Yuliang-Liu/MonkeyOCR)；[Document Parsing with a Structure-Recognition-Relation Triplet Paradigm](https://www.alphaxiv.org/overview/2506.05218)
+- 2025-05-21：[PaddleOCR 3.0](https://github.com/PaddlePaddle/PaddleOCR/tree/release/3.0)；[OCR精準度躍升13%，支援多語種、手寫體與高精準度文件解析](https://zhuanlan.zhihu.com/p/1908447391784342470)
+- 2025-03-05：[PP-DocBee](https://github.com/PaddlePaddle/PaddleMIX/tree/develop/deploy/ppdocbee)：[百度推出文件影像理解PP-DocBee](https://zhuanlan.zhihu.com/p/28715553656)
+- 2025-03-03：[olmocr](https://github.com/allenai/olmocr)：[🚀本地部署最强OCR大模型olmOCR！支持结构化精准提取复杂PDF文件内容！](https://www.aivi.fyi/llms/deploy-olmOCR)
+- 2025-02-05：[MinerU](https://github.com/opendatalab/MinerU)：[將PDF轉換為機器可讀格式的神器](https://mp.weixin.qq.com/s/ci5wp6gICTCtaRZfn5yWUQ)
+- 2024-12-15：[markitdown](https://github.com/microsoft/markitdown)
+- 2024-09-22：[OCR2.0时代-GOT来啦！](https://mp.weixin.qq.com/s/W-Ult-F3pU6Wvx3fHEN8yA)
+- 2024-09-11：[GOT-OCR-2.0模型开源](https://mp.weixin.qq.com/s/rQL-Q0TGhT6e8Ti4zZalrg)
+- 2024-08-20：[萬物皆可AI化！剛開源就有12000人圍觀的OCR 掃描PDF 開源工具！還可轉換為MarkDown！](https://www.53ai.com/news/MultimodalLargeModel/2024082059736.html)
+- [advancedliteratemachinery/OCR/OmniParser](https://github.com/AlibabaResearch/AdvancedLiterateMachinery/tree/main/OCR/OmniParser)
+- 2024-10-29：[Alibaba出品:OmniParser通用文檔複雜場景下OCR抽取](https://mp.weixin.qq.com/s/_1Aatpna7poIVRhfYk4aAQ)
+- [RapidOCR](https://github.com/RapidAI/RapidOCR/blob/main/docs/README_zh.md)
+- [12個流行的開源免費OCR項目](https://mp.weixin.qq.com/s/7EuhnQedAX6injBL_Dg_sQ)
+- [用PaddleOCR的PPOCRLabel來微調醫療診斷書和收據](https://blog.twman.org/2023/07/wsl.html)
+- [TableStructureRec: 表格結構辨識推理庫來了](https://zhuanlan.zhihu.com/p/668484933)：https://github.com/RapidAI/TableStructureRec
 
 ## Diffusion model (擴散模型)
 
@@ -190,25 +214,6 @@
 - [2040張圖片訓練出的ViT，準確率96.7%，連遷移表現都令人驚訝](https://zhuanlan.zhihu.com/p/463608959)
 - [Swin Transformer: 用CNN的方式打敗CNN](https://zhuanlan.zhihu.com/p/362690149)：https://github.com/microsoft/Swin-Transformer
 - [EfficientNetV2震撼發布！更小的模型，更快的訓練](https://zhuanlan.zhihu.com/p/361873583)：https://github.com/d-li14/efficientnetv2.pytorch
-
-## Optical Character Recognition (光學文字識別)
-
-**[針對物件或場景影像進行分析與偵測](https://www.twman.org/AI/CV)**
-- 2025-06-05：[MonkeyOCR](https://deepwiki.com/Yuliang-Liu/MonkeyOCR)；[Document Parsing with a Structure-Recognition-Relation Triplet Paradigm](https://www.alphaxiv.org/overview/2506.05218)
-- 2025-05-21：[PaddleOCR 3.0](https://github.com/PaddlePaddle/PaddleOCR/tree/release/3.0)；[OCR精準度躍升13%，支援多語種、手寫體與高精準度文件解析](https://zhuanlan.zhihu.com/p/1908447391784342470)
-- 2025-03-05：[PP-DocBee](https://github.com/PaddlePaddle/PaddleMIX/tree/develop/deploy/ppdocbee)：[百度推出文件影像理解PP-DocBee](https://zhuanlan.zhihu.com/p/28715553656)
-- 2025-03-03：[olmocr](https://github.com/allenai/olmocr)：[🚀本地部署最强OCR大模型olmOCR！支持结构化精准提取复杂PDF文件内容！](https://www.aivi.fyi/llms/deploy-olmOCR)
-- 2025-02-05：[MinerU](https://github.com/opendatalab/MinerU)：[將PDF轉換為機器可讀格式的神器](https://mp.weixin.qq.com/s/ci5wp6gICTCtaRZfn5yWUQ)
-- 2024-12-15：[markitdown](https://github.com/microsoft/markitdown)
-- 2024-09-22：[OCR2.0时代-GOT来啦！](https://mp.weixin.qq.com/s/W-Ult-F3pU6Wvx3fHEN8yA)
-- 2024-09-11：[GOT-OCR-2.0模型开源](https://mp.weixin.qq.com/s/rQL-Q0TGhT6e8Ti4zZalrg)
-- 2024-08-20：[萬物皆可AI化！剛開源就有12000人圍觀的OCR 掃描PDF 開源工具！還可轉換為MarkDown！](https://www.53ai.com/news/MultimodalLargeModel/2024082059736.html)
-- [advancedliteratemachinery/OCR/OmniParser](https://github.com/AlibabaResearch/AdvancedLiterateMachinery/tree/main/OCR/OmniParser)
-- 2024-10-29：[Alibaba出品:OmniParser通用文檔複雜場景下OCR抽取](https://mp.weixin.qq.com/s/_1Aatpna7poIVRhfYk4aAQ)
-- [RapidOCR](https://github.com/RapidAI/RapidOCR/blob/main/docs/README_zh.md)
-- [12個流行的開源免費OCR項目](https://mp.weixin.qq.com/s/7EuhnQedAX6injBL_Dg_sQ)
-- [用PaddleOCR的PPOCRLabel來微調醫療診斷書和收據](https://blog.twman.org/2023/07/wsl.html)
-- [TableStructureRec: 表格結構辨識推理庫來了](https://zhuanlan.zhihu.com/p/668484933)：https://github.com/RapidAI/TableStructureRec
 
 ## Document Understanding (文件理解)
 
