@@ -88,33 +88,45 @@
 
 ---
 
-# Computer Vision (電腦視覺)
 
-## Anomaly Detection (異常檢測)
-- 2025-07-16：[CostFilter-AD](https://github.com/ZHE-SAPI/CostFilter-AD)；[刷新無監督異常檢測上限！ CostFilter-AD：首個即插即用的代價濾波for異常檢測範式](https://zhuanlan.zhihu.com/p/1928870223529882075)
-- 2025-07-07：[CVPR 2025 異常檢測論文總結](https://zhuanlan.zhihu.com/p/30204993641)
-- 2025-06-13：[One-to-Normal Anomaly Personalization](https://www.alphaxiv.org/abs/2502.01201)；[少樣本異常辨識新突破，擴散模型協助精準偵測](https://zhuanlan.zhihu.com/p/1916799842879018831)
-- 2025-06-06：[CVPR2025, Dual-Interrelated Diffusion Model for Few-Shot Anomaly Image Generation](https://www.alphaxiv.org/abs/2408.13509v3)；[以大模型檢測工業品異常，復旦騰訊優圖新演算法入選CVPR 2025](https://www.qbitai.com/2025/06/291359.html)
-- 2025-05-15：[AdaptCLIP: Adapting CLIP for Universal Visual Anomaly Detection](https://www.alphaxiv.org/overview/2407.15795)；[Github](https://github.com/aiiu-lab/AdaptCLIP)；[騰訊開源AdaptCLIP 模型刷新多領域SOTA](https://mp.weixin.qq.com/s/w5x6T18aSZt9jxqMIdf-Yg)
+### **文章目錄**
+- [Anomaly Detection](#anomalydetection)
+- [Object Detection](#objectdetection)
+- [Segmentation](#segmentation)
+- [OCR](#ocr)
+- [Diffusion model (擴散模型)](#diffusion-model-擴散模型)
+- [Digital Human (虛擬數字人)](#digital-human-虛擬數字人)
+
+
+# CV
+Computer Vision (電腦視覺)
+
+## AnomalyDetection
+**Anomaly Detection，異常檢測**
+
+- 2025-07-16：[CostFilter-AD：Enhancing Anomaly Detection through Matching Cost Filtering](https://github.com/ZHE-SAPI/CostFilter-AD)；[刷新無監督異常檢測上限！ CostFilter-AD：首個即插即用的代價濾波for異常檢測範式](https://zhuanlan.zhihu.com/p/1928870223529882075)
+- 2025-06-13：[One-to-Normal：Anomaly Personalization](https://www.alphaxiv.org/abs/2502.01201)；[少樣本異常辨識新突破，擴散模型協助精準偵測](https://zhuanlan.zhihu.com/p/1916799842879018831)
+- 2025-06-06：[CVPR2025, *DualAnoDiff*：Dual-Interrelated Diffusion Model for Few-Shot Anomaly Image Generation](https://www.alphaxiv.org/abs/2408.13509v3)；[以大模型檢測工業品異常，復旦騰訊優圖新演算法入選CVPR 2025](https://www.qbitai.com/2025/06/291359.html)
+- 2025-05-15：[**AdaptCLIP**: Adapting CLIP for Universal Visual Anomaly Detection](https://www.alphaxiv.org/overview/2407.15795)；[Github](https://github.com/aiiu-lab/AdaptCLIP)；[騰訊開源AdaptCLIP 模型刷新多領域SOTA](https://mp.weixin.qq.com/s/w5x6T18aSZt9jxqMIdf-Yg)
 - 2025-05-05：[Detect, Classify, Act: Categorizing Industrial Anomalies with Multi-Modal Large Language Models](https://www.alphaxiv.org/zh/overview/2505.02626)；[DeepWiki](https://deepwiki.com/Sassanmtr/VELM)；[數據集](https://www.mvtec.com/company/research/datasets/mvtec-ad)
-- 2025-04-27：[AnomalyCLIP: Object-agnostic Prompt Learning for Zero-shot Anomaly Detection](https://www.alphaxiv.org/overview/2310.18961)；[DeepWiki](https://deepwiki.com/zqhang/AnomalyCLIP)
+- 2025-04-27：[**AnomalyCLIP**: Object-agnostic Prompt Learning for Zero-shot Anomaly Detection](https://www.alphaxiv.org/overview/2310.18961)；[DeepWiki](https://deepwiki.com/zqhang/AnomalyCLIP)
 - 2025-04-26：[PaDim](https://www.alphaxiv.org/zh/overview/2011.08785)；[DeepWiki](https://deepwiki.com/xiahaifeng1995/PaDiM-Anomaly-Detection-Localization-master)
-- 2025-04-12：[Anomaly-Aware CLIP, AA-CLIP: Enhancing Zero-shot Anomaly Detection via Anomaly-Aware CLIP](https://www.alphaxiv.org/zh/overview/2503.06661)；[DeepWiki](https://deepwiki.com/Mwxinnn/AA-CLIP)
-- 2025-03-25：[Dinomaly](https://github.com/guojiajeremy/Dinomaly)；[無監督異常檢測（Unsupervised Anomaly Detection，UAD）](https://zhuanlan.zhihu.com/p/1886364053259146390)
+- 2025-04-12：[Anomaly-Aware CLIP, **AA-CLIP**: Enhancing Zero-shot Anomaly Detection via Anomaly-Aware CLIP](https://www.alphaxiv.org/zh/overview/2503.06661)；[DeepWiki](https://deepwiki.com/Mwxinnn/AA-CLIP)
+- 2025-03-25：[**Dinomaly**：The Less Is More Philosophy in Multi-Class Unsupervised Anomaly Detection](https://github.com/guojiajeremy/Dinomaly)；[無監督異常檢測（Unsupervised Anomaly Detection，UAD）](https://zhuanlan.zhihu.com/p/1886364053259146390)
 
-
-
-## Object Detection (目標偵測)
+## ObjectDetection
+**Object Detection (目標偵測)**
 - [AAAI2025, Multi-clue Consistency Learning to Bridge Gaps Between General and Oriented Object in Semi-supervised Detection](https://www.alphaxiv.org/abs/2407.05909)；[Github](https://github.com/facias914/sood-mcl)；[AAAI2025 一個遙感半監督目標偵測（半監督旋轉目標偵測）方法](https://zhuanlan.zhihu.com/p/26788012528)
-- 2025-06-18：[CountVid: Open-World Object Counting in Videos](https://www.alphaxiv.org/abs/2506.15368)；[牛津大學開源類別無關的影片目標計數，影片中也能「指哪數哪」](https://mp.weixin.qq.com/s/hICrrfEgriyktoIxnbjPEQ)
 - 2025-07-24：[OV-DINO](https://github.com/wanghao9610/OV-DINO)；[開源工業開放詞彙目標偵測](https://mp.weixin.qq.com/s/gLAVYFAH_39gT4XC0zWN0A)
+- 2025-06-18：[CountVid: Open-World Object Counting in Videos](https://www.alphaxiv.org/abs/2506.15368)；[牛津大學開源類別無關的影片目標計數，影片中也能「指哪數哪」](https://mp.weixin.qq.com/s/hICrrfEgriyktoIxnbjPEQ)
 - 2025-06-15：[GeoPix](https://github.com/Norman-Ou/GeoPix)；[像素級遙感多模態大模型](https://3slab.pku.edu.cn/info/1026/2121.htm)
-- 2025-05-30：[GeoVision Labeler](https://deepwiki.com/microsoft/geo-vision-labeler)；[Zero-Shot Geospatial Classification with Vision and Language Models](https://www.alphaxiv.org/abs/2505.24340v1)；[微軟開源GeoVision Labeler零樣本分類框架，攻克複雜遙感場景分類](https://mp.weixin.qq.com/s/HMOW9Tha3s0CEZ6DtCXeiQ)
 - 2025-05-23：[VisionReasoner](https://github.com/dvlab-research/VisionReasoner)；[偵測、分割、計數、問答全拿下？對標Qwen2.5-VL！ VisionReasoner用強化學習統一視覺感知與推理](https://mp.weixin.qq.com/s/vECz3i_-dzvlDr3BdRLPWQ)
 - 2025-03-14：[Falcon: A Remote Sensing Vision-Language Foundation Model](https://www.alphaxiv.org/abs/2503.11070)；[DeepWiki](https://deepwiki.com/TianHuiLab/Falcon)
+ 
 
-## Segmentation (圖像分割)
-- 2025-06-21：[Perceive Anything Model：Recognize, Explain, Caption, and Segment Anything in Images and Videos](https://www.alphaxiv.org/zh/overview/2506.05302v1)；[對標SAM2 + LLM融合版！港中文開源感知一切模型與百萬級影像描述資料集：辨識、解釋、描述、分割一體化輸出](https://zhuanlan.zhihu.com/p/1919709726209446971)
+## Segmentation
+**Segmentation (圖像分割)**
+- [Perceive Anything Model：Recognize, Explain, Caption, and Segment Anything in Images and Videos](https://www.alphaxiv.org/zh/overview/2506.05302v1)；[對標SAM2 + LLM融合版！港中文開源感知一切模型與百萬級影像描述資料集：辨識、解釋、描述、分割一體化輸出](https://zhuanlan.zhihu.com/p/1919709726209446971)
 - [RemoteSAM](https://www.alphaxiv.org/abs/2505.18022v3)：[Towards Segment Anything for Earth Observation](https://deepwiki.com/1e12Leon/RemoteSAM)
 - [InstructSAM](https://voyagerxvoyagerx.github.io/InstructSAM/)：[A Training-Free Framework for Instruction-Oriented Remote Sensing Object Recognition](https://www.alphaxiv.org/zh/overview/2505.15818v1)；[DeepWiki](https://deepwiki.com/VoyagerXvoyagerx/InstructSAM)
 - [RESAnything: Attribute Prompting for Arbitrary Referring Segmentation](https://www.alphaxiv.org/abs/2505.02867)；[Project](https://suikei-wang.github.io/RESAnything/)
@@ -135,11 +147,11 @@
 - [SAM2-Adapter](https://github.com/tianrun-chen/SAM-Adapter-PyTorch)：[SAM 2無法分割一切？ SAM2-Adapter：首次讓SAM 2在下游任務適應調校！](https://mp.weixin.qq.com/s/3z-LshKAgbSzNCzyoLOuag)
 - [SAM2Point](https://github.com/ZiyuGuo99/SAM2Point)：[可提示3D 分割研究里程碑！ SAM2Point：SAM2加持可泛化任3D場景、任意提示！](https://mp.weixin.qq.com/s/TnTK5UE7O_hcrNzloxBmAw)
 
-## Optical Character Recognition (光學文字識別)
+- [Optical Character Recognition，光學文字識別](#OCR)
 
-**[針對物件或場景影像進行分析與偵測](https://www.twman.org/AI/CV)**  
-
-- 2025-08-03：[dots.ocr](https://github.com/rednote-hilab/dots.ocr)；[本地部署1.7B參數超強OCR大模型dots.ocr！超越GPT-4o和olmOCR](https://zhuanlan.zhihu.com/p/1935120171573413613)
+## OCR
+**Optical Character Recognition (光學文字識別)**  
+**[針對物件或場景影像進行分析與偵測](https://www.twman.org/AI/CV)**
 - 2025-06-05：[MonkeyOCR](https://deepwiki.com/Yuliang-Liu/MonkeyOCR)；[Document Parsing with a Structure-Recognition-Relation Triplet Paradigm](https://www.alphaxiv.org/overview/2506.05218)
 - 2025-05-21：[PaddleOCR 3.0](https://github.com/PaddlePaddle/PaddleOCR/tree/release/3.0)；[OCR精準度躍升13%，支援多語種、手寫體與高精準度文件解析](https://zhuanlan.zhihu.com/p/1908447391784342470)
 - 2025-03-05：[PP-DocBee](https://github.com/PaddlePaddle/PaddleMIX/tree/develop/deploy/ppdocbee)：[百度推出文件影像理解PP-DocBee](https://zhuanlan.zhihu.com/p/28715553656)
@@ -157,10 +169,9 @@
 - [TableStructureRec: 表格結構辨識推理庫來了](https://zhuanlan.zhihu.com/p/668484933)：https://github.com/RapidAI/TableStructureRec
 
 ## Diffusion model (擴散模型)
-
 - 2025-05-28：[視覺理解&生成大一統模型 Jodi](https://vipl-genun.github.io/Project-Jodi/)；[alphaXiv](https://www.alphaxiv.org/zh/overview/2505.19084)
 - 2025-05-27：[AnomalyAny](https://hansunhayden.github.io/AnomalyAny.github.io/)；[CVPR2025｜突破資料瓶頸！ Stable Diffusion 協助視覺異常檢測，無需訓練即可產生真實多樣異常樣本](https://zhuanlan.zhihu.com/p/1910284073231942689)
-- 2025-05-23：[HivisionIDPhotos －智慧證件照產生神器](https://deepwiki.com/Zeyi-Lin/HivisionIDPhotos)；[AI證件照，摳圖、換背景、任意尺寸](https://zhuanlan.zhihu.com/p/718725351)
+- 2025-05-23：[HivisionIDPhotos，智慧證件照產生神器](https://deepwiki.com/Zeyi-Lin/HivisionIDPhotos)；[AI證件照，摳圖、換背景、任意尺寸](https://zhuanlan.zhihu.com/p/718725351)
 - 2025-05-19：[Index-AniSora](https://deepwiki.com/bilibili/Index-anisora)；[Aligning Anime Video Generation with Human Feedback](https://www.alphaxiv.org/overview/2504.10044)；[B站開源SOTA動畫影片生成模型Index-AniSora！](https://zhuanlan.zhihu.com/p/1908150671540224717)
 - 2025-04-26：[Insert Anything](https://www.alphaxiv.org/zh/overview/2504.15009)；[DeepWiki](https://deepwiki.com/song-wensong/insert-anything)  
 - 2025-04-24：[字節Phantom](https://github.com/Phantom-video/Phantom)：[1280x720影片生成革命！位元組Phantom模型實測：10G顯存效果不輸某靈付費版](https://zhuanlan.zhihu.com/p/1898688574477545694)
