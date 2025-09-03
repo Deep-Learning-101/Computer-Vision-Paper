@@ -152,7 +152,7 @@ Computer Vision (電腦視覺)
 ## OCR
 **Optical Character Recognition (光學文字識別)**  
 **[針對物件或場景影像進行分析與偵測](https://www.twman.org/AI/CV)**
-- [2025-08-18]：[DianJin-OCR-R1](https://github.com/aliyun/qwen-dianjin)；[點金OCR-R1，模糊蓋章、跨頁表格、文字幻覺全拿下！](https://mp.weixin.qq.com/s/cOo0sqwDt3ARid70wBaYVA)
+- 2025-08-18：[DianJin-OCR-R1](https://github.com/aliyun/qwen-dianjin)；[點金OCR-R1，模糊蓋章、跨頁表格、文字幻覺全拿下！](https://mp.weixin.qq.com/s/cOo0sqwDt3ARid70wBaYVA)
 - 2025-07-30：[dots.ocr](https://huggingface.co/rednote-hilab/dots.ocr)；[本地部署1.7B参数超强OCR大模型dots.ocr](https://zhuanlan.zhihu.com/p/1935120171573413613)
 - 2025-06-16：[OCRFlux](https://github.com/chatdoc-com/OCRFlux)；[DEMO](https://ocrflux.pdfparser.io/#/)；[OCRFlux：一個基於LLM的複雜佈局與跨頁合併的PDF文檔解析](https://mp.weixin.qq.com/s/UgkKLYsVxrrFy-5Gn0JD-g)
 - 2025-06-05：[MonkeyOCR](https://deepwiki.com/Yuliang-Liu/MonkeyOCR)；[Document Parsing with a Structure-Recognition-Relation Triplet Paradigm](https://www.alphaxiv.org/overview/2506.05218)
