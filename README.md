@@ -104,6 +104,8 @@ Computer Vision (電腦視覺)
 ## AnomalyDetection
 **Anomaly Detection，異常檢測**
 
+-2025-09-24：[FS-SAM2: Adapting Segment Anything Model 2 for Few-Shot Semantic Segmentation via Low-Rank Adaptation](https://www.alphaxiv.org/overview/2509.12105v1)；[FS-SAM2靠SAM2+LoRA 實現效能與效率雙優](https://zread.ai/fornib/FS-SAM2)
+- 2025-09-20：[MOCHA: Multi-modal Objects-aware Cross-arcHitecture Alignment](https://www.alphaxiv.org/zh/overview/2509.14001v1)；[將大模型多模態語意注入YOLO，少樣本檢測性能大漲](https://zhuanlan.zhihu.com/p/1952054591035281418)
 - 2025-07-16：[CostFilter-AD：Enhancing Anomaly Detection through Matching Cost Filtering](https://github.com/ZHE-SAPI/CostFilter-AD)；[刷新無監督異常檢測上限！ CostFilter-AD：首個即插即用的代價濾波for異常檢測範式](https://zhuanlan.zhihu.com/p/1928870223529882075)
 - 2025-06-13：[One-to-Normal：Anomaly Personalization](https://www.alphaxiv.org/abs/2502.01201)；[少樣本異常辨識新突破，擴散模型協助精準偵測](https://zhuanlan.zhihu.com/p/1916799842879018831)
 - 2025-06-06：[CVPR2025, *DualAnoDiff*：Dual-Interrelated Diffusion Model for Few-Shot Anomaly Image Generation](https://www.alphaxiv.org/abs/2408.13509v3)；[以大模型檢測工業品異常，復旦騰訊優圖新演算法入選CVPR 2025](https://www.qbitai.com/2025/06/291359.html)
