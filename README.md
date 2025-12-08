@@ -153,6 +153,8 @@
 ## OCR
 **Optical Character Recognition (光學文字識別)**  
 **[針對物件或場景影像進行分析與偵測](https://www.twman.org/AI/CV)**
+- 2025-11-30：[HunyuanOCR](https://github.com/Tencent-Hunyuan/HunyuanOCR)；[OCR新晉頂流！騰訊混元開源1B級全能模式HunyuanOCR，效果驚艷
+- 2025-10-21：[使用開源模型強化您的 OCR 工作流程](https://huggingface.co/blog/zh/ocr-open-models)
 - 2025-08-18：[DianJin-OCR-R1](https://github.com/aliyun/qwen-dianjin)；[點金OCR-R1，模糊蓋章、跨頁表格、文字幻覺全拿下！](https://mp.weixin.qq.com/s/cOo0sqwDt3ARid70wBaYVA)
 - 2025-07-30：[dots.ocr](https://huggingface.co/rednote-hilab/dots.ocr)；[本地部署1.7B参数超强OCR大模型dots.ocr](https://zhuanlan.zhihu.com/p/1935120171573413613)
 - 2025-06-16：[OCRFlux](https://github.com/chatdoc-com/OCRFlux)；[DEMO](https://ocrflux.pdfparser.io/#/)；[OCRFlux：一個基於LLM的複雜佈局與跨頁合併的PDF文檔解析](https://mp.weixin.qq.com/s/UgkKLYsVxrrFy-5Gn0JD-g)
