@@ -95,8 +95,8 @@
 - [Object Detection](#objectdetection)
 - [Segmentation](#segmentation)
 - [OCR](#ocr)
-- [Diffusion model (擴散模型)](#diffusion-model-擴散模型)
-- [Digital Human (虛擬數字人)](#digital-human-虛擬數字人)
+- [Diffusion model (擴散模型)](#diffusion-model)
+- [Digital Human (虛擬數字人)](#digital-human)
 
 
 
