@@ -103,6 +103,10 @@
 ## AnomalyDetection
 **Anomaly Detection (異常檢測)**
 
+- 2026-01-29｜**LLM2CLIP**
+  - 說明：以大語言模型重塑跨模態表徵學習的文本基石
+  - 資源：[📄 AlphaXiv](https://www.alphaxiv.org/abs/2411.04997) | [🐙 GitHub](https://microsoft.github.io/LLM2CLIP/) | [📝 公眾號解讀](https://mp.weixin.qq.com/s/-U03e1KZmFCoXTGzdYbC0Q)
+
 - 2025-09-24｜**FS-SAM2**
   - 說明：Adapting Segment Anything Model 2 for Few-Shot Semantic Segmentation
   - 資源：[📄 AlphaXiv](https://www.alphaxiv.org/overview/2509.12105v1) | [📝 FS-SAM2 效能與效率雙優](https://zread.ai/fornib/FS-SAM2)
@@ -181,6 +185,9 @@
 ## Segmentation
 **Segmentation (圖像分割)**
 
+- **SAM 3**
+  - 資源：[🐙 GitHub](https://github.com/facebookresearch/sam3) | [📝 公眾號解讀](https://mp.weixin.qq.com/s/7uDHXQd1ES2mV4dZFB7VMw)
+
 - **Perceive Anything Model**
   - 說明：Recognize, Explain, Caption, and Segment Anything (對標 SAM2 + LLM)
   - 資源：[📄 AlphaXiv](https://www.alphaxiv.org/zh/overview/2506.05302v1) | [📝 中文解讀](https://zhuanlan.zhihu.com/p/1919709726209446971)
@@ -220,6 +227,9 @@
 
 - [使用開源模型強化您的 OCR 工作流程](https://huggingface.co/blog/zh/ocr-open-models)
 - [12個流行的開源免費OCR項目](https://mp.weixin.qq.com/s/7EuhnQedAX6injBL_Dg_sQ)
+
+- 2026-01-27 | **DeepSeek-OCR 2**
+  - 資源：[🐙 GitHub](https://github.com/deepseek-ai/DeepSeek-OCR-2/) | [🤗 HuggingFace](https://huggingface.co/deepseek-ai/DeepSeek-OCR-2) | [📝 公眾號解讀](https://mp.weixin.qq.com/s/DOm_hg6DWA_OjcsLuUQ9Hw)
 
 - 2025-11-30｜**HunyuanOCR**
   - 資源：[🐙 GitHub](https://github.com/Tencent-Hunyuan/HunyuanOCR) | [📝 騰訊混元 1B 級全能模型](https://zhuanlan.zhihu.com/p/1977498008712131326)
@@ -273,6 +283,7 @@
   - **TableStructureRec**：[🐙 GitHub](https://github.com/RapidAI/TableStructureRec) | [📝 表格結構辨識推理庫](https://zhuanlan.zhihu.com/p/668484933)
   - **PaddleOCR 教學**：[📝 用 PPOCRLabel 微調醫療診斷書和收據](https://blog.twman.org/2023/07/wsl.html)
 
+---
 
 ## Diffusion Model
 **Diffusion Model (擴散模型)**
