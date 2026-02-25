@@ -228,6 +228,9 @@
 - [使用開源模型強化您的 OCR 工作流程](https://huggingface.co/blog/zh/ocr-open-models)
 - [12個流行的開源免費OCR項目](https://mp.weixin.qq.com/s/7EuhnQedAX6injBL_Dg_sQ)
 
+- 2026-01-28 | **OpenDoc-0.1B**
+  - 資源：[🐙 GitHub](https://github.com/Topdu/OpenOCR) | [📝 公眾號解讀](https://mp.weixin.qq.com/s/TJdTLNBSgHy-3I1o98OEAQ) | [📝 公眾號解讀](https://mp.weixin.qq.com/s/2a8LruNJvHCxcuPslp0Z1Q)
+
 - 2026-01-27 | **DeepSeek-OCR 2**
   - 資源：[🐙 GitHub](https://github.com/deepseek-ai/DeepSeek-OCR-2/) | [🤗 HuggingFace](https://huggingface.co/deepseek-ai/DeepSeek-OCR-2) | [📝 公眾號解讀](https://mp.weixin.qq.com/s/DOm_hg6DWA_OjcsLuUQ9Hw)
 
@@ -363,6 +366,18 @@
 
 ## Digital Human
 **Digital Human (虛擬數字人)**
+
+- **SoulX-FlashTalk**
+  - 資源：[📝 GitHub ](https://github.com/Soul-AILab/SoulX-FlashTalk) | [📝 公眾號解讀](https://mp.weixin.qq.com/s/eArkEQco000XbA3-vGwwRw)
+
+- **FlowAct-R1**
+  - 資源：[📝 GitHub ](https://grisoon.github.io/FlowAct-R1/) | [📝 公眾號解讀](https://mp.weixin.qq.com/s/VOBYaVpOAC3AgJWKZN1tKA)
+
+- **EchoMimic V3**
+  - 資源：[📝 GitHub ](https://github.com/antgroup/echomimic_v3) | [📝 公眾號解讀](https://mp.weixin.qq.com/s/cHL-ROirvxLxJNtabke0Fg)
+
+- **PersonaLive**
+  - 資源：[📝 GitHub ](https://github.com/GVCLab/PersonaLive) | [📝 公眾號解讀](https://mp.weixin.qq.com/s/R5OXddOHsCYoGRoFJeFrZA)
 
 - **Open Avatar Chat**
   - 資源：[📝 專案介紹](https://zread.ai/HumanAIGC-Engineering/OpenAvatarChat) | [📝 GitHub 爆火神器，本地部署無套路](https://mp.weixin.qq.com/s/eNRbU4lZLgdpe_iNSNcfGA)
