@@ -1,3 +1,5 @@
+https://github.com/Deep-Learning-101/Computer-Vision-Paper
+
 <p align="center">
   <strong>Deep Learning 101, Taiwan’s pioneering and highest deep learning meetup, launched on 2016/11/11 @ 83F, Taipei 101</strong>  
 </p>
