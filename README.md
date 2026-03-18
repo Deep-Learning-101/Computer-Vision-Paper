@@ -154,7 +154,7 @@ https://github.com/Deep-Learning-101/Computer-Vision-Paper
 **Anomaly Detection，異常檢測**
 
 - 2026-01-29｜**LLM2CLIP**
-  - 說明：以大語言模型重塑跨模態表徵學習的文本基石
+  - 說明：結合大語言模型 (LLM) 強大的常識推理能力來增強 CLIP 模型的視覺表徵。解決了傳統 CLIP 在遇到罕見工業瑕疵或長尾分佈數據時容易誤判的問題，非常適合用於高精度的工業自動化光學檢測 (AOI) 與未見過異常的零樣本瑕疵檢測。
   - 資源：[📄 AlphaXiv](https://www.alphaxiv.org/abs/2411.04997) | [🐙 GitHub](https://microsoft.github.io/LLM2CLIP/) | [📝 公眾號解讀](https://mp.weixin.qq.com/s/-U03e1KZmFCoXTGzdYbC0Q)
 
 - 2025-09-24｜**FS-SAM2**
@@ -207,7 +207,7 @@ https://github.com/Deep-Learning-101/Computer-Vision-Paper
 **Object Detection (目標偵測)**
 
 - 2025｜**MCL (AAAI 2025)**
-  - 說明：Multi-clue Consistency Learning (遙感半監督目標檢測)
+  - 說明：專為無人機空拍圖與衛星遙感影像設計的半監督目標檢測框架。透過多線索一致性學習，只需極少量的標註資料，就能在超大解析度影像中精準框出微小的車輛、建築物或農作物病灶，大幅降低農業監測與國土巡檢的資料標註成本。
   - 資源：[📄 AlphaXiv](https://www.alphaxiv.org/abs/2407.05909) | [🐙 GitHub](https://github.com/facias914/sood-mcl) | [📝 中文解讀](https://zhuanlan.zhihu.com/p/26788012528)
 
 - 2025-07-24｜**OV-DINO**
@@ -215,7 +215,7 @@ https://github.com/Deep-Learning-101/Computer-Vision-Paper
   - 資源：[🐙 GitHub](https://github.com/wanghao9610/OV-DINO) | [📝 中文解讀](https://mp.weixin.qq.com/s/gLAVYFAH_39gT4XC0zWN0A)
 
 - 2025-06-18｜**CountVid**
-  - 說明：Open-World Object Counting in Videos (影片中指哪數哪)
+  - 說明：突破傳統模型只能數「特定訓練類別」的限制，支援在動態影片中透過提示 (Prompt) 實現「指哪數哪」的開放世界物件計數。極度適合應用於智慧城市的交通車流監控、大型活動的人流密度預警，或是生產線上快速移動物件的良率計算。
   - 資源：[📄 AlphaXiv](https://www.alphaxiv.org/abs/2506.15368) | [📝 中文解讀](https://mp.weixin.qq.com/s/hICrrfEgriyktoIxnbjPEQ)
 
 - 2025-06-15｜**GeoPix**
@@ -247,16 +247,16 @@ https://github.com/Deep-Learning-101/Computer-Vision-Paper
   - 資源：[📄 AlphaXiv](https://www.alphaxiv.org/abs/2505.18022v3) | [📚 DeepWiki](https://deepwiki.com/1e12Leon/RemoteSAM)
 
 - **InstructSAM**
-  - 說明：Training-Free Framework for Remote Sensing
+  - 說明：專為地球觀測 (Earth Observation) 打造的免訓練 (Training-Free) 圖像分割框架。使用者只需輸入自然語言指令（例如「框出所有的太陽能板」或「標記森林大火區域」），模型就能自動完成精準的地理圖資分割，是災防應變與都市 GIS 規劃的強大輔助工具。
   - 資源：[🌐 Project](https://voyagerxvoyagerx.github.io/InstructSAM/) | [📄 AlphaXiv](https://www.alphaxiv.org/zh/overview/2505.15818v1) | [📚 DeepWiki](https://deepwiki.com/VoyagerXvoyagerx/InstructSAM)
 
 - **SAM 2 & Variants** (SAM 2 相關變體)
   - [**Meta SAM 2**](https://ai.meta.com/sam2/): Meta 官方最新分割一切模型。
     - [📝 60行程式碼微調 SAM 2](https://mp.weixin.qq.com/s/YfgYCzvi0cXxOFIfQvE_9w)
   - [**Grounded SAM 2**](https://github.com/IDEA-Research/Grounded-SAM-2): Ground and Track Anything in Videos.
-  - [**SAM2Long**](https://github.com/Mark12Ding/SAM2Long): 港中文提出，專注於複雜長視頻分割。
+  - [**SAM2Long**](https://github.com/Mark12Ding/SAM2Long): Meta 官方的 SAM 2 在面對超過數分鐘的影片時容易丟失目標。此變體透過長效記憶體機制強化了追蹤穩定度，是影視後期特效「自動摳圖 (Rotoscoping)」的開源利器。
   - [**SAM2-Adapter**](https://github.com/tianrun-chen/SAM-Adapter-PyTorch): 首次讓 SAM 2 適應下游任務。
-  - [**SAM2Point**](https://github.com/ZiyuGuo99/SAM2Point): 可提示 3D 分割研究里程碑。
+  - [**SAM2Point**](https://github.com/ZiyuGuo99/SAM2Point): 將 SAM 2 的分割能力從 2D 圖片延伸至 3D 點雲 (Point Cloud) 數據。為自駕車的光達 (LiDAR) 感測分析與 3D 醫學影像（如 MRI/CT）分割帶來了革命性的零樣本 (Zero-shot) 處理能力。
 
 - **Other Notable Models**
   - [**SAMURAI**](https://yangchris11.github.io/samurai/): KF + SAM2 解決快速移動或自遮擋問題。
@@ -277,6 +277,7 @@ https://github.com/Deep-Learning-101/Computer-Vision-Paper
   - 資源：[🐙 GitHub](https://github.com/Topdu/OpenOCR) | [📝 公眾號解讀](https://mp.weixin.qq.com/s/TJdTLNBSgHy-3I1o98OEAQ) | [📝 公眾號解讀](https://mp.weixin.qq.com/s/2a8LruNJvHCxcuPslp0Z1Q)
 
 - 2026-01-27 | **DeepSeek-OCR 2**
+  - 說明：DeepSeek 團隊開源的新一代視覺語言模型，專精於複雜場景的高精度文字辨識。能完美應對手寫字跡、模糊掃描檔、多語系混合以及發票收據等不規則排版，是企業打造自動化財務報帳系統、或是大量紙本表單數位化的高性價比底座。
   - 資源：[🐙 GitHub](https://github.com/deepseek-ai/DeepSeek-OCR-2/) | [🤗 HuggingFace](https://huggingface.co/deepseek-ai/DeepSeek-OCR-2) | [📝 公眾號解讀](https://mp.weixin.qq.com/s/DOm_hg6DWA_OjcsLuUQ9Hw)
 
 - 2025-11-30｜**HunyuanOCR**
@@ -295,7 +296,7 @@ https://github.com/Deep-Learning-101/Computer-Vision-Paper
   - 資源：[🤗 HuggingFace](https://huggingface.co/rednote-hilab/dots.ocr) | [📝 本地部署 1.7B 超強 OCR](https://zhuanlan.zhihu.com/p/1935120171573413613)
 
 - 2025-06-16｜**OCRFlux**
-  - 說明：基於 LLM 的複雜佈局與跨頁合併 PDF 解析
+  - 說明：專治各種「反人類排版」的 PDF 解析救星！結合大語言模型 (LLM) 強大的上下文理解能力，能精準還原雙欄排版、跨頁表格與複雜的 ESG 財報數據。極度適合用來建立企業私有知識庫，或是作為 RAG (檢索增強生成) 系統的前端資料清洗管線。
   - 資源：[🐙 GitHub](https://github.com/chatdoc-com/OCRFlux) | [🌐 Demo](https://ocrflux.pdfparser.io/#/)
 
 - 2025-06-05｜**MonkeyOCR**
@@ -312,6 +313,7 @@ https://github.com/Deep-Learning-101/Computer-Vision-Paper
   - 資源：[🐙 GitHub](https://github.com/allenai/olmocr) | [📝 本地部署精準提取 PDF](https://www.aivi.fyi/llms/deploy-olmOCR)
 
 - 2025-02-05｜**MinerU**
+  - 說明：將 PDF 與網頁完美轉換為乾淨 Markdown 格式的開源神器。不僅能精準提取內文，連學術論文中的數學公式、程式碼區塊與圖表都能高保真還原，是開發者在準備大語言模型 (LLM) 預訓練語料或微調 (Fine-tuning) 數據時不可或缺的高效清洗工具。
   - 資源：[🐙 GitHub](https://github.com/opendatalab/MinerU) | [📝 PDF 轉 Markdown 神器](https://mp.weixin.qq.com/s/ci5wp6gICTCtaRZfn5yWUQ)
 
 - 2024-12-15｜**markitdown**
