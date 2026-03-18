@@ -90,20 +90,68 @@ https://github.com/Deep-Learning-101/Computer-Vision-Paper
 
 ---
 
-# Computer Vision (CV, 電腦視覺)
-
 ### **文章目錄**
-- [Anomaly Detection](#anomalydetection)
-- [Object Detection](#objectdetection)
-- [Segmentation](#segmentation)
-- [OCR](#ocr)
-- [Diffusion model (擴散模型)](#diffusion-model)
+- [Anomaly Detection (異常檢測)](#anomalydetection)
+- [Object Detection (目標偵測)](#objectdetection)
+- [Segmentation (圖像分割)](#segmentation)
+- [OCR (光學文字識別)](#ocr)
+- [Diffusion Model (擴散模型)](#diffusion-model)
 - [Digital Human (虛擬數字人)](#digital-human)
 
+---
 
+### 👁️ 2026 全球電腦視覺開源模型大全：YOLO 家族與擴散模型 (Diffusion)
+
+#### 1\. Object Detection (目標偵測與 YOLO 生態系)
+
+*目標偵測的標準幾乎由 YOLO 家族定義。此區塊整理了目前最主流的 YOLO 版本與新世代開放詞彙（Open-Vocabulary）模型。特別標註開發源頭，方便針對地緣資安需求進行選型。*
+
+**A. 國際大廠與台灣原生強權 (資安合規首選)**
+
+| 模型名稱 | 開發團隊 | 💡 核心優勢與突破點 | 🚀 推薦場景 & 規格標籤 |
+| :--- | :--- | :--- | :--- |
+| **YOLOv11** | 🇺🇸 **Ultralytics** | **全能視覺霸主**。架構大翻新，不僅做目標偵測，還原生支援實例分割、姿態辨識與旋轉邊界框 (OBB)。 | 邊緣運算、多任務視覺 AI<br>`[歐美開源]` `[多任務支援]` |
+| **YOLOv9** | 🇹🇼 **中研院 (王建堯博士團隊)** | **台灣之光！** 導入 PGI (Programmable Gradient Information) 技術，解決深層網路資訊遺失問題，參數少但準確度極高。 | 資源受限的本地端設備、瑕疵檢測<br>`[台灣開發]` `[高參數利用率]` |
+| **YOLOv8** | 🇺🇸 **Ultralytics** | **生態系最完善**。雖然不是最新，但在社群中的教學、部署套件、ONNX/TensorRT 轉換資源最為豐富。 | 工業級穩定部署、初學者專案<br>`[生態豐富]` `[極易部署]` |
+| **OV-DINO** | 🇺🇸 **國際學術界** | **開源工業開放詞彙目標檢測**。不需要預先定義好類別，直接用自然語言提示 (Prompt) 就能找出畫面中對應的物體。 | 零樣本 (Zero-shot) 偵測、通用場景<br>`[Open-Vocabulary]` `[前沿技術]` |
+
+**B. 亞洲/中國頂尖開源 (極致效能與端側特化)**
+
+| 模型名稱 | 開發團隊 | 💡 核心優勢與突破點 | 🚀 推薦場景 & 規格標籤 |
+| :--- | :--- | :--- | :--- |
+| **YOLOv10** | 🇨🇳 **清華大學** | **徹底消滅 NMS**。首次在 YOLO 家族中移除後處理的非極大值抑制 (NMS)，大幅降低推理延遲。 | 即時自動駕駛、無人機視覺<br>`[無後處理]` `[超低延遲]` |
+| **VisionReasoner** | 🇨🇳 **開源社群** | **統一視覺感知與推理**。利用強化學習技術，標榜效能可對標 Qwen2.5-VL 等大型視覺模型。 | 複雜場景理解、視覺問答<br>`[強化學習]` `[大模型對標]` |
+| **MCL** | 🇨🇳 **AAAI 2025** | **遙感影像專家**。專為空拍、衛星圖設計的半監督目標檢測框架 (Multi-clue Consistency Learning)。 | 農業監測、空拍圖分析<br>`[遙感特化]` `[半監督學習]` |
+
+-----
+
+#### 2\. Diffusion Model & Video Generation (影像生成與擴散模型)
+
+*影像生成已從單純的「文生圖 (Text-to-Image)」進化到「影片生成 (Video Generation)」與「精準控制」。本區塊區分歐美主流開源底座與亞洲大廠的高效能模型。*
+
+**A. 國際主流底座與生態系 (設計與產能主力)**
+
+| 模型/工具名稱 | 開發團隊 | 💡 核心優勢與突破點 | 🚀 推薦場景 & 規格標籤 |
+| :--- | :--- | :--- | :--- |
+| **Flux 系列** | 🇩🇪 **Black Forest Labs** | **Stable Diffusion 的真正繼承者**。目前最強大的開源生圖模型，提供 Canny/Depth/Fill 等強大控制網開發工具。 | 專業 AI 繪圖、高質量商稿生成<br>`[開源王者]` `[極致細節]` |
+| **Sana** | 🇺🇸 **NVIDIA / MIT 等** | **比 FLUX 快 100 倍！** (ICLR 2025 Oral)。導入新一代架構，大幅降低生成高清圖片所需的算力與時間。 | 實時圖像生成、低算力設備<br>`[極速生成]` `[NVIDIA加持]` |
+| **ComfyUI Impact Pack** | 🌐 **國際開源社群** | **最強臉部修復擴充**。ComfyUI 生態系中必裝的節點包，專治 AI 生成的人物臉部崩壞或手部變形問題。 | 人像生成、細節修補工作流<br>`[ComfyUI外掛]` `[必裝工具]` |
+| **FramePack** | 🌐 **國際開源社群** | **低顯存影片生成神器**。能在 6G 顯存下跑 13B 模型，最高支援生成 1 分鐘的長影片。 | 個人創作者影片生成、低階顯卡<br>`[6G顯存]` `[長影片]` |
+
+**B. 亞洲/中國開源大模型 (影片生成與實用工具)**
+
+| 模型/工具名稱 | 開發團隊 | 💡 核心優勢與突破點 | 🚀 推薦場景 & 規格標籤 |
+| :--- | :--- | :--- | :--- |
+| **Wan-Video (萬相)** | 🇨🇳 **阿里巴巴** | **全模態、全尺寸影片生成**。阿里萬相大模型開源，具備極強的物理規律理解與高解析度影片生成能力。 | 影視特效預覽、廣告素材生成<br>`[大廠開源]` `[全尺寸]` |
+| **HunyuanVideo-I2V** | 🇨🇳 **騰訊** | **高質量圖生影片**。開源了圖生視訊模型以及專屬的 LoRA 訓練腳本，客製化彈性極高。 | 動態插畫、個人化風格影片<br>`[支援LoRA]` `[圖生影片]` |
+| **Phantom** | 🇨🇳 **字節跳動** | **10G 顯存可用**。支援生成 1280x720 高清影片的模型，硬體門檻相對友善。 | 社交媒體短影音、720P生成<br>`[低硬體門檻]` `[字節跳動]` |
+| **HivisionIDPhotos** | 🇨🇳 **開源社群** | **智慧證件照生成神器**。全自動完成精準摳圖、換背景、裁切任意尺寸，實用性極高。 | 攝影工作室、自動化影像處理<br>`[超高實用性]` `[一鍵生成]` |
+| **Index-AniSora** | 🇨🇳 **Bilibili (B站)** | **二次元特化**。B 站開源的 SOTA 動畫影片生成模型，對動漫風格的掌握度目前無人能出其右。 | 動畫製作輔助、二次元創作<br>`[動漫風格]` `[SOTA模型]` |
+
+---
 
 ## AnomalyDetection
-**Anomaly Detection (異常檢測)**
+**Anomaly Detection，異常檢測**
 
 - 2026-01-29｜**LLM2CLIP**
   - 說明：以大語言模型重塑跨模態表徵學習的文本基石
@@ -111,34 +159,34 @@ https://github.com/Deep-Learning-101/Computer-Vision-Paper
 
 - 2025-09-24｜**FS-SAM2**
   - 說明：Adapting Segment Anything Model 2 for Few-Shot Semantic Segmentation
-  - 資源：[📄 AlphaXiv](https://www.alphaxiv.org/overview/2509.12105v1) | [📝 FS-SAM2 效能與效率雙優](https://zread.ai/fornib/FS-SAM2)
+  - 資源：[📄 AlphaXiv](https://www.alphaxiv.org/overview/2509.12105v1) | [📝 中文解讀：效能與效率雙優](https://zread.ai/fornib/FS-SAM2)
 
 - 2025-09-20｜**MOCHA**
   - 說明：Multi-modal Objects-aware Cross-arcHitecture Alignment
-  - 資源：[📄 AlphaXiv](https://www.alphaxiv.org/zh/overview/2509.14001v1) | [📝 注入 YOLO 少樣本檢測性能大漲](https://zhuanlan.zhihu.com/p/1952054591035281418)
+  - 資源：[📄 AlphaXiv](https://www.alphaxiv.org/zh/overview/2509.14001v1) | [📝 中文解讀：注入 YOLO 性能大漲](https://zhuanlan.zhihu.com/p/1952054591035281418)
 
 - 2025-07-16｜**CostFilter-AD**
   - 說明：Enhancing Anomaly Detection through Matching Cost Filtering
-  - 資源：[🐙 GitHub](https://github.com/ZHE-SAPI/CostFilter-AD) | [📝 刷新無監督異常檢測上限](https://zhuanlan.zhihu.com/p/1928870223529882075)
+  - 資源：[🐙 GitHub](https://github.com/ZHE-SAPI/CostFilter-AD) | [📝 中文解讀：刷新無監督上限](https://zhuanlan.zhihu.com/p/1928870223529882075)
 
 - 2025-06-13｜**One-to-Normal**
   - 說明：Anomaly Personalization (少樣本異常識別新突破)
-  - 資源：[📄 AlphaXiv](https://www.alphaxiv.org/abs/2502.01201) | [📝 擴散模型協助精準偵測](https://zhuanlan.zhihu.com/p/1916799842879018831)
+  - 資源：[📄 AlphaXiv](https://www.alphaxiv.org/abs/2502.01201) | [📝 中文解讀](https://zhuanlan.zhihu.com/p/1916799842879018831)
 
 - 2025-06-06｜**DualAnoDiff (CVPR 2025)**
   - 說明：Dual-Interrelated Diffusion Model for Few-Shot Anomaly Image Generation
-  - 資源：[📄 AlphaXiv](https://www.alphaxiv.org/abs/2408.13509v3) | [📝 復旦騰訊優圖新算法](https://www.qbitai.com/2025/06/291359.html)
+  - 資源：[📄 AlphaXiv](https://www.alphaxiv.org/abs/2408.13509v3) | [📝 中文解讀：復旦騰訊優圖入選](https://www.qbitai.com/2025/06/291359.html)
 
 - 2025-05-15｜**AdaptCLIP**
   - 說明：Adapting CLIP for Universal Visual Anomaly Detection
-  - 資源：[🐙 GitHub](https://github.com/aiiu-lab/AdaptCLIP) | [📄 AlphaXiv](https://www.alphaxiv.org/overview/2407.15795) | [📝 騰訊開源刷新 SOTA](https://mp.weixin.qq.com/s/w5x6T18aSZt9jxqMIdf-Yg)
+  - 資源：[📄 AlphaXiv](https://www.alphaxiv.org/overview/2407.15795) | [🐙 GitHub](https://github.com/aiiu-lab/AdaptCLIP) | [📝 中文解讀](https://mp.weixin.qq.com/s/w5x6T18aSZt9jxqMIdf-Yg)
 
 - 2025-05-05｜**Multi-Modal LLM for AD**
   - 說明：Detect, Classify, Act: Categorizing Industrial Anomalies
-  - 資源：[📄 AlphaXiv](https://www.alphaxiv.org/zh/overview/2505.02626) | [📚 DeepWiki](https://deepwiki.com/Sassanmtr/VELM) | [💾 MVTec Dataset](https://www.mvtec.com/company/research/datasets/mvtec-ad)
+  - 資源：[📄 AlphaXiv](https://www.alphaxiv.org/zh/overview/2505.02626) | [📚 DeepWiki](https://deepwiki.com/Sassanmtr/VELM) | [💾 Dataset](https://www.mvtec.com/company/research/datasets/mvtec-ad)
 
 - 2025-04-27｜**AnomalyCLIP**
-  - 說明：Object-agnostic Prompt Learning for Zero-shot Anomaly Detection
+  - 說明：Object-agnostic Prompt Learning for Zero-shot AD
   - 資源：[📄 AlphaXiv](https://www.alphaxiv.org/overview/2310.18961) | [📚 DeepWiki](https://deepwiki.com/zqhang/AnomalyCLIP)
 
 - 2025-04-26｜**PaDim**
@@ -151,7 +199,7 @@ https://github.com/Deep-Learning-101/Computer-Vision-Paper
 
 - 2025-03-25｜**Dinomaly**
   - 說明：The Less Is More Philosophy in Multi-Class Unsupervised AD
-  - 資源：[🐙 GitHub](https://github.com/guojiajeremy/Dinomaly) | [📝 無監督異常檢測 UAD 解讀](https://zhuanlan.zhihu.com/p/1886364053259146390)
+  - 資源：[🐙 GitHub](https://github.com/guojiajeremy/Dinomaly) | [📝 中文解讀](https://zhuanlan.zhihu.com/p/1886364053259146390)
 
 ---
 
@@ -168,7 +216,7 @@ https://github.com/Deep-Learning-101/Computer-Vision-Paper
 
 - 2025-06-18｜**CountVid**
   - 說明：Open-World Object Counting in Videos (影片中指哪數哪)
-  - 資源：[📄 AlphaXiv](https://www.alphaxiv.org/abs/2506.15368) | [📝 牛津大學開源](https://mp.weixin.qq.com/s/hICrrfEgriyktoIxnbjPEQ)
+  - 資源：[📄 AlphaXiv](https://www.alphaxiv.org/abs/2506.15368) | [📝 中文解讀](https://mp.weixin.qq.com/s/hICrrfEgriyktoIxnbjPEQ)
 
 - 2025-06-15｜**GeoPix**
   - 說明：像素級遙感多模態大模型
@@ -202,26 +250,21 @@ https://github.com/Deep-Learning-101/Computer-Vision-Paper
   - 說明：Training-Free Framework for Remote Sensing
   - 資源：[🌐 Project](https://voyagerxvoyagerx.github.io/InstructSAM/) | [📄 AlphaXiv](https://www.alphaxiv.org/zh/overview/2505.15818v1) | [📚 DeepWiki](https://deepwiki.com/VoyagerXvoyagerx/InstructSAM)
 
-- **RESAnything**
-  - 說明：Attribute Prompting for Arbitrary Referring Segmentation
-  - 資源：[📄 AlphaXiv](https://www.alphaxiv.org/abs/2505.02867) | [🌐 Project](https://suikei-wang.github.io/RESAnything/)
+- **SAM 2 & Variants** (SAM 2 相關變體)
+  - [**Meta SAM 2**](https://ai.meta.com/sam2/): Meta 官方最新分割一切模型。
+    - [📝 60行程式碼微調 SAM 2](https://mp.weixin.qq.com/s/YfgYCzvi0cXxOFIfQvE_9w)
+  - [**Grounded SAM 2**](https://github.com/IDEA-Research/Grounded-SAM-2): Ground and Track Anything in Videos.
+  - [**SAM2Long**](https://github.com/Mark12Ding/SAM2Long): 港中文提出，專注於複雜長視頻分割。
+  - [**SAM2-Adapter**](https://github.com/tianrun-chen/SAM-Adapter-PyTorch): 首次讓 SAM 2 適應下游任務。
+  - [**SAM2Point**](https://github.com/ZiyuGuo99/SAM2Point): 可提示 3D 分割研究里程碑。
 
-- **CVPR 2025 Highlights**
-  - **SegAnyMo**: [Segment Any Motion in Videos](https://www.alphaxiv.org/zh/overview/2503.22268) | [🐙 GitHub](https://github.com/nnanhuang/SegAnyMo)
-  - **Exact**: [遙感影像時間序列弱監督學習](https://zhuanlan.zhihu.com/p/38754229963) | [🐙 GitHub](https://github.com/MiSsU-HH/Exact)
+- **Other Notable Models**
+  - [**SAMURAI**](https://yangchris11.github.io/samurai/): KF + SAM2 解決快速移動或自遮擋問題。
+  - [**MatAnyone**](https://github.com/pq-yang/MatAnyone): 視訊摳圖，髮絲級還原。
+  - [**Exact (CVPR 2025)**](https://github.com/MiSsU-HH/Exact): 遙感影像時間序列弱監督學習。
+  - [**SegAnyMo (CVPR 2025)**](https://github.com/nnanhuang/SegAnyMo): Segment Any Motion in Videos.
 
-- **MatAnyone**
-  - 說明：視訊摳圖，一次指定全程追踪，髮絲級還原
-  - 資源：[🐙 GitHub](https://github.com/pq-yang/MatAnyone) | [📝 機器之心解讀](https://www.jiqizhixin.com/articles/2025-04-17-27)
-
-- **SAM 2 & Variants (分割一切系列)**
-  - **Meta SAM 2**: [官方網站](https://ai.meta.com/sam2/) | [📝 60行程式碼微調教學](https://mp.weixin.qq.com/s/YfgYCzvi0cXxOFIfQvE_9w)
-  - **CLIPSeg**: [HuggingFace Space](https://huggingface.co/spaces/taesiri/CLIPSeg) | [🐙 GitHub](https://github.com/timojl/clipseg)
-  - **SAMURAI**: [Project](https://yangchris11.github.io/samurai/) | [📝 KF+SAM2 解決快速移動/自遮擋](https://mp.weixin.qq.com/s/iU3Bk_uO01GWUxAtIBsrWQ)
-  - **Grounded SAM 2**: [🐙 GitHub](https://github.com/IDEA-Research/Grounded-SAM-2) | [🤗 Demo](https://huggingface.co/spaces/yizhangliu/Grounded-Segment-Anything)
-  - **SAM2Long**: [🐙 GitHub](https://github.com/Mark12Ding/SAM2Long) | [📝 港中文提出複雜長視頻分割](https://mp.weixin.qq.com/s/henvaxGoNgx24NLQV1Qj2w)
-  - **SAM2-Adapter**: [🐙 GitHub](https://github.com/tianrun-chen/SAM-Adapter-PyTorch) | [📝 讓 SAM 2 適應下游任務](https://mp.weixin.qq.com/s/3z-LshKAgbSzNCzyoLOuag)
-  - **SAM2Point**: [🐙 GitHub](https://github.com/ZiyuGuo99/SAM2Point) | [📝 可提示 3D 分割里程碑](https://mp.weixin.qq.com/s/TnTK5UE7O_hcrNzloxBmAw)
+---
 
 ## OCR
 **Optical Character Recognition (光學文字識別)**
@@ -289,6 +332,7 @@ https://github.com/Deep-Learning-101/Computer-Vision-Paper
   - **PaddleOCR 教學**：[📝 用 PPOCRLabel 微調醫療診斷書和收據](https://blog.twman.org/2023/07/wsl.html)
 
 ---
+
 
 ## Diffusion Model
 **Diffusion Model (擴散模型)**
