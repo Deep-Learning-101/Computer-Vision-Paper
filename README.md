@@ -1,92 +1,17 @@
-https://github.com/Deep-Learning-101/Computer-Vision-Paper
+{% include header.html %}
 
-<p align="center">
-  <strong>Deep Learning 101, Taiwan’s pioneering and highest deep learning meetup, launched on 2016/11/11 @ 83F, Taipei 101</strong>  
-</p>
-<p align="center">
-  AI是一條孤獨且充滿惶恐及未知的旅程，花俏絢麗的收費課程或活動絕非通往成功的捷徑。<br>
-  衷心感謝當時來自不同單位的AI同好參與者實名分享的寶貴經驗；如欲移除資訊還請告知。<br>
-  由 <a href="https://www.twman.org/" target="_blank">TonTon Huang Ph.D.</a> 發起，及其當時任職公司(台灣雪豹科技)無償贊助場地及茶水點心。<br>
-</p>  
-<p align="center">
-  <a href="https://huggingface.co/spaces/DeepLearning101/Deep-Learning-101-FAQ" target="_blank">
-    <img src="https://github.com/Deep-Learning-101/.github/blob/main/images/DeepLearning101.JPG?raw=true" alt="Deep Learning 101" width="180"></a>
-    <a href="https://www.buymeacoffee.com/DeepLearning101" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-red.png" alt="Buy Me A Coffee" style="height: 100px !important;width: 180px !important;" ></a>
-</p>
-<p align="center">
-  <a href="https://www.youtube.com/@DeepLearning101" target="_blank">去 YouTube 訂閱</a> |
-  <a href="https://www.facebook.com/groups/525579498272187/" target="_blank">Facebook</a> |
-  <a href="https://deep-learning-101.github.io/"> 回 GitHub Pages</a> |
-  <a href="https://github.com/Deep-Learning-101" target="_blank"> 到 GitHub 點星</a> |  
-  <a href="https://www.twman.org/DeepLearning101" target="_blank">網站</a> |
-  <a href="https://huggingface.co/DeepLearning101" target="_blank">到 Hugging Face Space 按愛心</a>
-</p>
+# 👁️ 電腦視覺 (CV) 與生成式影像・2026 資源全手冊
+
+> **編者按：** 本頁面即時彙整 2026 年全球最尖端的電腦視覺技術。從定義行業標準的 **YOLO 家族**、**工業異常檢測 (AOI)**，到引爆創作革命的 **Flux 擴散模型** 與 **AI 影片生成**。
+>
+> 🚀 **核心收錄：** 涵蓋 2016 至今的視覺技術演進，包含目標偵測、圖像分割 (SAM 2/3)、OCR 文檔理解及最新的虛擬數位人技術。
+>
+> 歡迎訪問 **GitHub Repository**：
+> 👉 [**GitHub: Computer-Vision-Paper**](https://github.com/Deep-Learning-101/Computer-Vision-Paper) (歡迎 Star ⭐)
 
 ---
 
-<div align="center">
-
-<table>
-  <tr>
-    <td align="center"><a href="https://deep-learning-101.github.io/Large-Language-Model">大語言模型</a></td>
-    <td align="center"><a href="https://deep-learning-101.github.io/Speech-Processing">語音處理</a></td>
-    <td align="center"><a href="https://deep-learning-101.github.io/Natural-Language-Processing">自然語言處理</a></td>
-    <td align="center"><a href="https://deep-learning-101.github.io//Computer-Vision">電腦視覺</a></td>
-  </tr>
-  <tr>
-    <td><a href="https://github.com/Deep-Learning-101/Natural-Language-Processing-Paper?tab=readme-ov-file#llm">Large Language Model</a></td>
-    <td><a href="https://github.com/Deep-Learning-101/Speech-Processing-Paper">Speech Processing</a></td>
-    <td><a href="https://github.com/Deep-Learning-101/Natural-Language-Processing-Paper">Natural Language Processing, NLP</a></td>
-    <td><a href="https://github.com/Deep-Learning-101/Computer-Vision-Paper">Computer Vision</a></td>
-  </tr>
-</table>
-
-</div>
-
----
-
-<details>
-<summary>手把手帶你一起踩 AI 坑</summary>
-
-<h3><a href="https://blog.twman.org/p/deeplearning101.html" target="_blank">手把手帶你一起踩 AI 坑</a>：<a href="https://www.twman.org/AI" target="_blank">https://www.twman.org/AI</a></h3>
-
-<ul>
-  <li>
-    <b><a href="https://blog.twman.org/2025/03/AIAgent.html" target="_blank">避開 AI Agent 開發陷阱：常見問題、挑戰與解決方案</a></b>：<a href="https://deep-learning-101.github.io/agent" target="_blank">探討多種 AI 代理人工具的應用經驗與挑戰，分享實用經驗與工具推薦。</a>
-  </li>
-  <li>
-    <b><a href="https://blog.twman.org/2024/08/LLM.html" target="_blank">白話文手把手帶你科普 GenAI</a></b>：<a href="https://deep-learning-101.github.io/GenAI" target="_blank">淺顯介紹生成式人工智慧核心概念，強調硬體資源和數據的重要性。</a>
-  </li>
-  <li>
-    <b><a href="https://blog.twman.org/2024/09/LLM.html" target="_blank">大型語言模型直接就打完收工？</a></b>：<a href="https://deep-learning-101.github.io/1010LLM" target="_blank">回顧 LLM 領域探索歷程，討論硬體升級對 AI 開發的重要性。</a>
-  </li>
-  <li>
-    <b><a href="https://blog.twman.org/2024/07/RAG.html" target="_blank">檢索增強生成(RAG)不是萬靈丹之優化挑戰技巧</a></b>：<a href="https://deep-learning-101.github.io/RAG" target="_blank">探討 RAG 技術應用與挑戰，提供實用經驗分享和工具建議。</a>
-  </li>
-  <li>
-    <b><a href="https://blog.twman.org/2024/02/LLM.html" target="_blank">大型語言模型 (LLM) 入門完整指南：原理、應用與未來</a></b>：<a href="https://deep-learning-101.github.io/0204LLM" target="_blank">探討多種 LLM 工具的應用與挑戰，強調硬體資源的重要性。</a>
-  </li>
-  <li>
-    <b><a href="https://blog.twman.org/2023/04/GPT.html" target="_blank">什麼是大語言模型，它是什麼？想要嗎？(Large Language Model，LLM)</a></b>：<a href="https://deep-learning-101.github.io/GPU" target="_blank">探討 LLM 的發展與應用，強調硬體資源在開發中的關鍵作用。</a>
-  </li>
-  <li>
-    <b><a href="https://blog.twman.org/2024/11/diffusion.html" target="_blank">Diffusion Model 完全解析：從原理、應用到實作 (AI 圖像生成)</a></b>；<a href="https://deep-learning-101.github.io/diffusion" target="_blank">深入探討影像生成與分割技術的應用，強調硬體資源的重要性。</a>
-  </li>
-  <li>
-    <b><a href="https://blog.twman.org/2024/02/asr-tts.html" target="_blank">ASR/TTS 開發避坑指南：語音辨識與合成的常見挑戰與對策</a></b>：<a href="https://deep-learning-101.github.io/asr-tts" target="_blank">探討 ASR 和 TTS 技術應用中的問題，強調數據質量的重要性。</a>
-  </li>
-  <li>
-    <b><a href="https://blog.twman.org/2021/04/NLP.html" target="_blank">那些 NLP 踩的坑</a></b>：<a href="https://deep-learning-101.github.io/nlp" target="_blank">分享 NLP 領域的實踐經驗，強調數據質量對模型效果的影響。</a>
-  </li>
-  <li>
-    <b><a href="https://blog.twman.org/2021/04/ASR.html" target="_blank">那些語音處理踩的坑</a></b>：<a href="https://deep-learning-101.github.io/speech" target="_blank">分享語音處理領域的實務經驗，強調資料品質對模型效果的影響。</a>
-  </li>
-  <li>
-    <b><a href="https://blog.twman.org/2020/05/DeepLearning.html" target="_blank">手把手學深度學習安裝環境</a></b>：<a href="https://deep-learning-101.github.io/101" target="_blank">詳細介紹在 Ubuntu 上安裝深度學習環境的步驟，分享實際操作經驗。</a>
-  </li>
-</ul>
-
-</details>
+{% include ai-share.html %}
 
 ---
 
@@ -504,3 +429,44 @@ https://github.com/Deep-Learning-101/Computer-Vision-Paper
 
 - **3D Decomposition (CVPR 2021)**
   - Face Forgery Detection by 3D Decomposition. Xiangyu Zhu et al.
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://deep-learning-101.github.io/Computer-Vision"
+  },
+  "headline": "2026 電腦視覺 (CV) 全攻略：從 YOLOv11 目標偵測到 Flux/Wan-Video 影像生成",
+  "description": "2026 年最強 CV 資源清單。收錄 YOLOv11/v10/v9、SAM 3 圖像分割、Flux.1 生圖、Wan-Video 影片生成、DeepSeek-OCR 2 及工業異常檢測 (Anomaly Detection) 與虛擬數位人技術。",
+  "image": "https://raw.githubusercontent.com/Deep-Learning-101/.github/blob/main/images/DeepLearning101.JPG?raw=true",
+  "author": {
+    "@type": "Organization",
+    "name": "Deep Learning 101, Taiwan",
+    "url": "https://deep-learning-101.github.io/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Deep Learning 101, Taiwan",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://raw.githubusercontent.com/Deep-Learning-101/.github/blob/main/images/DeepLearning101.JPG?raw=true"
+    }
+  },
+  "datePublished": "2026-03-29",
+  "dateModified": "2026-03-29",
+  "keywords": "電腦視覺, Computer Vision, YOLOv11, YOLOv9, Flux.1, Sana, Wan-Video, SAM 3, 異常檢測, Anomaly Detection, OCR, DeepSeek-OCR, 數位人, Digital Human, 影像生成, Diffusion Model, 遙感影像分析",
+  "about": [
+    {
+      "@type": "Service",
+      "name": "判別式視覺技術 (Object Detection, Segmentation, OCR)"
+    },
+    {
+      "@type": "Service",
+      "name": "生成式視覺技術 (Diffusion Models, Video Generation, Digital Human)"
+    }
+  ]
+}
+</script>  
