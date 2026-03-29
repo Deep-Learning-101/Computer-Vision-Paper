@@ -1,15 +1,24 @@
+---
+layout: default
+title: 2026 電腦視覺資源懶人包 (Computer Vision) | YOLO, OCR & Diffusion | Deep Learning 101
+description: 2026 電腦視覺 (CV) 開源模型選型指南。收錄 YOLOv11、AOI 異常檢測、高精度 OCR (DeepSeek/MinerU)、Stable Diffusion 影片生成與免標註圖像分割等工業級視覺實戰資源。
+permalink: /Computer-Vision
+lang: zh-Hant
+schema_type: service
+service_type: AI Consulting
+---
+
 {% include header.html %}
 
-# 👁️ 電腦視覺 (CV) 與生成式影像・2026 資源全手冊
+---
 
-> **編者按：** 本頁面即時彙整 2026 年全球最尖端的電腦視覺技術。從定義行業標準的 **YOLO 家族**、**工業異常檢測 (AOI)**，到引爆創作革命的 **Flux 擴散模型** 與 **AI 影片生成**。
+# 👁️ 電腦視覺 (CV)・必讀資源總整理
+
+> **編者按：** 本頁面彙整了電腦視覺領域的關鍵技術資源，涵蓋物件偵測、生成式 AI、影像分割以及文字識別（OCR）等最新論文與實作。
 >
-> 🚀 **核心收錄：** 涵蓋 2016 至今的視覺技術演進，包含目標偵測、圖像分割 (SAM 2/3)、OCR 文檔理解及最新的虛擬數位人技術。
->
-> 歡迎訪問 **GitHub Repository**：
+> 如果您想尋找更詳細的筆記，歡迎訪問 **GitHub Repository**：
 > 👉 [**GitHub: Computer-Vision-Paper**](https://github.com/Deep-Learning-101/Computer-Vision-Paper) (歡迎 Star ⭐)
 
----
 
 {% include ai-share.html %}
 
@@ -430,7 +439,6 @@
 - **3D Decomposition (CVPR 2021)**
   - Face Forgery Detection by 3D Decomposition. Xiangyu Zhu et al.
 
-
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -439,9 +447,9 @@
     "@type": "WebPage",
     "@id": "https://deep-learning-101.github.io/Computer-Vision"
   },
-  "headline": "2026 電腦視覺 (CV) 全攻略：從 YOLOv11 目標偵測到 Flux/Wan-Video 影像生成",
-  "description": "2026 年最強 CV 資源清單。收錄 YOLOv11/v10/v9、SAM 3 圖像分割、Flux.1 生圖、Wan-Video 影片生成、DeepSeek-OCR 2 及工業異常檢測 (Anomaly Detection) 與虛擬數位人技術。",
-  "image": "https://raw.githubusercontent.com/Deep-Learning-101/.github/blob/main/images/DeepLearning101.JPG?raw=true",
+  "headline": "2026 電腦視覺 (Computer Vision) 工業級模型資源彙整",
+  "description": "一份詳盡的電腦視覺（Computer Vision）資源清單，內容涵蓋異常檢測(AOI)、物件偵測、圖像分割、高精度OCR、擴散模型與影片生成，協助企業與開發者快速導入開源視覺技術。",
+  "image": "https://raw.githubusercontent.com/Deep-Learning-101/TonTon/refs/heads/main/_includes/DL101-Logo.jpg",
   "author": {
     "@type": "Organization",
     "name": "Deep Learning 101, Taiwan",
@@ -452,21 +460,21 @@
     "name": "Deep Learning 101, Taiwan",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://raw.githubusercontent.com/Deep-Learning-101/.github/blob/main/images/DeepLearning101.JPG?raw=true"
+      "url": "https://raw.githubusercontent.com/Deep-Learning-101/TonTon/refs/heads/main/_includes/DL101-Logo.jpg"
     }
   },
   "datePublished": "2026-03-29",
   "dateModified": "2026-03-29",
-  "keywords": "電腦視覺, Computer Vision, YOLOv11, YOLOv9, Flux.1, Sana, Wan-Video, SAM 3, 異常檢測, Anomaly Detection, OCR, DeepSeek-OCR, 數位人, Digital Human, 影像生成, Diffusion Model, 遙感影像分析",
-  "about": [
-    {
-      "@type": "Service",
-      "name": "判別式視覺技術 (Object Detection, Segmentation, OCR)"
+  "keywords": "電腦視覺, Computer Vision, YOLO, 目標偵測, OCR, 異常檢測, AOI, 圖像分割, SAM2, 擴散模型, 影片生成, 數位人, 發票解析, 機器視覺",
+  "about": {
+    "@type": "Service",
+    "serviceType": "AI Consulting",
+    "provider": {
+      "@type": "Organization",
+      "name": "Deep Learning 101, Taiwan"
     },
-    {
-      "@type": "Service",
-      "name": "生成式視覺技術 (Diffusion Models, Video Generation, Digital Human)"
-    }
-  ]
+    "name": "人工智慧顧問服務 (AI Consulting)",
+    "description": "提供關於電腦視覺（Computer Vision）領域的專業顧問服務，包含演算法開發、模型選擇、應用落地與技術導入。"
+  }
 }
-</script>  
+</script>
