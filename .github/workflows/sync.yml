@@ -22,6 +22,7 @@ jobs:
           repository: Deep-Learning-101/deep-learning-101.github.io
           token: ${{ secrets.GH_PAT }}
           path: main-repo
+          fetch-depth: 0 # 確保抓取完整歷史
 
       - name: Sync and Mirror Structure
         run: |
@@ -40,11 +41,30 @@ jobs:
       - name: Commit and Push
         run: |
           cd main-repo
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add .
-          
+
+          # 1. 抓取子站原始資訊：訊息、作者、Email、SHA
           ORIGINAL_MSG="${{ github.event.head_commit.message }}"
-          
-          git diff --quiet && git diff --staged --quiet || git commit -m "CV Sync: $ORIGINAL_MSG"
-          git push
+          AUTHOR_NAME="${{ github.event.head_commit.author.name }}"
+          AUTHOR_EMAIL="${{ github.event.head_commit.author.email }}"
+          SUB_SHA="${{ github.sha }}"
+
+          # 2. 設定 Git 作者（讓主站綠色格子算在你的帳號下）
+          git config user.name "$AUTHOR_NAME"
+          git config user.email "$AUTHOR_EMAIL"
+
+          # 3. 暫存搬移過來的內容
+          git add .
+
+          # 4. 檢查是否有變動
+          if ! git diff --quiet || ! git diff --staged --quiet; then
+            # 建立包含子站訊息與 SHA 的 Commit
+            git commit -m "NLP Sync: $ORIGINAL_MSG (From Sub: ${SUB_SHA:0:7})"
+
+            # 5. 關鍵補救：防止主站有變動導致 rejected
+            git pull --rebase origin main
+
+            # 6. 推送
+            git push origin main
+          else
+            echo "No changes detected, skipping sync."
+          fi
