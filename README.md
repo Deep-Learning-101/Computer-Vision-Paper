@@ -141,6 +141,12 @@ service_type: AI Consulting
 自從 Meta 推出 Segment Anything (SAM) 以來，圖像分割已經進入「提示即分割 (Promptable Segmentation)」的時代。
 
 ### 1. SAM 家族與通用分割基石
+
+* **[[Falcon Perception]](https://github.com/tiiuae/falcon-perception)** `[2026-04-01]` 🔥
+  * **核心優勢**：**0.6B 極簡單棧架構，開放詞彙分割強勢幹翻 SAM 3！** TII 團隊革命性力作，徹底拋棄傳統「檢測+分割」的複雜 Pipeline，首創「早融合 + 混合注意力」的單一 Transformer 網路。在密集實例（擁擠場景）得分高達 72.6，遙遙領先 SAM 3 (58.4) 與 Qwen3-VL-30B。
+  * **解決痛點 / 推薦場景**：**解決了傳統視覺模型模組堆疊導致的「高延遲、難維護」痛點。** 無需繁瑣的後處理與匈牙利匹配，一步到位完成檢測與理解。非常適合算力受限的邊緣運算設備，或需要處理擁擠場景的高效能應用。
+  * **資源**：[🐙 GitHub](https://github.com/tiiuae/falcon-perception) | [📄 論文](https://arxiv.org/abs/2603.27365) | [🌐 線上 Demo](https://vision.falcon.aidrc.tii.ae/)
+
 * **[Meta SAM 3](https://github.com/facebookresearch/sam3)**
   * **核心優勢**：Meta 官方最新分割一切模型，持續推進零樣本分割的極限。[📝 公眾號解讀](https://mp.weixin.qq.com/s/7uDHXQd1ES2mV4dZFB7VMw)
   
@@ -173,19 +179,32 @@ service_type: AI Consulting
 ### 1. 基於視覺大模型 (VLM) 的高精度 OCR
 處理手寫字跡、模糊掃描檔與不規則表單的最佳解法。
 
+* **[[Chandra OCR 2]](https://github.com/datalab-to/chandra)** `[2026-04-16]` 🔥
+
+    * **[Chandra OCR](https://github.com/datalab-to/chandra)** `[2025-10-21]`：標榜超越 DeepSeek-OCR 的革命性突破，支援本地部署。[📝 真實評測](https://zhuanlan.zhihu.com/p/1969019468937144099)
+    * **核心優勢**：**擊敗 GPT-4o 與 DeepSeek-OCR 的開源 SOTA 黑馬！** 僅 4B 參數卻具備頂級的「版面感知 (Layout-Aware)」能力。它不僅是提取純文字，而是像人類閱讀一樣理解文檔結構，能精準識別跨頁表格、手寫表單（含核取方塊）與複雜的 LaTeX 數學公式，並直接輸出支援渲染的 Markdown 或 HTML。
+
+    * **解決痛點 / 推薦場景**：**徹底解決傳統 OCR「只認字、不認排版」導致資料破碎的致命痛點。** 原生支援 vLLM 容器化高速批量推論與超過 90 種語言。非常適合用作建構企業 RAG 知識庫的前處理引擎，或是科研論文數位化、歷史手稿與法務合約的自動化解析。
+
+    * **資源**：[🐙 GitHub](https://github.com/datalab-to/chandra) | [🤗 HuggingFace](https://huggingface.co/datalab-to/chandra) | [🌐 官方線上 Playground](https://www.datalab.to/playground)
+* **[[Qianfan-OCR]](https://github.com/baidubce/Qianfan-VL)** `[2026-03-25]` 🔥
+  * **核心優勢**：**4B 參數達成「端對端文檔智慧」新標竿，KIE 任務表現超越 Gemini-3.1 Pro。** 百度千帆團隊推出的統一模型，不再需要傳統的偵測與識別分離流程。其核心 **Layout-as-Thought** 機制讓模型在解析文字前先進行佈局推理，大幅提升了對非結構化文檔的理解精度。
+  * **解決痛點 / 推薦場景**：**完美解決了傳統 OCR 在處理複雜嵌套表格、多欄排版時「順序錯亂」與「關聯丟失」的問題。** 在 OmniDocBench 等多項權威基準測試中登頂，是目前兼顧「解析精度」與「推論效率」的工業級文檔處理首選。
+  * **資源**：[🐙 GitHub](https://github.com/baidubce/Qianfan-VL) | [📄 論文](https://www.google.com/search?q=https://arxiv.org/abs/2603.XXXXX) (待正式釋出) | [📝 官方技術解析](https://www.google.com/search?q=https://cloud.baidu.com/article/qianfan-ocr-unified-model)
 * **[DeepSeek-OCR 2](https://github.com/deepseek-ai/DeepSeek-OCR-2/)** `[2026-01-27]` 🔥
   * **核心優勢**：專精複雜場景的高精度文字辨識。能完美應對手寫、模糊與多語系發票，是企業自動化財報系統的高性價比底座。[📝 公眾號解讀](https://mp.weixin.qq.com/s/DOm_hg6DWA_OjcsLuUQ9Hw)
-* **[Chandra OCR](https://github.com/datalab-to/chandra)** `[2025-10-21]`：標榜超越 DeepSeek-OCR 的革命性突破，支援本地部署。[📝 真實評測](https://zhuanlan.zhihu.com/p/1969019468937144099)
 * **[HunyuanOCR](https://github.com/Tencent-Hunyuan/HunyuanOCR)** `[2025-11-30]`：騰訊混元釋出的 1B 級全能模型。
 * **[PaddleOCR-VL](https://huggingface.co/PaddlePaddle/PaddleOCR-VL)** `[2025-10-19]`：老牌 OCR 強者推出的視覺大模型版本。
 * **[DianJin-OCR-R1](https://github.com/aliyun/qwen-dianjin)** `[2025-08-18]`：點金 OCR，專攻模糊蓋章與跨頁表格。
 
 ### 2. PDF 解析與 RAG 資料清洗神器
-將複雜排版的文件完美轉換為適合大語言模型閱讀的 Markdown 格式。
+將複雜排版的文件完美轉換為適合大語言模型閱讀的 Markdown 格式。  
 
-
-* **[MinerU](https://github.com/opendatalab/MinerU)** `[2025-02-05]`
-  * **解決痛點**：將 PDF 完美轉換為乾淨 Markdown 的開源神器。高保真還原數學公式與程式碼區塊，是準備 LLM 訓練語料的必備清洗工具。
+* **[[MinerU 2.5-Pro]](https://github.com/opendatalab/MinerU)** `[2026-04-16]` 🔥
+  * **[MinerU](https://github.com/opendatalab/MinerU)** `[2025-02-05]`：**解決痛點**：將 PDF 完美轉換為乾淨 Markdown 的開源神器。高保真還原數學公式與程式碼區塊，是準備 LLM 訓練語料的必備清洗工具。
+  * **核心優勢**：**1.2B 極小參數逆襲 235B 巨獸，RAG 資料清洗的終極殺器！** 上海 AI Lab 重磅升級，憑藉極致的數據工程（四步協同質量飛輪），在 OmniDocBench 評測中擊敗千億級通用大模型。原生支援「跨頁表格自動合併」、「截斷段落接續」與「表格內圖像檢測」。
+  * **解決痛點 / 推薦場景**：**徹底解決複雜 PDF (如雙欄論文、密集數學公式、嵌套表格) 轉換 Markdown 時的結構破碎問題。** 不需龐大算力即可精準還原版面邏輯，是企業建置 RAG 私有知識庫、大模型預訓練語料準備絕對不可或缺的高保真清洗神器。
+  * **資源**：[🐙 GitHub](https://github.com/opendatalab/MinerU) | [📄 論文](https://arxiv.org/abs/2604.04771) | [📊 評測基準](https://github.com/opendatalab/OmniDocBench)
 * **[OCRFlux](https://github.com/chatdoc-com/OCRFlux)** `[2025-06-16]`
   * **解決痛點**：專治「反人類排版」的 PDF 解析救星！精準還原雙欄排版與跨頁表格，非常適合建立企業私有知識庫。
 * **[markitdown](https://github.com/microsoft/markitdown)** `[2024-12-15]`：微軟官方開源的文件轉換工具。
@@ -193,6 +212,10 @@ service_type: AI Consulting
 * **[olmocr](https://github.com/allenai/olmocr)** `[2025-03-03]`：支援本地部署精準提取 PDF。
 
 ### 3. 輕量化與傳統開源 OCR 生態
+* **[[Falcon OCR]](https://github.com/tiiuae/falcon-perception)** `[2026-04-01]` 🔥
+  * **核心優勢**：**0.3B 極致輕量，效能吊打 10 倍大模型。** 採用與 Falcon Perception 相同的早融合單棧架構專為 OCR 訓練。表格識別準確率達 90.3%，OmniDocBench 總體得分與 DeepSeek OCR v2 等百億參數巨獸不相上下。
+  * **解決痛點 / 推薦場景**：**打破高併發文件解析的吞吐量瓶頸。** 在 vLLM 環境下單卡 A100 吞吐量高達驚人的 5825 tok/s。更原生提供 MLX 支援，開發者可直接在 MacBook 上流暢部署，是本地端極速 OCR 的「殺手級」引擎。
+  * **資源**：[🐙 GitHub](https://github.com/tiiuae/falcon-perception) | [📄 論文](https://arxiv.org/abs/2603.27365)
 * **[OpenDoc-0.1B](https://github.com/Topdu/OpenOCR)** `[2026-01-28]` / **[OpenOCR](https://github.com/Topdu/OpenOCR)** `[2025-03-05]`：極度輕量化的開源 OCR 專案。
 * **[dots.ocr](https://huggingface.co/rednote-hilab/dots.ocr)** `[2025-07-30]`：本地部署的 1.7B 超強 OCR。
 * **[MonkeyOCR](https://deepwiki.com/Yuliang-Liu/MonkeyOCR)** `[2025-06-05]`：猴子家族的文檔辨識專案。
@@ -245,20 +268,57 @@ service_type: AI Consulting
 虛擬數字人技術結合了語音驅動 (Audio-Driven)、唇形對齊 (Lip-Sync) 與 3D 渲染，是目前 AI 客服與虛擬直播的技術核心。
 
 ### 1. 語音驅動與動態頭像生成 (Audio-Driven Avatar)
-* **[SoulX-LiveAct](https://github.com/Soul-AILab/SoulX-LiveAct)** `[2026-03]` 🔥
-  * **核心優勢**：Soul AI Lab 推出的黑科技，主打「小時級 (Hour-Scale)」即時人類動畫生成。能在極低的硬體成本下，以 20 FPS 的速度進行即時串流推論，非常適合虛擬直播場景。
+
+* **[[StreamAvatar]](https://streamavatar.github.io)** `[2025-12]` 🔥
+  * **核心優勢**：**打破高質量、實時性與強交互的「不可能三角」，首創具備「聆聽反應」的流式擴散數字人！** 由清華、人大與騰訊混元聯合發表。透過創新的自回歸蒸餾（Auto-regressive Distillation），將傳統笨重的雙向 DiT 模型轉化為僅需 3 步去噪的因果生成器。在雙 H800 GPU 環境下，達成 1.20 秒超低延遲與 RTF < 1 的完美實時串流生成。
+  * **解決痛點 / 推薦場景**：**徹底解決傳統擴散模型「無法即時串流」、「長時生成身份漂移」以及「只會說不會聽」的三大致命傷。** 獨創 Reference Sink 機制確保長影片不變形，並導入音訊交互注意力模組，讓數字人在用戶說話時能給出點頭、微笑等極度自然的「聽覺反饋」。是打造次世代雙向視訊客服、高保真 AI 實況主與沉浸式虛擬陪伴的巔峰架構。
+  * **資源**：[🌐 官方專案主頁與 Demo](https://streamavatar.github.io) | [📄 論文](https://arxiv.org/abs/2512.22065)
+
+* **[[SoulX-LiveAct]](https://github.com/Soul-AILab/SoulX-LiveAct)** `[2026-03-16]` 🔥
+  * **核心優勢**：**首款突破「小時級」穩定生成的實時數字人框架，低延遲且具備極致性價比。** 來自 Soul App AI Lab，首創 Neighbor Forcing 與 ConvKV Memory 技術，解決了 AR 擴散模型在流式生成中常見的身份漂移與顯存爆量問題。在 H100 達成 20 FPS、0.94s 延遲，甚至支援在 RTX 5090 等消費級顯卡上流暢運行。
+  * **解決痛點 / 推薦場景**：**徹底解決長時直播中常見的「人物變形」與「顯存線性增長」瓶頸。** 提供高精準度的口型同步 (Sync-C: 9.40) 與動作/表情 JSON 精細控制。是打造 24 小時不斷線直播、實時視訊通話（FaceTime 級體驗）與企業級虛擬客服的技術天花板方案。
+  * **資源**：[🐙 GitHub](https://github.com/Soul-AILab/SoulX-LiveAct)
+
+* **[[Live Avatar]](https://github.com/Alibaba-Quark/LiveAvatar)** `[持續更新]` 🔥
+  * **核心優勢**：**阿里巴巴 (Quark) 開源的 14B 頂規即時交互數字人模型。** 建立在強大的 `Wan2.2-S2V-14B` 基礎模型之上，支援流式生成（Streaming Generation），能透過單張照片與音訊，生成畫質極高且「無限時長」的動態說話影片。
+  * **解決痛點 / 實戰避坑指南**：**主打「再也不用真人直播」，但硬體要求極為嚴苛。** 完美解決了 24 小時虛擬直播帶貨的需求，但**部署前請注意**：這是一頭在電腦裡跑的大象，強烈建議使用具備 **24GB 顯存** 的顯卡（如 RTX 3090/4090）進行推理。12GB 顯卡極易觸發 CUDA Out of Memory (OOM) 報錯。適合擁有高階算力、追求極致畫質與無斷點直播的企業級用戶。
+  * **資源**：[🐙 GitHub](https://github.com/Alibaba-Quark/LiveAvatar) | [🌐 官方專案主頁](https://liveavatar.github.io/)
+
+* **[[PersonaLive]](https://github.com/GVCLab/PersonaLive)** `[持續更新]` 🔥
+  * **核心優勢**：**12GB 顯存即可驅動實時數字人，首創流式擴散（Streaming Diffusion）無限生成技術。** 由澳門大學與 GVC Lab 研發，透過外觀蒸餾（Appearance Distillation）與 Reference UNet 技術，在達成低延遲即時生成（支援攝影機聯動）的同時，能高度還原原始肖像的藝術風格與細節，有效避免失真。
+  * **解決痛點 / 推薦場景**：**打破了高端伺服器對「實時動畫」的壟斷，解決長時生成易導致記憶體溢位（OOM）的瓶頸。** 提供 WebUI 介面，具備亞秒級響應與無限長度影片輸出能力。是虛擬主播直播帶貨、插畫師將角色設計動態化、以及影視團隊快速進行原型動畫驗證的「最低門檻」方案。
+  * **資源**：[🐙 GitHub](https://github.com/GVCLab/PersonaLive)
+
+* **[[SoulX-FlashTalk]](https://github.com/Soul-AILab/SoulX-FlashTalk)** `[2025-12-24]` 🔥
+  * **核心優勢**：**14B 參數數字人開源新標竿，0.87 秒極速啟動 + 32 FPS 實時流生成。** Soul AI Lab 針對實時交互場景打造的重磅模型，首創「雙向流蒸餾技術」與「多步回顧自校正機制」。不僅將訓練效率暴力提升 23 倍，更打破了傳統模型長序列生成的崩壞魔咒，實現亞秒級的超低延遲與高保真吞吐。
+  * **解決痛點 / 推薦場景**：**徹底終結數字人長時直播「越播越崩」與「身份漂移」的致命痛點。** 具備強大的長時生成穩定性，完美支援 7×24 小時不斷線實時互動。極度適合用於高強度的電商 AI 直播帶貨、需要極低延遲的視訊智能客服，以及元宇宙多語言虛擬社交場景。
+  * **資源**：[🐙 GitHub](https://github.com/Soul-AILab/SoulX-FlashTalk) | [📄 論文](https://arxiv.org/abs/2512.23379) | [🌐 官方 Demo 與展示](https://soul-ailab.github.io/soulx-flashtalk/) | [🤗 HuggingFace 權重](https://huggingface.co/Soul-AILab/SoulX-FlashTalk-14B)
+
 * **[JoyStreamer-Flash](https://joystreamer.github.io/)** `[2025-12]`
   * **核心優勢**：強大的音訊驅動 (Audio-driven) 自回歸擴散模型。具備即時推論能力，且標榜支援「無限時長 (Infinite-length)」的數字人與影片生成，是打造長時間不斷線 AI 實況主的極佳底座。
-* **[EchoMimic V3](https://github.com/antgroup/echomimic_v3)** / **[EchoMimic V2 (CVPR 2025)](https://github.com/antgroup/echomimic_v2)**
-  * **核心優勢**：螞蟻集團開源的強大框架。V3 版本進一步強化了臉部表情的細節與唇形同步的精準度，是目前最穩定的開源選項之一。[📝 V3 公眾號解讀](https://mp.weixin.qq.com/s/cHL-ROirvxLxJNtabke0Fg)
+
+* **[[EchoMimic V3]](https://github.com/antgroup/echomimic_v3)** `[持續更新]` 🔥
+  * **核心優勢**：**螞蟻集團開源的統一多模態人體動畫生成大模型。** V3 版本底層大換血，深度整合了 `Wan2.1-Fun-V1.1-1.3B` 與 `wav2vec2-base-960h`，進一步強化了臉部表情的細節與唇形同步的精準度，是目前最受矚目的開源數字人框架之一。
+  * **解決痛點 / 實戰避坑指南**：**高畫質但硬體門檻極高，部署前請注意算力評估。** 雖然官方曾聲稱 12GB 顯存可運行，但根據開發者最新實測，在生成高幀數影片時，單一 Python 進程顯存極易飆破 21GB（甚至在 RTX 4090 D 上遭遇 OOM）。**部署建議**：需嚴格檢查模型權重路徑（如 `models/transformer`），並適度在 `app_mm.py` 中下調 `num_frames`（分段長度）以降低顯存壓力。適合具備高階算力（如 24G+ VRAM）的企業級開發者進行二次開發。
+  * **資源**：[🐙 GitHub](https://github.com/antgroup/echomimic_v3) | [🤗 Wan2.1 基礎模型](https://huggingface.co/alibaba-pai/Wan2.1-Fun-V1.1-1.3B-InP) | [🤖 魔搭 ModelScope 權重](https://modelscope.cn/models/BadToBest/EchoMimicV3) | [📝 V3 官方原理解讀](https://mp.weixin.qq.com/s/cHL-ROirvxLxJNtabke0Fg)
+
 * **[Fantasy-talking](https://fantasy-amap.github.io/fantasy-talking/)** `[2025-04-14]`：基於強大的 Wan2.1 影片生成底座，打造的高畫質音訊驅動數字人。
+
 * **[Hallo3 (CVPR 2025)](https://github.com/fudan-generative-vision/hallo3)**：復旦大學開源，主打高度動態且極具表現力的肖像動畫生成。
+
 * **[FlowAct-R1](https://grisoon.github.io/FlowAct-R1/)**：基於流匹配技術的高效能數字人生成框架。
 
 ### 2. 完整互動系統與 3D 建模 (Interactive System & 3D)
-* **[Linly-Talker](https://github.com/Kedreamix/Linly-Talker)**：不只是生影片！這是一個結合 LLM 與視覺模型的「智能交互系統」，可以直接用來打造虛擬面試官或 AI 客服。
+
+* **[[Linly-Talker]](https://github.com/Kedreamix/Linly-Talker)** `[持續更新]` 🔥
+  * **核心優勢**：**開源數字人界的「多模態全家桶」，高度模組化的智能交互系統！** 在 GitHub 狂攬 3.1K+ Stars，它打破了單純「圖片轉影片」的框架，將 ASR (Whisper)、LLM 大腦 (Qwen/Gemini)、TTS 音色克隆 (GPT-SoVITS) 與面部驅動 (SadTalker/MuseTalk) 完美串接。支援流式語音與 WebRTC 即時通訊，模組可按需求自由抽換。
+  * **解決痛點 / 推薦場景**：**徹底推翻了高質量數字人需要昂貴動捕設備與專業團隊的成本高牆。** 只需要「一張任意人像照片 + 一段語音/文字」，就能打造具備上下文記憶、會聽、會說、會動的專屬 AI 分身。極度適合低成本部署虛擬面試官、24 小時 AI 客服、線上教育導師，或是支援本地端部署的隱私安全對話機器人。
+  * **資源**：[🐙 GitHub](https://github.com/Kedreamix/Linly-Talker)
+
 * **[Open Avatar Chat](https://zread.ai/HumanAIGC-Engineering/OpenAvatarChat)**：爆火的開源神器，主打本地部署、無套路，輕鬆打造個人虛擬助理。
+
 * **[MimicTalk (NeurIPS 2024)](https://github.com/yerfor/MimicTalk)**：專注於 3D Talking Face 生成的學術級框架。
+
 * **商用級別開源 (克隆與真人還原)**：
   * **[Duix](https://github.com/GuijiAI/duix.ai)**：全球首個開源的「真人」數字人系統。
   * **[HeyGem](https://github.com/GuijiAI/HeyGem.ai)**：被譽為數字人克隆神器，高度還原真人神態。
