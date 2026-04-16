@@ -240,6 +240,10 @@ service_type: AI Consulting
 * **[MAGI-1](https://github.com/SandAI-org/Magi-1)** `[2025-04-22]`：Sand AI 推出的全球首個自回歸影片生成大模型。
 * **[Phantom](https://github.com/Phantom-video/Phantom)** `[2025-04-24]`：字節跳動開源。極度友善的硬體門檻，僅需 10G 顯存即可生成 1280x720 高清影片。
 * **[Index-AniSora](https://deepwiki.com/bilibili/Index-anisora)** `[2025-05-19]`：B 站開源的 SOTA 動畫影片生成模型，二次元風格特化。
+* **[[MAI-Image-2]](https://microsoft.ai/news/today-were-announcing-3-new-world-class-mai-models-available-in-foundry/)** `[2026-04-16]` 🔥
+  * **核心優勢**：**重新定義「廣告級」影像生成，畫面內文字清晰度與光影質感超越 DALL-E 3。** Microsoft AI 專為設計師打造，精準捕捉自然膚色紋理與細膩光影。其最強大的亮點在於解決了生成式 AI 常見的「圖中文字扭曲」痛點，能直接產出可商用的排版設計。
+  * **解決痛點 / 推薦場景**：**解決了設計師在生成海報或 UI 時，必須手動修正文字與光影不自然的繁瑣流程。** 榮登 Arena.ai 榜單前三，是電商廣告創作、專業平面設計與社交媒體視覺素材的工業級利器。
+  * **資源**：[🌐 Microsoft MAI Playground](https://www.google.com/search?q=https://microsoft.ai/playground) | [📄 官方發布報告](https://microsoft.ai/news/today-were-announcing-3-new-world-class-mai-models-available-in-foundry/)
 
 ### 2. 極速生成與大一統架構 (Speed & Unified Models)
 * **[Sana (ICLR 2025 Oral)](https://github.com/NVlabs/Sana)** `[2025-01-28]` 🔥
