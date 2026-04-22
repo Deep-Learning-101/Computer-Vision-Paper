@@ -246,9 +246,18 @@ service_type: AI Consulting
   * **資源**：[🌐 Microsoft MAI Playground](https://www.google.com/search?q=https://microsoft.ai/playground) | [📄 官方發布報告](https://microsoft.ai/news/today-were-announcing-3-new-world-class-mai-models-available-in-foundry/)
 
 ### 2. 極速生成與大一統架構 (Speed & Unified Models)
+
+* **[[Nucleus-Image 17B]](https://github.com/WithNucleusAI/Nucleus-Image)** `[2026-04]` 🔥
+  * **核心優勢**：**全球首個將 MoE (混合專家) 架構引入文生圖領域的擴散大模型**。具備高達 170 億參數的龐大知識容量，但每次推論（Inference）僅需激活約 20 億參數。獨創「解耦路由機制」與「文本 KV 緩存加速」，不需依賴 RLHF 偏好微調，純預訓練效能即超越 Imagen 4，並在空間位置理解上輾壓 FLUX.1。
+  * **解決痛點 / 推薦場景**：完美解決了傳統頂尖生圖模型「吃顯存、推理極慢、算力成本高昂」的致命痛點，真正實現「大模型品質，小模型成本」。對於需要高併發、低延遲生成複雜畫面（例如：精準物件排版、高難度密集提示詞遵循）的企業級 AI 繪圖服務與商業設計平台，這是極具性價比的新一代開源基座首選。
+  * **資源**：[🐙 GitHub](https://github.com/WithNucleusAI/Nucleus-Image) | [🤖 ModelScope](https://modelscope.cn/models/NucleusAI/Nucleus-Image)
+    <br>`[MoE擴散模型]` `[極低推理成本]` `[精準空間佈局]`
+
 * **[Sana (ICLR 2025 Oral)](https://github.com/NVlabs/Sana)** `[2025-01-28]` 🔥
   * **核心優勢**：由 NVIDIA、MIT 與清華共同開源。導入新架構，生成高清圖片的速度比 FLUX 快 100 倍！[📝 中文解讀](https://zhuanlan.zhihu.com/p/19489214543)
+
 * **[Jodi](https://vipl-genun.github.io/Project-Jodi/)** `[2025-05-28]`：視覺理解與生成大一統模型，打破辨識與生成的界線。
+
 * **[FlashVideo](https://github.com/FoundationVision/FlashVideo)** `[2025-02-14]`：字節跳動視訊增強演算法，102 秒即可生成 1080P 影片。
 
 ### 3. ComfyUI 實用工具與精準控制
