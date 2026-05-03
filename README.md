@@ -49,6 +49,11 @@ service_type: AI Consulting
 | **YOLOv8** | 🇺🇸 **Ultralytics** | **生態系最完善**。雖然不是最新，但在社群中的教學、部署套件、ONNX/TensorRT 轉換資源最為豐富。 | 工業級穩定部署、初學者專案<br>`[生態豐富]` `[極易部署]` |
 | **OV-DINO** | 🇺🇸 **國際學術界** | **開源工業開放詞彙目標檢測**。不需要預先定義好類別，直接用自然語言提示 (Prompt) 就能找出畫面中對應的物體。 | 零樣本 (Zero-shot) 偵測、通用場景<br>`[Open-Vocabulary]` `[前沿技術]` |
 
+* **[[FS-DETR]](https://github.com/YT3DVision/FSDETR)** `[2026-04-21]` 🔥 `[小目標偵測]` `[頻域空間融合]` `[邊緣運算]`
+  * **核心優勢**：**打破極端小目標漏檢魔咒，首創「頻域-空間」雙軌融合的輕量級檢測神作！** 基於 RT-DETR 架構進行深度魔改，創新引入二維快速傅立葉變換 (FFT2D) 提取高頻紋理，並結合空間層次注意力 (SHAB) 與可變形稀疏採樣 (DA-AIFI)。在參數僅有 14.7M（比 RT-DETR-R18 瘦身 26%）的極致輕量化條件下，仍能精準捕捉僅數十像素的微小物體，小目標檢測效能 (APₛ) 強勢輾壓 D-Fine-M 與 RT-DETRv2。
+  * **解決痛點 / 推薦場景**：**完美解決了傳統 YOLO/DETR 在邊緣設備上「縮小模型就嚴重漏檢、做大模型又跑不動」，以及全局注意力容易被密集背景雜訊干擾的致命痛點。** 實測在 VisDrone (高密度交通) 與 TinyPerson (極端低對比度微小行人) 等嚴苛資料集上創下 SOTA。是打造**無人機高空巡檢 (UAV)**、**衛星遙感影像分析**，以及部署於算力極限**邊緣運算盒子 (Edge AI)** 的工業級首選。
+  * **資源**：[🐙 GitHub 官方開源](https://github.com/YT3DVision/FSDETR)
+
 **B. 亞洲/中國頂尖開源 (極致效能與端側特化)**
 
 | 模型名稱 | 開發團隊 | 💡 核心優勢與突破點 | 🚀 推薦場景 & 規格標籤 |
@@ -122,15 +127,35 @@ service_type: AI Consulting
 
 目標偵測不僅是畫出邊界框 (Bounding Box)，目前的趨勢是結合語言模型與強化學習，實現「開放詞彙 (Open-Vocabulary)」與「極端場景特化」。
 
+* **[[Roboflow Trackers]](https://github.com/roboflow/trackers)** `[2026]` 🔥 `[多目標跟蹤 MOT]` `[隨插即用]` `[Apache 2.0可商用]`
+  * **核心優勢**：**解救演算法工程師的 MOT 隨插即用神器，一行程式碼無縫接軌任意檢測模型！** 徹底打破過去跟蹤演算法與特定檢測器深度耦合、官方程式碼難以魔改的泥淖。內建 SORT、ByteTrack (高低置信度雙階段關聯) 與 OC-SORT (抗遮擋霸主) 等主流演算法。高度模組化設計，只要你的模型（YOLO, RT-DETR 等）能吐出檢測框與置信度，它就能接手產出具備唯一 ID 的連續軌跡。
+  * **解決痛點 / 推薦場景**：**完美解決了傳統跟蹤演算法「換個檢測模型就要重寫底層」以及「論文程式碼難以落地」的致命痛點。** 原生支援 CLI 指令，一鍵即可無腦處理本地視訊、攝影機或 RTSP 串流，並內建標準 HOTA 效能評估工具。極度適合需要快速部署**安防監控即時串流分析**、**高動態體育賽事轉播 (SportsMOT)**，以及**自駕車與機器人視覺**等工業級即時追蹤場景。
+  * **資源**：[🐙 GitHub 官方開源](https://github.com/roboflow/trackers) | [📄 官方完整文件](https://trackers.roboflow.com) | [🌐 瀏覽器線上 DEMO](https://huggingface.co/spaces/Roboflow/Trackers)
+
+* **[[FT-FSOD (Parallel Decoder)]](https://github.com/Intellindust-AI-Lab/FT-FSOD)** `[CVPR 2026]` 🔥 `[跨域少樣本]` `[並行解碼器]` `[自動化微調]`
+  * **核心優勢**：**打破跨域微調的過度擬合魔咒，僅靠輕量解碼器魔改與漸進式微調，強勢輾壓 SAM 3！** 論文證實，面對巨大域偏移（如工業瑕疵、醫療影像），一味把模型做大是錯的！透過首創的「混合集成解碼器 (HED)」引入並行預測多樣性，搭配 plateau-aware 漸進式微調策略，幾乎**零額外參數**即可徹底解決少樣本訓練極易震盪與收斂困難的致命缺陷。
+  * **解決痛點 / 推薦場景**：**完美解決傳統視覺模型導入特殊產業（如工業 AOI 缺陷、空拍圖、水下探勘或文件解析）時，因「標註資料極少」加「場景差異過大」導致模型泛化能力直接崩潰的痛點。** 實測在包含 100 個極端異構資料集的 RF100-VL 基準上，10-shot 效能 (41.9 mAP) 顯著擊敗 SAM 3 與 DINO 家族。極度適合沒有海量算力與標註人力、不想手動痛苦調參，卻需要讓 AI 快速適配陌生新場景的企業級跨域目標檢測任務。
+  * **資源**：[🐙 GitHub 官方開源](https://github.com/Intellindust-AI-Lab/FT-FSOD)
+
+* **[[Rex-Omni]](https://rex-omni.github.io/)** `[CVPR 2026]` 🔥 `[檢測一切]` `[GRPO強化學習]` `[Qwen2.5-VL底座]`
+  * **核心優勢**：**打破語言理解與視覺定位的壁壘，首創引入 GRPO 強化學習的「檢測一切」多模態大模型！** 基於 3B 輕量級 Qwen2.5-VL 打造，徹底拋棄傳統 YOLO/DETR 依賴的座標迴歸（Regression），將目標偵測、OCR、GUI 定位與關鍵點提取，全部霸氣統一為「離散座標序列預測」任務。透過獨創的幾何感知獎勵函數（GRPO）進行後訓練，精準糾正了以往多模態模型（MLLM）常見的座標漂移與重複預測問題。
+  * **解決痛點 / 推薦場景**：**完美解決了傳統視覺大模型「看得懂複雜指令，卻框不準精確位置」的致命痛點。** 它的零樣本 (Zero-shot) 檢測效能直接匹敵甚至超越 Grounding DINO 等專用模型。極度適合用於開發需要深度語言理解的**自動化 GUI 網頁操作代理 (Web Agent)**、**複雜圖表/排版的 OCR 系統**，以及支援自然語言指令的**開放詞彙 (Open-Vocabulary) 機器人視覺感知系統**。
+  * **資源**：[🐙 專案首頁與程式碼](https://rex-omni.github.io/) | [📄 arXiv 論文](https://arxiv.org/abs/2510.12798)
+
 * **[OV-DINO](https://github.com/wanghao9610/OV-DINO)** `[2025-07-24]`
   * **核心優勢**：開源工業開放詞彙目標檢測框架。不需要預先標註所有類別，只需輸入自然語言，模型就能自動找到對應的物體。[📝 中文解讀](https://mp.weixin.qq.com/s/gLAVYFAH_39gT4XC0zWN0A)
+
 * **[CountVid](https://www.alphaxiv.org/abs/2506.15368)** `[2025-06-18]`
   * **解決痛點**：突破傳統模型只能數「特定訓練類別」的限制，支援在動態影片中透過提示詞實現「指哪數哪」的開放世界計數。適合交通車流監控與生產線良率計算。[📝 中文解讀](https://mp.weixin.qq.com/s/hICrrfEgriyktoIxnbjPEQ)
+
 * **[MCL (AAAI 2025)](https://github.com/facias914/sood-mcl)** `[2025]`
   * **解決痛點**：專為無人機空拍圖與衛星遙感影像設計的半監督框架。透過多線索一致性學習，只需極少量標註，就能在超大解析度影像中精準框出微小物件。[📝 中文解讀](https://zhuanlan.zhihu.com/p/26788012528)
-  
+
+
 * **[VisionReasoner](https://github.com/dvlab-research/VisionReasoner)** `[2025-05-23]`：用強化學習統一視覺感知與推理，對標大廠 VLM。
+
 * **[GeoPix](https://github.com/Norman-Ou/GeoPix)** `[2025-06-15]`：像素級遙感多模態大模型。[📝 實驗室介紹](https://3slab.pku.edu.cn/info/1026/2121.htm)
+
 * **[Falcon](https://deepwiki.com/TianHuiLab/Falcon)** `[2025-03-14]`：遙感視覺與語言基礎模型 (Remote Sensing VLM)。
 
 ---
@@ -157,10 +182,24 @@ service_type: AI Consulting
   * [**Grounded SAM 2**](https://github.com/IDEA-Research/Grounded-SAM-2)：結合文字 grounding 技術，在影片中追蹤特定物件。
 
 ### 2. 領域特化與多模態分割模型
+
+* **[[TIPSv2]](https://github.com/google-deepmind/tips)** `[CVPR 2026]` 🔥 `[像素級理解]` `[零樣本分割]` `[視覺-語言預訓練]`
+  * **核心優勢**：**打破 CLIP 與 DINOv2 局限，達成「像素級」Patch-Text 對齊的視覺編碼器新霸主！** 谷歌開源的 TIPSv2，創新提出 `iBOT++` 掩碼圖像建模目標，首度強制模型「對齊可見 Token 的表徵」，並結合 Head-only EMA 與多粒度文本描述策略。在零樣本分割任務上全面輾壓 SigLIP2 與 DINOv2 (例如 PASCAL VOC 達 62.4 mIoU)，實現前所未有的邊界清晰度與語意一致性。
+  * **解決痛點 / 推薦場景**：**完美解決了傳統視覺-語言大模型「認得出貓，但無法精確框出貓的每一寸毛髮（Patch 級別輪廓）」的致命痛點。** 由於大幅提升了特徵圖的平滑度與局部語意捕捉能力，是打造**自動駕駛場景精細感知**、**醫療影像像素級病灶分割**，以及**機器人高精度抓取**等密集預測 (Dense Prediction) 任務的工業級底座首選。
+  * **資源**：[🐙 項目頁面與程式碼](https://github.com/google-deepmind/tips)
+
+* **[[INSID3]](https://visinf.github.io/INSID3)** `[CVPR 2026]` 🔥 `[免訓練分割]` `[DINOv3特化]` `[輕量極速]`
+  * **核心優勢**：**打破 SAM 霸權的免訓練 (Training-Free) 分割黑科技，單一凍結 DINOv3 達成 SOTA！** 徹底拋棄傳統 In-Context Segmentation 對額外 Decoder、Fine-tuning 或 SAM 遮罩先驗的重度依賴[cite: 1]。透過首創的「位置去偏 (Positional Debiasing)」與「聚類聚合」機制，讓分割能力直接從 DINOv3 強大的自監督表示中「長出來」[cite: 1]。模型參數僅 304M，單次推論僅需 302 ms，速度與輕量化程度遠超動輒近 1B 參數的 GF-SAM (1,030 ms)[cite: 1]。
+  * **解決痛點 / 推薦場景**：**完美解決了傳統視覺模型在更換資料域（如醫療影像）或不同語義粒度時，泛化能力崩潰與硬體資源消耗過大的致命痛點[cite: 1]。** 憑藉卓越的跨圖語義匹配能力，在醫療 X-Ray (+27.8 點)、PASCAL-Part (+6.0 點) 與個人化分割任務上全面輾壓對手[cite: 1]。極度適合資源受限的邊緣設備、高精確度醫療影像分析，以及需要 One-Shot 零樣本提取特定物件的工業級輕量化場景。
+  * **資源**：[🐙 項目頁面與程式碼](https://visinf.github.io/INSID3)[cite: 1]
+
 * **[Perceive Anything Model](https://www.alphaxiv.org/zh/overview/2506.05302v1)**：對標 SAM2 + LLM，不僅能分割，還能理解並描述物件。[📝 中文解讀](https://zhuanlan.zhihu.com/p/1919709726209446971)
+
 * **[InstructSAM](https://voyagerxvoyagerx.github.io/InstructSAM/)**
   * **解決痛點**：專為地球觀測打造的免訓練分割框架。輸入指令「標記森林大火區域」，即可自動完成地理圖資分割，災防應變強大輔助。
+
 * **[RemoteSAM](https://deepwiki.com/1e12Leon/RemoteSAM)**：面向地球觀測 (Earth Observation) 的通用分割模型。
+
 * **[MatAnyone](https://github.com/pq-yang/MatAnyone)**：視訊摳圖專用，主打髮絲級還原。
 
 ---
@@ -288,6 +327,11 @@ service_type: AI Consulting
 
 ### 1. 語音驅動與動態頭像生成 (Audio-Driven Avatar)
 
+* **[[CyberVerse]](https://github.com/dsd2077/CyberVerse)** `[2026-04-18]` 🔥 `[WebRTC即時通訊]` `[單張圖生成]` `[高度模組化]`
+  * **核心優勢**：**跨越恐怖谷的即時視訊數位人，單圖直連 P2P 的互動革命！** 徹底終結預錄影片與假笑循環。透過 WebRTC P2P 直連，實現首幀渲染僅需 1.5 秒的超低延遲，並精準還原說話時嘴唇與喉結的微小起伏。首創「樂高式」可插拔 YAML 配置架構，將大腦 (LLM)、臉 (Avatar)、聲音 (TTS) 與耳朵 (ASR) 完美解耦，支援一鍵切換豆包、GPT 或本地 Llama 模型。
+  * **解決痛點 / 推薦場景**：**解決了傳統數位人「無法即時對談」、「延遲高得嚇人」以及「系統封閉難以二次開發」的致命痛點。** 支援呼叫外部工具（如查股價、跑腳本），讓矽基生命真正具備行動力。極度適合擁有高階算力 (如 RTX 4090/5090) 的開發者，打造**次世代高沉浸感虛擬客服**、**24小時視訊陪伴 AI**，或**企業級自動化會議助理**。
+  * **資源**：[🐙 GitHub 官方開源](https://github.com/dsd2077/CyberVerse)
+
 * **[[InfiniteTalk]](https://github.com/Meituan-AutoML/InfiniteTalk)** `[2026-04]` 🔥
   * **核心優勢**：**打破「面癱」配音魔咒，首創「全身聯動」的無限時長說話影片生成模型！** 由美團 (MeiGen-AI) 團隊重磅開源 (Apache 2.0)。採用獨創的「稀疏幀影片配音」範式與流式音訊驅動架構，支援圖生影片 (I2V) 與影片到影片 (V2V)。它全面超越 MuseTalk 等傳統僅能「修補嘴型」的方案，不僅對口型，更能讓數字人的頭部動作、面部表情與身體姿態完美契合音訊節奏。
   * **解決痛點 / 推薦場景**：**徹底解決傳統 AI 虛擬人「身體僵硬、表情死板」以及生成長度受限的致命痛點。** 具備強大的軟參考機制，能在極致保留原始人物身份與背景的同時，實現無卡頓的幀間平滑過渡。生態系極度友善，已原生支援 ComfyUI 節點與低顯存量化加速。極度適合教育工作者零門檻打造**生動的虛擬講師微課**，也是**影視多語言在地化無縫配音**與**高互動遊戲 NPC 動畫**的工業級首選。
@@ -354,10 +398,17 @@ service_type: AI Consulting
 
 在追求酷炫的生成式 AI 之前，理解圖像分類的底層架構仍然是電腦視覺的必修課。以下是從 CNN 時代走向 Transformer 時代的三大奠基之作：
 
+* **[[EUPE (Efficient Universal Perception Encoder)]](https://arxiv.org/pdf/2603.22387)** `[2026-03]` 🔥 `[通用視覺編碼器]` `[多任務聚合]` `[邊緣運算]`
+  * **核心優勢**：**終結視覺基礎模型「嚴重偏科」的開源神作，單一輕量編碼器完美聚合 CLIP、DINO 與 SAM 的多領域超能力！** Meta Reality Labs 創新提出「先擴展再縮小」的兩階段蒸餾範式（先由巨型代理教師融合跨域知識，再固定解析度蒸餾給輕量學生模型），徹底突破了過往高效編碼器無法兼顧「全局語意理解」與「像素級密集預測」的瓶頸，各項基準測試效能全面輾壓 NVIDIA 的 RADIO 系列。
+  * **解決痛點 / 推薦場景**：**完美解決了傳統電腦視覺專案為了應付不同任務，必須「同時掛載多個專家模型」導致記憶體爆滿、硬體算力消耗過大的致命痛點。** EUPE 的極致高效與統一的特徵空間，不僅是資源極度受限的**邊緣運算設備 (Edge AI)** 與**多任務工業視覺感知系統**的落地首選，更是為下一代**多模態大語言模型 (MLLM)** 裝上了一雙能同時看懂語意與幾何細節的「全能之眼」。
+  * **資源**：[📄 arXiv 論文](https://arxiv.org/pdf/2603.22387)
+
 * **[ViT (Vision Transformer)](https://github.com/google-research/vision_transformer)**
   * **技術意義**：Google 團隊將 NLP 領域的 Transformer 架構完美移植到視覺領域的開山之作，徹底改變了 CV 的發展軌跡。[📝 解析文章](https://zhuanlan.zhihu.com/p/445122996)
+
 * **[Swin Transformer](https://github.com/microsoft/Swin-Transformer)**
   * **技術意義**：微軟開源。透過移動窗口 (Shifted Window) 機制，解決了 ViT 運算量過大與難以處理多尺度物件的問題，「用 CNN 的方式打敗了 CNN」。[📝 原理通俗解析](https://zhuanlan.zhihu.com/p/362690149)
+
 * **[EfficientNetV2](https://github.com/d-li14/efficientnetv2.pytorch)**
   * **技術意義**：CNN 架構的極致優化版。透過神經架構搜尋 (NAS)，在極小的參數規模下達到了前所未有的準確度與訓練速度。[📝 更小更快的訓練解析](https://zhuanlan.zhihu.com/p/361873583)
 
