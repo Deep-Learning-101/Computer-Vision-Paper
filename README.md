@@ -191,13 +191,13 @@ service_type: AI Consulting
   * **資源**：[🐙 GitHub](https://github.com/tiiuae/falcon-perception) | [📄 論文](https://arxiv.org/abs/2603.27365) | [🌐 線上 Demo](https://vision.falcon.aidrc.tii.ae/)
 
 * **[SAM3-I](https://github.com/debby-0527/SAM3-I)** `[2026-05]` 🔥 `[指令驅動]` `[免大模型代理]` `[部件級分割]`
-* **核心優勢**：**打破 SAM 依賴多模態大模型的硬體枷鎖，1.1B 參數效能強勢輾壓 8.8B 巨獸！** 這項由騰訊微信與頂尖大學聯手發表於 ACL 2026 的黑科技，首創「指令感知級聯適配器 (S-Adapter/C-Adapter)」，讓 SAM3 直接具備理解複雜自然語言（如「用來解渴的東西」而非單純的名詞「杯子」）的能力。不需破壞預訓練權重，即可實現從「單純識物」到「高階邏輯聽令」的進化。
-* **解決痛點 / 推薦場景**：**完美解決傳統 SAM 結合 VLM Agent 時「推論極慢、極吃記憶體、容易產生級聯誤差」的致命痛點。** 特別是在面對「一對多」的複雜場景與極精細的「部件級 (Part-level) 分割」時（如精準分割出「帶有鉻合金排氣管的黑色管子」），其準確度遠超過往 SOTA。極度適合部署於**資源受限的邊緣視覺設備 (Edge AI)**、**高互動性具身智能機器人 (Embodied AI)**，以及需要處理**精細工業/醫療影像的零樣本分割系統**。
-* **資源**：[🐙 GitHub](https://github.com/debby-0527/SAM3-I) | [📄 論文](https://arxiv.org/abs/2512.04585)
+  * **核心優勢**：**打破 SAM 依賴多模態大模型的硬體枷鎖，1.1B 參數效能強勢輾壓 8.8B 巨獸！** 這項由騰訊微信與頂尖大學聯手發表於 ACL 2026 的黑科技，首創「指令感知級聯適配器 (S-Adapter/C-Adapter)」，讓 SAM3 直接具備理解複雜自然語言（如「用來解渴的東西」而非單純的名詞「杯子」）的能力。不需破壞預訓練權重，即可實現從「單純識物」到「高階邏輯聽令」的進化。
+  * **解決痛點 / 推薦場景**：**完美解決傳統 SAM 結合 VLM Agent 時「推論極慢、極吃記憶體、容易產生級聯誤差」的致命痛點。** 特別是在面對「一對多」的複雜場景與極精細的「部件級 (Part-level) 分割」時（如精準分割出「帶有鉻合金排氣管的黑色管子」），其準確度遠超過往 SOTA。極度適合部署於**資源受限的邊緣視覺設備 (Edge AI)**、**高互動性具身智能機器人 (Embodied AI)**，以及需要處理**精細工業/醫療影像的零樣本分割系統**。
+  * **資源**：[🐙 GitHub](https://github.com/debby-0527/SAM3-I) | [📄 論文](https://arxiv.org/abs/2512.04585)
 
 * **[Meta SAM 3](https://github.com/facebookresearch/sam3)**
   * **核心優勢**：Meta 官方最新分割一切模型，持續推進零樣本分割的極限。[📝 公眾號解讀](https://mp.weixin.qq.com/s/7uDHXQd1ES2mV4dZFB7VMw)
-  
+
 * **Meta SAM 2 及其變體**：
   * [**Meta SAM 2 官方**](https://ai.meta.com/sam2/) | [📝 60行程式碼微調教學](https://mp.weixin.qq.com/s/YfgYCzvi0cXxOFIfQvE_9w)
   * [**SAM2Long**](https://github.com/Mark12Ding/SAM2Long)：解決 SAM 2 長影片追蹤容易丟失目標的問題，影視特效自動摳圖利器。
