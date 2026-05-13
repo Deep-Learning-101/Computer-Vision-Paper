@@ -306,12 +306,22 @@ service_type: AI Consulting
 ### 1. 影片生成大模型 (Video Generation)
 突破硬體極限與時長限制，帶來電影級的視覺理解。
 
+* **[SVOR (Stable Video Object Removal)](https://github.com/xiaomi-research/svor)** `[2026-03]` 🔥 `[影片物件消除]` `[物理感知]` `[高容錯]`
+  * **核心優勢**：**CVPR 2026 物理感知視頻實例消除挑戰賽冠軍神作，徹底終結影片消除的「陰影殘留」與「閃爍抖動」！** 由小米大模型應用團隊研發，首創 MUSE (窗口化聯合策略) 與 DA-Seg (去噪感知分割) 模組。透過時間窗口內的多影格聯合分析，即使輸入的 AI 識別遮罩有缺陷，也能穩定追蹤高速動態物件並智能修補邊界。
+  * **解決痛點 / 推薦場景**：**完美解決了真實世界影片後製中，物件移除後容易「跟丟導致閃爍」與「殘留反光物理陰影」的致命痛點。** 搭配課程式兩階段訓練（真實背景自監督預訓練＋合成數據精調），極大幅度提升了跨場景的適應力。是打造**高質量影視特效擦除**、**短影音自動去浮水印/路人**，以及推動**智慧影片編輯工具商用落地**的工業級開源首選。
+  * **資源**：[🐙 GitHub](https://github.com/xiaomi-research/svor) | [📄 論文](https://arxiv.org/abs/2603.09283) | [⚡ Skill 快速調用](https://clawhub.ai/wangfei1204/mi-visionforge-svor) | [🏆 挑戰賽榜單](https://docs.google.com/spreadsheets/d/18qfBQesVNpHadUP_cdL6T8hPGH_cXrnJ94Z5H-zuibs)
+
 * **[Wan-Video (萬相)](https://github.com/Wan-Video/Wan2.1)** `[2025-02-25]`
   * **核心優勢**：阿里萬相大模型開源，主打全模態、全尺寸的高解析度影片生成。[📝 媒體報導](https://finance.sina.com.cn/jjxw/2025-02-26/doc-inemukxr9127437.shtml)
+
 * **[SkyReels V2](https://github.com/SkyworkAI/SkyReels-V2)** `[2025-04-22]`：全球首個無限時長影片生成模型，具備電影級的場景理解能力。
+
 * **[MAGI-1](https://github.com/SandAI-org/Magi-1)** `[2025-04-22]`：Sand AI 推出的全球首個自回歸影片生成大模型。
+
 * **[Phantom](https://github.com/Phantom-video/Phantom)** `[2025-04-24]`：字節跳動開源。極度友善的硬體門檻，僅需 10G 顯存即可生成 1280x720 高清影片。
+
 * **[Index-AniSora](https://deepwiki.com/bilibili/Index-anisora)** `[2025-05-19]`：B 站開源的 SOTA 動畫影片生成模型，二次元風格特化。
+
 * **[MAI-Image-2](https://microsoft.ai/news/today-were-announcing-3-new-world-class-mai-models-available-in-foundry/)** `[2026-04-16]` 🔥
   * **核心優勢**：**重新定義「廣告級」影像生成，畫面內文字清晰度與光影質感超越 DALL-E 3。** Microsoft AI 專為設計師打造，精準捕捉自然膚色紋理與細膩光影。其最強大的亮點在於解決了生成式 AI 常見的「圖中文字扭曲」痛點，能直接產出可商用的排版設計。
   * **解決痛點 / 推薦場景**：**解決了設計師在生成海報或 UI 時，必須手動修正文字與光影不自然的繁瑣流程。** 榮登 Arena.ai 榜單前三，是電商廣告創作、專業平面設計與社交媒體視覺素材的工業級利器。
