@@ -33,6 +33,8 @@ jobs:
         id: filter
         with:
           base: ${{ github.event.before }}
+          head: ${{ github.sha }}
+          working-directory: sub-repo
           filters: |
             readme:
               - 'README.md'
