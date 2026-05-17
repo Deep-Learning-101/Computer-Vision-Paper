@@ -277,23 +277,46 @@ service_type: AI Consulting
   * **核心優勢**：**1.2B 極小參數逆襲 235B 巨獸，RAG 資料清洗的終極殺器！** 上海 AI Lab 重磅升級，憑藉極致的數據工程（四步協同質量飛輪），在 OmniDocBench 評測中擊敗千億級通用大模型。原生支援「跨頁表格自動合併」、「截斷段落接續」與「表格內圖像檢測」。
   * **解決痛點 / 推薦場景**：**徹底解決複雜 PDF (如雙欄論文、密集數學公式、嵌套表格) 轉換 Markdown 時的結構破碎問題。** 不需龐大算力即可精準還原版面邏輯，是企業建置 RAG 私有知識庫、大模型預訓練語料準備絕對不可或缺的高保真清洗神器。
   * **資源**：[🐙 GitHub](https://github.com/opendatalab/MinerU) | [📄 論文](https://arxiv.org/abs/2604.04771) | [📊 評測基準](https://github.com/opendatalab/OmniDocBench)
+
+* **[PDFMathTranslate](https://github.com/PDFMathTranslate/PDFMathTranslate)** `[2025-11-12]` 🔥
+  * **核心優勢**：**學術界頂會 EMNLP 2025 認證，地表首款完美保留排版、公式與圖表的 PDF 雙語翻譯大腦！** 採用先進的 `DocLayout-YOLO` 視覺模型進行版面佈局解析，徹底打破傳統 PDF 翻譯工具將公式文字化、導致排版盡毀的黑盒限制。它能精準「解剖」論文結構，完美復刻 LaTeX 數學公式、複雜嵌套表格與文獻引用，並原生對接 OpenAI、DeepL、Google 乃至本地部署的 Ollama 等多元 LLM 推理引擎。全球累積下載量已突破 22 萬次。
+  * **解決痛點 / 推薦場景**：**完美解決了科研人員與開發者閱讀 STEM (理工科) 論文時公式錯亂、圖表移位的致命痛點。** 內建五大靈活接入模式（WebUI、CLI 腳本、Docker 隔離部署、MCP 智能體插件以及 Zotero 學術工作流一鍵右鍵翻譯），是企業打造**高保真學術文獻 RAG 知識庫前處理**、**學術團隊極速無障礙文獻調研**的工業級無損知識遷移神作。
+  * **資源**：[官方主倉庫 🐙 GitHub](https://github.com/PDFMathTranslate/PDFMathTranslate) | [次世代實驗分支 🐙 GitHub-next](https://github.com/PDFMathTranslate/PDFMathTranslate-next) | [📄 EMNLP 論文](https://aclanthology.org/2025.emnlp-demos.71/) | [📝 arXiv 預印本](https://arxiv.org/abs/2507.03009)
+
+
 * **[OCRFlux](https://github.com/chatdoc-com/OCRFlux)** `[2025-06-16]`
   * **解決痛點**：專治「反人類排版」的 PDF 解析救星！精準還原雙欄排版與跨頁表格，非常適合建立企業私有知識庫。
+
 * **[markitdown](https://github.com/microsoft/markitdown)** `[2024-12-15]`：微軟官方開源的文件轉換工具。
+
 * **[OmniParser](https://github.com/AlibabaResearch/AdvancedLiterateMachinery/tree/main/OCR/OmniParser)** `[2024-10-29]`：Alibaba 出品，通用文檔複雜場景抽取。
+
 * **[olmocr](https://github.com/allenai/olmocr)** `[2025-03-03]`：支援本地部署精準提取 PDF。
 
 ### 3. 輕量化與傳統開源 OCR 生態
+
+* **[Stirling-PDF (全能隱私安全 PDF 處理基礎設施)](https://github.com/Stirling-Tools/Stirling-PDF)** `[持續更新]` 🔥
+  * **核心優勢**：**地表最強 100% 本地私有化 PDF 處理神兵利器，橫掃 50+ 種專業編輯與高精度 OCR 功能！** 在 GitHub 狂攬超過 63K Stars，這款基於 Java 的硬核開源專案，讓使用者能透過美觀的網頁介面完全離線操作。它徹底終結了敏感公文或商業機密必須上傳至公有雲轉換的資安洩漏風險，將商業級 PDF 編輯室完美封裝至本地端。
+  * **解決痛點 / 推薦場景**：**完美解決了政府機關、金融合規與技術團隊處理機密合約、財務報表時的資料隱私痛點，是終結昂貴商業授權（如 Adobe Acrobat）的終極平替神作。** 原生整合強大的 **OCR 光學字元辨識**，能將沉悶的掃描檔秒變可搜尋、可編輯的乾淨文本。支援大批量 PDF 與 Word、Excel、Markdown、網頁及圖片的雙向無損轉換。極度適合用於**企業內部高度機密檔案處置**、**跨平台自動化財稅發票審計**，以及**大模型 RAG 知識庫前處理的資料去隱私與清洗管線**。
+  * **資源**：[🐙 GitHub 官方開源](https://github.com/Stirling-Tools/Stirling-PDF) | [🌐 官方網站](https://www.stirlingpdf.com) | [📦 Docker Hub 鏡像](https://hub.docker.com/r/stirlingpdf/stirling-pdf)
+
 * **[Falcon OCR](https://github.com/tiiuae/falcon-perception)** `[2026-04-01]` 🔥
   * **核心優勢**：**0.3B 極致輕量，效能吊打 10 倍大模型。** 採用與 Falcon Perception 相同的早融合單棧架構專為 OCR 訓練。表格識別準確率達 90.3%，OmniDocBench 總體得分與 DeepSeek OCR v2 等百億參數巨獸不相上下。
   * **解決痛點 / 推薦場景**：**打破高併發文件解析的吞吐量瓶頸。** 在 vLLM 環境下單卡 A100 吞吐量高達驚人的 5825 tok/s。更原生提供 MLX 支援，開發者可直接在 MacBook 上流暢部署，是本地端極速 OCR 的「殺手級」引擎。
   * **資源**：[🐙 GitHub](https://github.com/tiiuae/falcon-perception) | [📄 論文](https://arxiv.org/abs/2603.27365)
+
 * **[OpenDoc-0.1B](https://github.com/Topdu/OpenOCR)** `[2026-01-28]` / **[OpenOCR](https://github.com/Topdu/OpenOCR)** `[2025-03-05]`：極度輕量化的開源 OCR 專案。
+
 * **[dots.ocr](https://huggingface.co/rednote-hilab/dots.ocr)** `[2025-07-30]`：本地部署的 1.7B 超強 OCR。
+
 * **[MonkeyOCR](https://deepwiki.com/Yuliang-Liu/MonkeyOCR)** `[2025-06-05]`：猴子家族的文檔辨識專案。
+
 * **[PP-DocBee](https://github.com/PaddlePaddle/PaddleMIX/tree/develop/deploy/ppdocbee)** `[2025-03-05]`：百度文檔影像理解模型。
+
 * **[GOT-OCR-2.0](https://mp.weixin.qq.com/s/rQL-Q0TGhT6e8Ti4zZalrg)** `[2024-09-11]`：宣告 OCR 2.0 時代來臨的代表作。
+
 * **[RapidOCR](https://github.com/RapidAI/RapidOCR/blob/main/docs/README_zh.md)**：跨平台、高效率的實用 OCR 部署方案。
+
 * **[TableStructureRec](https://github.com/RapidAI/TableStructureRec)**：專門對付複雜表格結構的辨識推理庫。
 
 ---
@@ -305,6 +328,12 @@ service_type: AI Consulting
 
 ### 1. 影片生成大模型 (Video Generation)
 突破硬體極限與時長限制，帶來電影級的視覺理解。
+
+* **[Remotion Skills (AI 代碼驅動影片框架)](https://github.com/remotion-dev/skills)** `[持續更新]` 🔥
+  * **核心優勢**：**顛覆「黑盒文生影片」，用 AI 寫 React 程式碼來「精確渲染」影片的工程化革命！** 建立在知名的 React 影片框架 Remotion 之上，將影片視為「隨時間變化的 UI」。它內建專為大模型設計的動畫模式庫與 MCP 協議，讓 AI 代理能直接聽懂自然語言指令（如：做一個 30 秒科技風產品介紹），並自動輸出 100% 確定性、可編輯、支援版本控制的 TypeScript/React 影片代碼。
+  * **解決痛點 / 推薦場景**：**完美解決了主流生成式 AI 影片無法精確控制排版、無法修改錯字，以及傳統圖形化剪輯軟體無法自動化批量生產的痛點。** 告別手動拖曳時間軸，極度適合企業開發者打造**自動化 RPA 影片生產工廠 (如每日新聞摘要、電商財報可視化)**、**社群媒體短影音批量生成**，是將影片製作從「手工藝」升級為「軟體工程」的開源首選。
+  * **資源**：[🐙 Remotion 主專案](https://github.com/remotion-dev/remotion) | [🐙 Remotion Skills (AI技能包)](https://github.com/remotion-dev/skills)
+`[程式碼生影片]` `[Agent原生支援]` `[零誤差渲染]` `[自動化剪輯工廠]`
 
 * **[SVOR (Stable Video Object Removal)](https://github.com/xiaomi-research/svor)** `[2026-03]` 🔥 `[影片物件消除]` `[物理感知]` `[高容錯]`
   * **核心優勢**：**CVPR 2026 物理感知視頻實例消除挑戰賽冠軍神作，徹底終結影片消除的「陰影殘留」與「閃爍抖動」！** 由小米大模型應用團隊研發，首創 MUSE (窗口化聯合策略) 與 DA-Seg (去噪感知分割) 模組。透過時間窗口內的多影格聯合分析，即使輸入的 AI 識別遮罩有缺陷，也能穩定追蹤高速動態物件並智能修補邊界。
