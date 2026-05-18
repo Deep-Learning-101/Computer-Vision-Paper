@@ -112,6 +112,12 @@ service_type: AI Consulting
 ### 2. 少樣本與無監督學習前沿突破 (Few-shot & Unsupervised)
 解決現場只能取得「正常良品圖」或極少量瑕疵圖的痛點。
 
+* **[DINO-AD](https://arxiv.org/abs/2602.03870)** `[2026-02]` 🔥
+  * **核心優勢**：**打破模型微調成本高牆的免訓練 (Training-Free) 異常檢測黑科技！** 徹底拋棄針對特定資料集重新訓練的繁瑣流程，直接利用凍結的 DINO-V3 自監督視覺特徵，結合首創的「嵌入相似性匹配 (ESM)」與「前景感知 K-means 聚類」。完全零訓練開銷，卻在醫療影像 (Brain/Liver) 的像素級異常檢測上雙雙突破 98% AUROC，強勢輾壓 PatchCore 與 PaDiM 等經典無監督算法。
+  * **解決痛點 / 推薦場景**：**完美解決了傳統 AOI 與醫療分析中「異常樣本極度稀缺」以及「每次更換檢測物體都需耗時重新煉丹 (重訓模型)」的致命痛點。** 其多中心聚類設計能完美適應正常組織的自然形態變化，避免過度敏感導致的誤判。極度適合用於**高精度的醫療影像病灶快速篩查**、需要頻繁切換產線的**工業 AOI 柔性製造**，以及算力不允許進行模型訓練的**邊緣運算設備 (Edge AI)**。
+  * **資源**：[📄 官方論文 (ISBI 2026)](https://arxiv.org/abs/2602.03870) | *註：官方 2D 實現源碼待釋出，可先參考相關的 3D 異常檢測庫 [DINO3D-AD*](https://github.com/alivecat05/DINO3D-AD)
+  `[免訓練 SOTA]` `[無監督學習]` `[醫療影像特化]`
+
 * **[SubspaceAD (YOLO + SubspaceAD 雙引擎架構)](https://github.com/CLendering/SubspaceAD)** `[CVPR 2026]` 🔥 `[1-shot 極限檢測]` `[免訓練]` `[零漏檢架構]`
   * **核心優勢**：**打破 AOI 部署門檻，僅需 1 張良品圖即可實現未知缺陷的免訓練檢測，結合 YOLO 將漏檢率暴降 96%！** 由埃因霍溫理工大學於 CVPR 2026 提出的極簡美學神作。徹底拋棄複雜的記憶庫與提示學習，利用凍結的 DINOv2 提取特徵並擬合 PCA 低維子空間，藉由計算重建殘差精準定位異常。1-shot 設定下，MVTec-AD 圖像級 AUROC 高達 98.0%。
   * **解決痛點 / 推薦場景**：**完美解決傳統 AOI「樣本稀缺、未知缺陷無法識別、換線成本極高」的三座大山。** 透過「有監督 YOLO (抓已知) + 無監督 SubspaceAD (抓未知)」的互補雙引擎，每個品類模型不到 1MB。新品上線只需拍一張正常照片即刻完成部署，導入週期縮短 80%。是**多樣少量生產線質檢**、**資源受限邊緣運算設備**與**快速換線 AOI 系統**的工業級完美解決方案。
@@ -144,6 +150,12 @@ service_type: AI Consulting
 **🎯 Object Detection (目標偵測)**
 
 目標偵測不僅是畫出邊界框 (Bounding Box)，目前的趨勢是結合語言模型與強化學習，實現「開放詞彙 (Open-Vocabulary)」與「極端場景特化」。
+
+* **[EUPE: DINOv3 + SAM + CLIP 三模合一輕量檢測框架](https://github.com/little51/dinov3-samples)** `[2026]` 🔥
+  * **核心優勢**：**打破大模型落地門檻的開箱即用神器，將 DINOv3、SAM 與 CLIP 的跨域超能力濃縮進極致輕量的檢測管線！** 基於 Meta 最新的 EUPE (Efficient Universal Perception Encoder) 骨幹，透過 `lightly-train` 框架高度封裝。開發者完全無需從頭煉丹，短短 10 行 Python 程式碼即可直接呼叫在 COCO 資料集上訓練完成的任務頭 (Task Head)，實現精準的開箱即用目標偵測。
+  * **解決痛點 / 推薦場景**：**完美解決了傳統視覺大模型 (Vision Foundation Models) 「整合困難、需要手寫複雜下游任務頭」的致命痛點。** 官方貼心釋出從 `ConvNeXt-Tiny` 到 `ViT-Base` 等多種尺寸的預訓練權重。極度適合需要在**邊緣運算設備 (Edge AI)** 快速部署街景分析，或是缺乏算力但想享受 SOTA 級通用視覺特徵的個人開發者與中小企業。
+  * **資源**：[🐙 GitHub 完整視覺化實戰源碼](https://github.com/little51/dinov3-samples) | [📄 官方框架說明](https://pypi.org/project/lightly-train)
+  `[開箱即用]` `[輕量化部署]` `[三模合一]` `[極簡API]`
 
 * **[Roboflow Trackers](https://github.com/roboflow/trackers)** `[2026]` 🔥 `[多目標跟蹤 MOT]` `[隨插即用]` `[Apache 2.0可商用]`
   * **核心優勢**：**解救演算法工程師的 MOT 隨插即用神器，一行程式碼無縫接軌任意檢測模型！** 徹底打破過去跟蹤演算法與特定檢測器深度耦合、官方程式碼難以魔改的泥淖。內建 SORT、ByteTrack (高低置信度雙階段關聯) 與 OC-SORT (抗遮擋霸主) 等主流演算法。高度模組化設計，只要你的模型（YOLO, RT-DETR 等）能吐出檢測框與置信度，它就能接手產出具備唯一 ID 的連續軌跡。
@@ -185,6 +197,12 @@ service_type: AI Consulting
 
 ### 1. SAM 家族與通用分割基石
 
+* **[LuoHuaLabel (基於 SAM 3 的智慧標註神器)](https://github.com/luohuabuxiema/LuoHuaLabel)** `[2026]` 🔥
+  * **核心優勢**：**徹底解放雙手的資料標註黑科技，以 SAM 3 驅動的次世代視覺標註系統！** 完美整合 Segment Anything 3 (SAM 3) 的強大零樣本 (Zero-shot) 分割能力，捨棄傳統耗時的手繪多邊形。支援「單點極速提取輪廓」與「自然語言提示 (Prompt) 全圖自動打框」。更獨創原生 OBB 旋轉框控制手柄（具備防變形與 360° 平滑旋轉），效能與體驗全面輾壓傳統 Labelme / LabelImg。
+  * **解決痛點 / 推薦場景**：**完美解決了電腦視覺專案中「手動標註耗時崩潰」、「傾斜目標難以精準框選」以及「標註格式轉換繁瑣」的三大致命痛點。** 系統內建一鍵訓練/驗證集劃分，並支援 JSON、YOLO (.txt 自動座標歸一化)、XML 等多格式無縫匯出。極度適合用於**無人機遙感影像分析 (Remote Sensing)**、**複雜 OCR 文本檢測**，以及需要快速量產高品質**實例分割 (Instance Segmentation)** 訓練資料的工業級開發團隊。
+  * **資源**：[🐙 GitHub 官方源碼](https://github.com/luohuabuxiema/LuoHuaLabel) | [📄 SAM 3 論文 (arXiv:2511.16719)](https://arxiv.org/abs/2511.16719) | [📝 開發者實戰指南](https://blog.csdn.net/weixin_29100927/article/details/158752105)
+  `[SAM3驅動]` `[智慧標註神器]` `[OBB旋轉框]` `[零成本開源]`
+
 * **[Falcon Perception](https://github.com/tiiuae/falcon-perception)** `[2026-04-01]` 🔥
   * **核心優勢**：**0.6B 極簡單棧架構，開放詞彙分割強勢幹翻 SAM 3！** TII 團隊革命性力作，徹底拋棄傳統「檢測+分割」的複雜 Pipeline，首創「早融合 + 混合注意力」的單一 Transformer 網路。在密集實例（擁擠場景）得分高達 72.6，遙遙領先 SAM 3 (58.4) 與 Qwen3-VL-30B。
   * **解決痛點 / 推薦場景**：**解決了傳統視覺模型模組堆疊導致的「高延遲、難維護」痛點。** 無需繁瑣的後處理與匈牙利匹配，一步到位完成檢測與理解。非常適合算力受限的邊緣運算設備，或需要處理擁擠場景的高效能應用。
@@ -205,6 +223,12 @@ service_type: AI Consulting
   * [**Grounded SAM 2**](https://github.com/IDEA-Research/Grounded-SAM-2)：結合文字 grounding 技術，在影片中追蹤特定物件。
 
 ### 2. 領域特化與多模態分割模型
+
+* **[SAM3-LoRA 醫學影像微調實戰 (ISIC 2018)](https://github.com/little51/dinov3-course)** `[2026]` 🔥
+  * **核心優勢**：**打破通用大模型在專業領域「水土不服」的魔咒，6GB 顯存即可實現 SAM3 的極速領域特化！** 針對 SAM3 在醫療影像上零樣本能力低下的問題，捨棄昂貴的全參數訓練，導入 LoRA 技術僅微調 0.43% 的關鍵參數 (Q/V/K/Out)。並創新結合「邊界框 (Bounding Box) 提示詞」自動對齊策略，僅需 1 輪訓練即可將皮膚癌病灶的 Dice 係數由 0.892 暴升至 0.943，大幅提升邊緣輪廓的精準度。
+  * **解決痛點 / 推薦場景**：**完美解決了將視覺大模型 (VFM) 導入特殊產業時「缺乏自然語言提示詞」以及「全量微調算力門檻過高 (需 12GB+ 顯存)」的致命痛點。** 此開源管線為開發者提供了標準化的二次開發路徑，後續更可無縫串聯 YOLO 等目標偵測模型，實現「先檢測、後精細分割」的全自動化流水線。極度適合**醫療病灶高精度輔助診斷**、**工業 AOI 複雜瑕疵提取**，以及缺乏龐大 GPU 算力的**個人開發者與學術研究團隊**。
+  * **資源**：[🐙 GitHub 完整微調源碼](https://github.com/little51/dinov3-course) | [📝 SAM3 微調技術深度解析](https://blog.csdn.net/little51/article/details/145892552)
+  `[SAM3微調]` `[醫療影像特化]` `[低算力救星]` `[LoRA極速煉丹]`
 
 * **[X2SAM](https://github.com/wanghao9610/X2SAM)** `[2026-05]` 🔥 `[圖影大一統]` `[多模態分割]` `[時序一致性]`
   * **核心優勢**：**終結圖像與影片分割割裂的全新範式，單一模型包辦 14 項分割任務的通用視覺大腦！** 結合 Qwen3-VL 的語意理解與 SAM2 的精準分割，X2SAM 首次在單一框架內同時支援圖像/影片雙輸入與文字/視覺（點、框）雙提示。其獨創的 **Mask 記憶模組 (Mask Memory Module)** 作為短期視覺工作記憶，在影片推理分割 (V-Rea. Seg.) 上狂飆提升 14.2 個百分點，強勢刷新 SOTA。
@@ -501,6 +525,12 @@ service_type: AI Consulting
 
 ### 1. 端對端與無 OCR 解析框架 (End-to-End & OCR-Free)
 跳過傳統的文字檢測與辨識步驟，直接將圖片轉化為結構化文本。
+
+* **[Infinity-Parser2](https://github.com/infly-ai/INF-MLLM)** `[2026-05]` 🔥
+  * **核心優勢**：**打破大廠閉源壟斷的文檔解析天花板，單一模型通吃六大任務的開源霸主！** 徹底拋棄傳統 OCR 繁瑣的「版面分析 + 表格辨識 + 文字提取」多階段 Pipeline。透過首創的「可驗證獎勵聯合強化學習」，一個端到端模型就能完美解析複雜雙欄排版、跨頁表格、甚至高難度的 LaTeX 數學公式與化學式。在權威 ParseBench 中，其 35B Pro 版得分 (74.3%) 強勢超越 Gemini-3-Pro，而 2B Flash 版更能以 1624 tokens/s 的極速狂飆。
+  * **解決痛點 / 推薦場景**：**完美解決企業建置 RAG (檢索增強生成) 系統時「PDF 轉 Markdown 格式破碎、表格資料流失」的致命痛點。** 告別難以維護的舊式 OCR 工具鏈。Flash 版 (2B) 非常適合部署於算力受限的邊緣運算設備或高併發的 C 端應用；Pro 版 (35B) 則是打造**企業級私有知識庫**、**科研論文自動化歸檔**與**醫療/金融報表深度解析**的工業級清洗神器。
+  * **資源**：[🐙 GitHub 官方源碼](https://github.com/infly-ai/INF-MLLM) | [🤗 HuggingFace 線上體驗](https://huggingface.co/spaces/infly/Infinity-Parser2-Demo)
+  `[RAG前處理]` `[端到端解析]` `[超越Gemini]` `[極速推論]`
 
 * **[Logics-Parsing (含 Omni/v2)](https://github.com/alibaba/Logics-Parsing)** `[2026-03]` 🔥
   * **核心優勢**：阿里開源的端對端 (End-to-End) 文件解析王者。採用單一模型架構，完全拋棄了傳統複雜的多階段 Pipeline。
