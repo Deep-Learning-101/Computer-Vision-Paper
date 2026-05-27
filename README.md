@@ -431,10 +431,16 @@ service_type: AI Consulting
 
 ### 1. 語音驅動與動態頭像生成 (Audio-Driven Avatar)
 
-* **[CyberVerse](https://github.com/dsd2077/CyberVerse)** `[2026-04-18]` 🔥 `[WebRTC即時通訊]` `[單張圖生成]` `[高度模組化]`
-  * **核心優勢**：**跨越恐怖谷的即時視訊數位人，單圖直連 P2P 的互動革命！** 徹底終結預錄影片與假笑循環。透過 WebRTC P2P 直連，實現首幀渲染僅需 1.5 秒的超低延遲，並精準還原說話時嘴唇與喉結的微小起伏。首創「樂高式」可插拔 YAML 配置架構，將大腦 (LLM)、臉 (Avatar)、聲音 (TTS) 與耳朵 (ASR) 完美解耦，支援一鍵切換豆包、GPT 或本地 Llama 模型。
-  * **解決痛點 / 推薦場景**：**解決了傳統數位人「無法即時對談」、「延遲高得嚇人」以及「系統封閉難以二次開發」的致命痛點。** 支援呼叫外部工具（如查股價、跑腳本），讓矽基生命真正具備行動力。極度適合擁有高階算力 (如 RTX 4090/5090) 的開發者，打造**次世代高沉浸感虛擬客服**、**24小時視訊陪伴 AI**，或**企業級自動化會議助理**。
-  * **資源**：[🐙 GitHub 官方開源](https://github.com/dsd2077/CyberVerse)
+* **[CyberVerse](https://github.com/dsd2077/CyberVerse)** `[2026-04-18]` 🔥 `[即時視訊對話]` `[零建模單圖生成]` `[WebRTC流式傳輸]` `[全鏈路Agent]`
+  * **核心優勢**：**真正意義上的 JARVIS 級開源即時數位人神作，單張照片即可開啟超低延遲視訊對話！** 採用極致的微服務與熱插拔插件架構，內建 WebRTC P2P 與 LiveKit SFU 雙流模式。徹底打破傳統數位人「預錄、回合制」的侷限，無縫整合 FlashHead/LiveAct 視覺驅動、Qwen Omni 語音大模型、RAG 記憶資料庫與 Agent 工具調用，實現「視覺、聽覺、執行」三位一體的全鏈路即時互動。
+  * **解決痛點 / 推薦場景**：**完美解決了以往開源數位人「對話延遲高達數秒」、「不支援語音即時打斷 (Voice Barge-in)」以及「缺乏後台任務執行力」的致命痛點。** 結合 GPU 分散式推理與首次預熱機制，成功將首幀延遲壓縮至 1.5 秒以內。是企業低成本打造**24 小時高擬真視訊客服**、**沉浸式 AI 陪伴角色**，以及**跨硬體裝置具身智能中樞**的工業級首選框架。
+  * **資源**：[🐙 GitHub 官方開源](https://github.com/dsd2077/CyberVerse) | [📄 官方中文技術文件](https://github.com/dsd2077/CyberVerse/blob/main/README.zh-CN.md)
+
+* **[LongCat-Video-Avatar 1.5](https://github.com/meituan-longcat/LongCat-Video)** `[2026-05]` 🔥
+  * **核心優勢**：**打破數字人「完美演練」的實驗室假象，真正走向商用落地的極速影片生成霸主！** 由美團團隊開源，搭載 Whisper-large 音訊解碼器，並首創將 GRPO 偏好對齊細化至逐幀層面，完美修正了手部畸變與長時序動作崩塌。最震撼的是引入 DMD (Distribution Matching Distillation) 蒸餾技術，將 50 步生成暴力壓縮至 8 步，達成 15 倍推理加速（10 秒影片僅需 1 分鐘），徹底引爆規模化商用潛能。
+  `[8步極速生成]` `[GRPO偏好對齊]` `[多人互動支援]` `[商業級擬真]`
+  * **解決痛點 / 推薦場景**：**完美解決了傳統虛擬人「講長句口型崩壞」、「多人同框時嘴部亂動」以及「生成太慢吃垮算力」的致命痛點。** 憑藉極高的身份一致性與音畫協調度，在盲測中強勢擊敗 Kling Avatar 2.0 與 HeyGen。是打造**高併發電商直播帶貨**、**千人千面的 AI 客服/講師**，以及**複雜多人互動情境**的工業級基礎模型首選。
+  * **資源**：[🐙 GitHub](https://github.com/meituan-longcat/LongCat-Video) | [📄 官方技術報告](https://github.com/meituan-longcat/LongCat-Video/blob/main/assets/LongCat-Video-Avatar-1.5-Tech-Report.pdf) | [🌐 專案主頁與線上 Demo](https://meigen-ai.github.io/LongCat-Video-Avatar-1.5-Page/)
 
 * **[InfiniteTalk](https://github.com/Meituan-AutoML/InfiniteTalk)** `[2026-04]` 🔥
   * **核心優勢**：**打破「面癱」配音魔咒，首創「全身聯動」的無限時長說話影片生成模型！** 由美團 (MeiGen-AI) 團隊重磅開源 (Apache 2.0)。採用獨創的「稀疏幀影片配音」範式與流式音訊驅動架構，支援圖生影片 (I2V) 與影片到影片 (V2V)。它全面超越 MuseTalk 等傳統僅能「修補嘴型」的方案，不僅對口型，更能讓數字人的頭部動作、面部表情與身體姿態完美契合音訊節奏。
@@ -457,11 +463,6 @@ service_type: AI Consulting
   * **解決痛點 / 實戰避坑指南**：**主打「再也不用真人直播」，但硬體要求極為嚴苛。** 完美解決了 24 小時虛擬直播帶貨的需求，但**部署前請注意**：這是一頭在電腦裡跑的大象，強烈建議使用具備 **24GB 顯存** 的顯卡（如 RTX 3090/4090）進行推理。12GB 顯卡極易觸發 CUDA Out of Memory (OOM) 報錯。適合擁有高階算力、追求極致畫質與無斷點直播的企業級用戶。
   * **資源**：[🐙 GitHub](https://github.com/Alibaba-Quark/LiveAvatar) | [🌐 官方專案主頁](https://liveavatar.github.io/)
 
-* **[PersonaLive](https://github.com/GVCLab/PersonaLive)** `[持續更新]` 🔥
-  * **核心優勢**：**12GB 顯存即可驅動實時數字人，首創流式擴散（Streaming Diffusion）無限生成技術。** 由澳門大學與 GVC Lab 研發，透過外觀蒸餾（Appearance Distillation）與 Reference UNet 技術，在達成低延遲即時生成（支援攝影機聯動）的同時，能高度還原原始肖像的藝術風格與細節，有效避免失真。
-  * **解決痛點 / 推薦場景**：**打破了高端伺服器對「實時動畫」的壟斷，解決長時生成易導致記憶體溢位（OOM）的瓶頸。** 提供 WebUI 介面，具備亞秒級響應與無限長度影片輸出能力。是虛擬主播直播帶貨、插畫師將角色設計動態化、以及影視團隊快速進行原型動畫驗證的「最低門檻」方案。
-  * **資源**：[🐙 GitHub](https://github.com/GVCLab/PersonaLive)
-
 * **[SoulX-FlashTalk](https://github.com/Soul-AILab/SoulX-FlashTalk)** `[2025-12-24]` 🔥
   * **核心優勢**：**14B 參數數字人開源新標竿，0.87 秒極速啟動 + 32 FPS 實時流生成。** Soul AI Lab 針對實時交互場景打造的重磅模型，首創「雙向流蒸餾技術」與「多步回顧自校正機制」。不僅將訓練效率暴力提升 23 倍，更打破了傳統模型長序列生成的崩壞魔咒，實現亞秒級的超低延遲與高保真吞吐。
   * **解決痛點 / 推薦場景**：**徹底終結數字人長時直播「越播越崩」與「身份漂移」的致命痛點。** 具備強大的長時生成穩定性，完美支援 7×24 小時不斷線實時互動。極度適合用於高強度的電商 AI 直播帶貨、需要極低延遲的視訊智能客服，以及元宇宙多語言虛擬社交場景。
@@ -482,6 +483,18 @@ service_type: AI Consulting
 * **[FlowAct-R1](https://grisoon.github.io/FlowAct-R1/)**：基於流匹配技術的高效能數字人生成框架。
 
 ### 2. 完整互動系統與 3D 建模 (Interactive System & 3D)
+
+* **[OpenTalking](https://github.com/datascale-ai/opentalking)** `[2026-05]` 🔥
+  * **核心優勢**：**打通從 Demo 到生產部署的最後一哩路，工業級「全鏈路」實時數字人編排框架！** 它不重複造底層模型的輪子，而是專注於產線編排，將 LLM 流式對話、句級 TTS、口型同步渲染與 WebRTC 低延遲傳輸完美串接。首創「樂高式」可插拔設計，無縫相容輕量級 Wav2Lip 到高質量 FlashTalk，更原生支援華為昇騰 910B 等企業級 NPU 私有化部署。
+  `[工業級編排]` `[實時互動]` `[WebRTC低延遲]` `[全鏈路串接]`
+  * **解決痛點 / 推薦場景**：**完美解決了傳統數字人開源專案「只能做短片 Demo」、「缺乏實時打斷控制」與「模組碎片化難以整合」的致命痛點。** 透過 100-300ms 的極低 WebRTC 傳輸延遲與精細的事件流控制，提供從「5 分鐘免顯卡 API 快速體驗」到「本地端高畫質渲染」的四階段落地路徑。是企業打造**高併發電商虛擬直播帶貨**、**24 小時無斷點視訊客服**、以及**高沉浸感 AI 陪伴角色**的底層中樞首選。
+  * **資源**：[🐙 GitHub 官方開源](https://github.com/datascale-ai/opentalking) | [🌐 官方架構解析](https://github.com/datascale-ai/opentalking/blob/main/docs/architecture.md) | [📦 OmniRT 模型服務庫](https://github.com/datascale-ai/omnirt)
+
+* **[PersonaLive](https://github.com/GVCLab/PersonaLive)** `[CVPR 2026]` 🔥
+  * **核心優勢**：**打破硬體高牆的無限時長虛擬主播，12GB 顯存即刻開播！** 澳門大學與大灣區大學 GVC Lab 研發的即時肖像動畫框架。首創流式生成策略（Streaming Generation），將影片分塊處理，徹底解決傳統擴散模型生成長影片時「顯存隨時間線性暴增」導致 OOM 的致命瓶頸。單張靜態照片即可透過攝像頭即時驅動，支援 TensorRT 加速與 WebUI 互動。
+  `[流式生成]` `[無限時長]` `[低硬體門檻]` `[ComfyUI支援]`
+  * **解決痛點 / 推薦場景**：**完美解決了傳統數位人系統需要昂貴動捕設備或頂規顯卡才能長時段直播的痛點。** 極度適合缺乏高階算力的個人創作者與中小企業，用於打造**高擬真虛擬實況主 (VTuber)**、**線上教育虛擬講師**與**隱私保護視訊會議**。專案生態成熟，已原生支援 ComfyUI 工作流與 Apache-2.0 商業授權。
+  * **資源**：[🐙 GitHub 官方開源](https://github.com/GVCLab/PersonaLive) | [📄 arXiv 論文](https://arxiv.org/abs/2512.11253) | [📦 ComfyUI 擴展節點](https://github.com/okdalto/ComfyUI-PersonaLive)
 
 * **[Linly-Talker](https://github.com/Kedreamix/Linly-Talker)** `[持續更新]` 🔥
   * **核心優勢**：**開源數字人界的「多模態全家桶」，高度模組化的智能交互系統！** 在 GitHub 狂攬 3.1K+ Stars，它打破了單純「圖片轉影片」的框架，將 ASR (Whisper)、LLM 大腦 (Qwen/Gemini)、TTS 音色克隆 (GPT-SoVITS) 與面部驅動 (SadTalker/MuseTalk) 完美串接。支援流式語音與 WebRTC 即時通訊，模組可按需求自由抽換。
