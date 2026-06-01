@@ -49,6 +49,11 @@ service_type: AI Consulting
 | **YOLOv8** | 🇺🇸 **Ultralytics** | **生態系最完善**。雖然不是最新，但在社群中的教學、部署套件、ONNX/TensorRT 轉換資源最為豐富。 | 工業級穩定部署、初學者專案<br>`[生態豐富]` `[極易部署]` |
 | **OV-DINO** | 🇺🇸 **國際學術界** | **開源工業開放詞彙目標檢測**。不需要預先定義好類別，直接用自然語言提示 (Prompt) 就能找出畫面中對應的物體。 | 零樣本 (Zero-shot) 偵測、通用場景<br>`[Open-Vocabulary]` `[前沿技術]` |
 
+* **[ViCrop-Det](https://arxiv.org/abs/2604.26806)** `[2026-04-29]` 🔥
+  * **核心優勢**：**打破小目標檢測的算力魔咒，首創「免訓練、即插即用」的空間注意力熵 (SAE) 智能裁剪框架。** 這款由華中科技大學提出的神作，巧妙利用 DETR 檢測器內建的交叉注意力分布作為「內生探針」，透過計算香農熵精準揪出模型「不確定且重要」的區域（即小目標藏身處）進行局部高解析度重檢測。僅需微幅增加約 20% 計算量，即可在 VisDrone 數據集上穩定提升近 3 個百分點的 mAP，以極高的推理幀率 (38.6 FPS) 徹底碾壓 SAHI 等暴力全圖切片方法。
+  * **解決痛點 / 推薦場景**：**完美解決了 Transformer 檢測器在密集場景中「注意力被空曠背景稀釋導致微小目標蒸發」，以及傳統 SAHI 切片法「計算量線性暴增」的致命痛點。** 由於無需重新訓練且不更動網路架構，極度適合企業直接掛載於現有模型上，部署於**無人機航拍 (UAV) 密集微小物件偵測**、**自駕車遠距離行人辨識**，以及**衛星遙感影像大圖分析**等計算資源受限但需極高精度的邊緣運算場景。<br>`[免訓練即插即用]` `[小目標檢測]` `[碾壓SAHI]` `[邊緣運算首選]`
+  * **資源**：[🐙 GitHub (待釋出搜尋)](https://github.com/search?q=ViCrop-Det+Hui+Wang+HUST) | [📄 論文](https://arxiv.org/abs/2604.26806) | [📝 深度解讀](https://mp.weixin.qq.com/s/UQZENPtcQ-M2AiQu41OKcg)
+
 * **[FS-DETR](https://github.com/YT3DVision/FSDETR)** `[2026-04-21]` 🔥 `[小目標偵測]` `[頻域空間融合]` `[邊緣運算]`
   * **核心優勢**：**打破極端小目標漏檢魔咒，首創「頻域-空間」雙軌融合的輕量級檢測神作！** 基於 RT-DETR 架構進行深度魔改，創新引入二維快速傅立葉變換 (FFT2D) 提取高頻紋理，並結合空間層次注意力 (SHAB) 與可變形稀疏採樣 (DA-AIFI)。在參數僅有 14.7M（比 RT-DETR-R18 瘦身 26%）的極致輕量化條件下，仍能精準捕捉僅數十像素的微小物體，小目標檢測效能 (APₛ) 強勢輾壓 D-Fine-M 與 RT-DETRv2。
   * **解決痛點 / 推薦場景**：**完美解決了傳統 YOLO/DETR 在邊緣設備上「縮小模型就嚴重漏檢、做大模型又跑不動」，以及全局注意力容易被密集背景雜訊干擾的致命痛點。** 實測在 VisDrone (高密度交通) 與 TinyPerson (極端低對比度微小行人) 等嚴苛資料集上創下 SOTA。是打造**無人機高空巡檢 (UAV)**、**衛星遙感影像分析**，以及部署於算力極限**邊緣運算盒子 (Edge AI)** 的工業級首選。
@@ -97,6 +102,16 @@ service_type: AI Consulting
 ### 1. 結合 LLM 與多模態的零樣本檢測 (Zero-shot AD)
 利用大語言模型或 CLIP 龐大的常識庫，在「沒看過瑕疵樣本」的情況下，直接透過文字描述或視覺特徵揪出異常。
 
+* **[JUDO](https://github.com/woodavid31/JUDO)** `[2026-05]` 🔥
+  * **核心優勢**：**打破通用大模型產線翻車魔咒，首創「對照式定位＋領域知識內化＋GRPO 推理對齊」的工業異常多模態推理器。** 這款 ICLR 2026 頂會神作基於 Qwen2.5-VL-7B 打造，徹底拋棄外掛 RAG 容易引發幻覺與邏輯偏離的弱點。它透過輸入「正常標準件與待檢件」進行視覺並置對照 (SegJux)，將工業質檢標準深植於模型權重 (DomInj)，並利用多層獎勵函數 (GRPO) 嚴格約束空間定位與工藝邏輯。在 MMAD 基準測試中，以 81.20% 的平均準確率強勢擊敗 GPT-4o。
+  * **解決痛點 / 推薦場景**：**完美解決了傳統視覺大模型 (VLM) 在工業現場「看得出異常，卻給不出符合工藝邏輯的解釋」的致命痛點。** 它的輸出不再只是模糊的「合格/不合格」，而是能精準定位缺陷並解釋對裝配或密封的影響，讓 AI 推理真正可被人工複核。極度適合企業用來建構**次世代 AOI 瑕疵問答系統**、**自動化品質工程追溯 (SPC) 流程**，以及**產線專家級決策輔助大腦**，打通工業質檢的最後一哩路。<br>`[產線質檢大腦]` `[GRPO推理對齊]` `[超越GPT-4o]`
+  * **資源**：[🐙 GitHub](https://github.com/woodavid31/JUDO) | [📄 論文](https://arxiv.org/abs/2605.20284) | [📝 深度解讀](https://mp.weixin.qq.com/s/7WFnkb-Vp9euyzkGLqDS2g)
+
+* **[DCS (DINO-CLIP-SAM)](https://doi.org/10.3390/app16041836)** `[2026-06]` 🔥
+  * **核心優勢**：**集結三大視覺基礎模型之大成，無需任何瑕疵樣本即可達成像素級精準分割的零樣本檢測王牌！** 這套發表於 MDPI 的創新框架，將 Grounding DINO（候選定位）、CLIP（語義感知）與 SAM（精細分割）完美串聯且完全凍結骨幹權重。透過引入細粒度文本提示 (FinePrompt)、雙路徑跨模態交互 (ADCI) 修銳異常熱力圖，以及「框＋正負點」提示組合器 (BPPC)，徹底補平了大模型間的語義斷層。在 MVTec-AD 與 VisA 基準上分別創下 94.6% 與 97.2% AUROC 的零樣本極致表現。
+  * **解決痛點 / 推薦場景**：**完美解決了傳統工業質檢「異常樣本極度稀缺」，以及單純使用 CLIP/SAM 進行零樣本預測時「邊界模糊、語義歧義嚴重」的致命痛點。** 由於具備強大的開放詞彙 (Open-vocabulary) 泛化能力，極度適合**高頻換線的柔性製造產線 (High-Mix Low-Volume)**、**缺乏歷史瑕疵數據的新品試產期 (NPI) AOI 檢測**，以及作為**雲端/離線高精度瑕疵複判大腦**（需注意其串聯三大模型帶來的算力開銷，不建議用於極低延遲的邊緣設備）。<br>`[零樣本AOI]` `[大模型串聯]` `[像素級分割]` `[免微調骨幹]`
+  * **資源**：[🐙 GitHub (社群實作搜尋)](https://github.com/search?q=DCS+Zero-Shot+Anomaly+Detection+DINO+CLIP+SAM) | [📄 論文](https://doi.org/10.3390/app16041836) | [📝 深度解讀](https://mp.weixin.qq.com/s/OaLdkHD1s4iQnBh-qAL3yA)
+
 * **[LLM2CLIP](https://microsoft.github.io/LLM2CLIP/)** `[2026-01-29]` 🔥
   * **核心優勢**：微軟開源黑科技！結合大語言模型 (LLM) 強大的常識推理能力來增強 CLIP 模型的視覺表徵。
   * **解決痛點**：完美解決了傳統 CLIP 在遇到罕見工業瑕疵或長尾分佈數據時容易誤判的問題，非常適合用於高精度的零樣本瑕疵檢測。[📄 AlphaXiv 論文](https://www.alphaxiv.org/abs/2411.04997) | [📝 公眾號深度解讀](https://mp.weixin.qq.com/s/-U03e1KZmFCoXTGzdYbC0Q)
@@ -109,8 +124,18 @@ service_type: AI Consulting
 
 * **[Multi-Modal LLM for AD (VELM)](https://deepwiki.com/Sassanmtr/VELM)** `[2025-05-05]`：不僅偵測異常，還能進行分類與動作建議的工業多模態架構。
 
+* **[OneNIP](https://github.com/gaobb/OneNIP)** `[2024-10]` 🔥
+  * **核心優勢**：**終結產線「海量瑕疵數據」焦慮，單張正常圖片即插即用的全科質檢神醫！** 這款收錄於 ECCV 2024 的重磅開源神作，徹底打破傳統 AOI 必須「收集海量缺陷、專病專治」的成本高牆。透過首創的「單一正常圖像提示 (Normal Image Prompt)」與「雙向交叉注意力 (Bidirectional Cross-Attention)」機制，讓模型學會直接與「標準答案（正常件）」進行像素級對照，成功繞過自監督重建網路常見的「身份捷徑 (Identity Shortcut)」陷阱，在 MVTec 與 VisA 等權威工業基準上實現跨類別的 SOTA 表現。
+  * **解決痛點 / 推薦場景**：**完美解決了高良率產線「瑕疵樣本極難收集」與「新品上線需重新訓練模型」的致命痛點。** 只要提供一張無瑕疵的黃金樣本 (Golden Sample)，模型就能精準抓出邊緣模糊或具偽裝性的複雜瑕疵，並透過監督式精化器 (Refiner) 輸出高精度的像素級定位。極度適合用於**高頻換線的柔性製造產線 (High-Mix Low-Volume)**、**極少數目缺陷的精密電子 AOI 檢測**，以及企業建構**跨產品線的統一視覺質檢基座**。<br>`[單樣本質檢]` `[AOI神器]` `[跨類別通用]`
+  * **資源**：[🐙 GitHub](https://github.com/gaobb/OneNIP) | [📄 論文](https://csgaobb.github.io/Pub_files/ECCV2024_OneNIP_CR_Full_0725_Mobile.pdf)
+
 ### 2. 少樣本與無監督學習前沿突破 (Few-shot & Unsupervised)
 解決現場只能取得「正常良品圖」或極少量瑕疵圖的痛點。
+
+* **[MeDS](https://github.com/SirojbekSafarov/MeDS)** `[2026-05]` 🔥
+  * **核心優勢**：**打破工業質檢「訓練集必須絕對乾淨」的不可能假設，首創無懼 40% 髒數據污染的自清洗抗噪異常檢測框架！** 這篇 ICML 2026 的強悍之作直擊產線最痛的「標籤噪聲」現實。透過「自舉稀疏記憶庫 (Bootstrapped Memory) 粗篩」、「記憶分數蒸餾 (Score Distillation) 細化定位」與「漸進式樣本選擇 (Progressive Selection) 閉環微調」三步法，讓模型自己學會過濾異常。在 MVTecAD 基準測試中，即便訓練集混入高達 40% 的瑕疵樣本，它依然能將 I-AUROC 從崩潰邊緣的 87.38% 強勢拉回 99.16%，展現驚人的魯棒性。
+  * **解決痛點 / 推薦場景**：**完美解決了真實工廠中因「輕微缺陷漏標、加工紋理波動、多人標註口徑不一」導致模型決策邊界變寬容、上線後漏檢率飆升的致命痛點。** 它並非要取代現有的 UAD 模型 (如 Dinomaly)，而是作為一層可插拔的「抗污染保險層」掛載於現有架構上。極度適合**數據維護與清洗成本極高的傳統製造業**、**特徵變異大的機加工/鑄造/焊接產線**，以及作為**協助 QC 工程師優先篩檢可疑髒數據的自清洗前置模組**。<br>`[工業抗噪神作]` `[無懼髒數據]` `[自清洗閉環]` `[產線落地首選]`
+  * **資源**：[🐙 GitHub](https://github.com/SirojbekSafarov/MeDS) | [📄 論文](https://arxiv.org/abs/2605.26676)
 
 * **[DINO-AD](https://arxiv.org/abs/2602.03870)** `[2026-02]` 🔥
   * **核心優勢**：**打破模型微調成本高牆的免訓練 (Training-Free) 異常檢測黑科技！** 徹底拋棄針對特定資料集重新訓練的繁瑣流程，直接利用凍結的 DINO-V3 自監督視覺特徵，結合首創的「嵌入相似性匹配 (ESM)」與「前景感知 K-means 聚類」。完全零訓練開銷，卻在醫療影像 (Brain/Liver) 的像素級異常檢測上雙雙突破 98% AUROC，強勢輾壓 PatchCore 與 PaDiM 等經典無監督算法。
@@ -150,6 +175,11 @@ service_type: AI Consulting
 **🎯 Object Detection (目標偵測)**
 
 目標偵測不僅是畫出邊界框 (Bounding Box)，目前的趨勢是結合語言模型與強化學習，實現「開放詞彙 (Open-Vocabulary)」與「極端場景特化」。
+
+* **[AFSS (Anti-Forgetting Sampling Strategy)](https://arxiv.org/abs/2603.17684)** `[2026-03]` 🔥
+  * **核心優勢**：**打破 YOLO 系列「每輪看全量資料」的吃算力魔咒，零侵入性讓訓練速度狂飆 1.6 倍且精度無損！** 這篇 CVPR 2026 的強悍之作，不改 Backbone、不碰 Loss、不影響推論端 (部署零成本)。它首創將「學習充分度 (min(P, R))」作為內生探針，動態把訓練圖分為難/中/易三檔，結合「抗遺忘回看 (Continuous Review)」與「短期覆蓋 (Short-Term Coverage)」機制。讓 GPU 算力精準砸在「模型還沒學好」的困難樣本上，在 COCO 上讓 YOLO11s 訓練時間從 43.9 小時暴降至 28.4 小時。
+  * **解決痛點 / 推薦場景**：**完美解決了企業在龐大自定義資料集上訓練時「GPU 算力成本極度高昂」與「中後期訓練邊際效益嚴重遞減」的致命痛點。** 由於完全不干擾原始網路架構，極度適合需要頻繁新增資料、高頻迭代模型的**自駕車感知系統**、**高頻換線的工業 AOI 瑕疵檢測**，以及所有受限於算力預算（如單卡/雙卡開發者）但渴望快速驗證迭代的企業 AI 團隊。<br>`[訓練加速神器]` `[無損提速]` `[抗遺忘採樣]` `[算力省長]`
+  * **資源**：[🐙 GitHub (社群實作搜尋)](https://github.com/search?q=Does+YOLO+Really+Need+to+See+Every+Training+Image+in+Every+Epoch) | [📄 論文](https://arxiv.org/abs/2603.17684) | [📝 深度解讀](https://mp.weixin.qq.com/s/tQAlP7UmAsWT-bZLHQDaAA)
 
 * **[EUPE: DINOv3 + SAM + CLIP 三模合一輕量檢測框架](https://github.com/little51/dinov3-samples)** `[2026]` 🔥
   * **核心優勢**：**打破大模型落地門檻的開箱即用神器，將 DINOv3、SAM 與 CLIP 的跨域超能力濃縮進極致輕量的檢測管線！** 基於 Meta 最新的 EUPE (Efficient Universal Perception Encoder) 骨幹，透過 `lightly-train` 框架高度封裝。開發者完全無需從頭煉丹，短短 10 行 Python 程式碼即可直接呼叫在 COCO 資料集上訓練完成的任務頭 (Task Head)，實現精準的開箱即用目標偵測。
@@ -196,6 +226,16 @@ service_type: AI Consulting
 自從 Meta 推出 Segment Anything (SAM) 以來，圖像分割已經進入「提示即分割 (Promptable Segmentation)」的時代。
 
 ### 1. SAM 家族與通用分割基石
+
+* **[ConceptSeg-R1](https://github.com/NTU-AI4X/ConceptSeg-R1)** `[2026-05]` 🔥
+  * **核心優勢**：**打破 SAM/SAM 3 「只懂標籤、不懂邏輯關係」的語義瓶頸，首創由元強化學習 (Meta-GRPO) 驅動的可提示概念分割框架！** 該神作將「分割概念」分為上下文無關 (CI)、上下文依賴 (CD) 與上下文推理 (CR) 三大層次。透過內建的「捷徑路由器 (Shortcut Router)」，它能將多模態大模型 (MLLM) 複雜的深度邏輯推理狀態，翻譯為 SAM 3 能直接讀取的「隱式概念組 (Implicit Concept Groups)」，讓模型學會從視覺演示中歸納規則，實現真正的跨圖表徵與邏輯演繹。
+  * **解決痛點 / 推薦場景**：**完美解決了過往「多模態推理與像素分割間存在語義斷層」，以及傳統模型無法識別「靠環境對比與功能關係」才能定義的目標之致命痛點。** 極度適合企業用來建構**高難度醫療病灶精準定位 (如邊緣模糊的息肉或腫瘤)**、**工業級缺陷動態追蹤與對照**，以及需要強大時空推理能力的**次世代泛用型具身智能 (Embodied AI) 視覺大腦**，強勢推動視覺感知從「找物體」邁向「找概念」的典範轉移。<br>`[概念級分割]` `[超越SAM3]` `[元強化學習Meta-GRPO]` `[醫療與缺陷定位]`
+  * **資源**：[🐙 GitHub](https://github.com/NTU-AI4X/ConceptSeg-R1) | [📄 論文](https://arxiv.org/abs/2605.20385) | [🌐 專案主頁](https://ntu-ai4x.github.io/ConceptSeg-R1)
+
+* **[CAFe-DINO (DINO-Soars)](https://github.com/rfaulk/DINO_Soars)** `[2026-05]` 🔥
+  * **核心優勢**：**打破遙感分割「密集標註地獄」與「巨大域落差」，首創零遙感微調即稱霸 OVSS 的跨域遷移神作！** 這篇 CVPR 2026 Workshop 的重磅論文，巧妙繞過直接拿 DINOv3 跑遙感圖會「糊成一團」的痛點。其核心在於不重訓骨幹，而是利用「空間去噪＋跨類別推理」的成本聚合網路 (Cost Aggregation Network)，搭配凍結的特徵引導上採樣 (AnyUp)，將 DINOv3 的強大潛在表徵「無損洗淨」後遷移至遙感視角。僅用 COCO-Stuff 的 41 個遙感相關子類進行訓練，便在四個權威基準 (Potsdam, Vaihingen, OEM, LoveDA) 達成平均 56.5% 的 SOTA 表現。
+  * **解決痛點 / 推薦場景**：**完美解決了遙感影像 (RS) 領域「標註成本極高」且模型「換個城市就拉胯」的致命痛點。** 由於實現了真正的「零遙感微調」，極度適合資源受限但需處理巨量衛星影像的企業或公部門。是建構**跨城市/跨氣候的全球自動化地表覆蓋製圖**、**災區快速變遷分析**，以及**免標註開詞彙無人機 (UAV) 巡檢系統**的工業級首選。<br>`[零遙感微調]` `[OVSS開詞彙分割]` `[DINOv3魔改]` `[遙感衛星大腦]`
+  * **資源**：[🐙 GitHub](https://github.com/rfaulk/DINO_Soars) | [📄 論文](https://arxiv.org/abs/2605.03175) | [📝 深度解讀](https://mp.weixin.qq.com/s/UfkO6YAlBO-vnLhGbNtyhA)
 
 * **[LuoHuaLabel (基於 SAM 3 的智慧標註神器)](https://github.com/luohuabuxiema/LuoHuaLabel)** `[2026]` 🔥
   * **核心優勢**：**徹底解放雙手的資料標註黑科技，以 SAM 3 驅動的次世代視覺標註系統！** 完美整合 Segment Anything 3 (SAM 3) 的強大零樣本 (Zero-shot) 分割能力，捨棄傳統耗時的手繪多邊形。支援「單點極速提取輪廓」與「自然語言提示 (Prompt) 全圖自動打框」。更獨創原生 OBB 旋轉框控制手柄（具備防變形與 360° 平滑旋轉），效能與體驗全面輾壓傳統 Labelme / LabelImg。
