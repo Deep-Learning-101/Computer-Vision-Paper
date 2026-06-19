@@ -190,6 +190,13 @@ service_type: AI Consulting
 * **[PaDim](https://deepwiki.com/xiahaifeng1995/PaDiM-Anomaly-Detection-Localization-master)** `[2025-04-26]`：工業界極為經典且泛用性高的無監督異常檢測與定位演算法。
 
 ### 3. 架構融合與跨模態對齊 (Cross-Architecture Alignment)
+
+* **[Uni-RCM (跨模態多類別統一異常檢測框架)](https://arxiv.org/abs/2605.29455)** `[2026-05]` 🔥
+  * **核心優勢**：**打破「一類產品養一套模型」的產線維護惡夢，首創跨模態統一建模的工業質檢神作！** 徹底拋棄傳統容易導致特徵混疊的龐大 Memory Bank，創新引入「參考引導塊 (Reference Guide Block)」為多類別特徵提供一個穩定的跨模態錨點，動態過濾類別雜訊。此外，透過「離線殘差量化器 (ORQ)」以緊湊的小碼本 (Cascaded Codebooks) 約束正常特徵流形。在 MVTec 3D-AD 的多類別統一檢測基準中，其 I-AUROC 狂飆至 95.4%，強勢輾壓現有 SOTA 方法。
+  * **解決痛點 / 推薦場景**：**完美解決了真實產線中「多種物料與治具混線生產」導致模型數量無限膨脹、版本回歸與更新成本極高的致命痛點。** 透過 2D RGB (紋理表面) 與 3D 點雲 (幾何結構) 特徵的乘法互補融合，能同時精準抓出微小刮傷與立體結構變形。極度適合**多樣少量柔性製造 (Flexible Manufacturing)** 產線，以及企圖以**單一 AI 底座支援全廠多品項**的次世代企業級 AOI 視覺質檢系統。
+  * **資源**：[📄 arXiv 論文 (2605.29455)](https://arxiv.org/abs/2605.29455) | [📝 微信公眾號深度解讀](https://mp.weixin.qq.com/s/G2AtBBpeh2qkTffw-ik5Tg)
+  `[統一建模]` `[跨模態對齊]` `[AOI工業視覺]` `[多類別部署]`
+
 * **[MOCHA](https://www.alphaxiv.org/zh/overview/2509.14001v1)** `[2025-09-20]`：Multi-modal Objects-aware 架構。將此技術注入 YOLO 後，檢測效能獲得大幅度成長。[📝 中文解讀](https://zhuanlan.zhihu.com/p/1952054591035281418)
 * **[FS-SAM2](https://zread.ai/fornib/FS-SAM2)** `[2025-09-24]`：將 Meta 的 SAM 2 (Segment Anything 2) 模型適配於少樣本語義分割任務，在效能與效率上達到雙優。
 
@@ -305,6 +312,10 @@ service_type: AI Consulting
 
 ### 2. 領域特化與多模態分割模型
 
+* **[CaptionFormer](https://www.gabriel.fiastre.fr/captionformer/)** `[2026-06]` 🔥
+  * **核心優勢**：**首創端到端整合「像素級分割、跨幀追蹤與自然語言描述 (DVOC)」的統一架構，並神來一筆運用 VLM (Gemini 2.0) 自動合成海量影片軌跡標註，將訓練成本狂降至傳統方法的十分之一 (僅需 ~208 GPU hours)！** 巧妙地將缺乏描述的 LVIS/LV-VIS 標註轉化為高品質的時空軌跡數據集，讓模型在單一管線中學會精準的「時間與物理一致性」。
+  * **解決痛點 / 推薦場景**：**完美解決了傳統影片理解任務中「人工逐幀標註成本爆炸」與「多模組拼接（檢測+追蹤+生成分開做）導致時空語意斷層」的致命痛點。** 藉由創新的時序聚合 (Temporal Aggregation) 技術，模型能精確掌握同一個物體「在哪裡、去了哪、正在做什麼」。是打造**零樣本長影片語意檢索 (Zero-shot Video Retrieval)**、**機器人動態場景感知**、**高階智慧安防監控**與**互動式 AI 影片編輯**的次世代神作。
+
 * **[SAM3-LoRA 醫學影像微調實戰 (ISIC 2018)](https://github.com/little51/dinov3-course)** `[2026]` 🔥
   * **核心優勢**：**打破通用大模型在專業領域「水土不服」的魔咒，6GB 顯存即可實現 SAM3 的極速領域特化！** 針對 SAM3 在醫療影像上零樣本能力低下的問題，捨棄昂貴的全參數訓練，導入 LoRA 技術僅微調 0.43% 的關鍵參數 (Q/V/K/Out)。並創新結合「邊界框 (Bounding Box) 提示詞」自動對齊策略，僅需 1 輪訓練即可將皮膚癌病灶的 Dice 係數由 0.892 暴升至 0.943，大幅提升邊緣輪廓的精準度。
   * **解決痛點 / 推薦場景**：**完美解決了將視覺大模型 (VFM) 導入特殊產業時「缺乏自然語言提示詞」以及「全量微調算力門檻過高 (需 12GB+ 顯存)」的致命痛點。** 此開源管線為開發者提供了標準化的二次開發路徑，後續更可無縫串聯 YOLO 等目標偵測模型，實現「先檢測、後精細分割」的全自動化流水線。極度適合**醫療病灶高精度輔助診斷**、**工業 AOI 複雜瑕疵提取**，以及缺乏龐大 GPU 算力的**個人開發者與學術研究團隊**。
@@ -377,6 +388,10 @@ service_type: AI Consulting
   * **核心優勢**：專精複雜場景的高精度文字辨識。能完美應對手寫、模糊與多語系發票，是企業自動化財報系統的高性價比底座。[📝 公眾號解讀](https://mp.weixin.qq.com/s/DOm_hg6DWA_OjcsLuUQ9Hw)
 
 * **[HunyuanOCR](https://github.com/Tencent-Hunyuan/HunyuanOCR)** `[2025-11-30]`：騰訊混元釋出的 1B 級全能模型。
+
+* **[PP-OCRv6 (PaddleOCR 第六代)](https://github.com/PaddlePaddle/PaddleOCR)** `[2026-06]` 🔥
+  * **核心優勢**：**1.5M 極限輕量至 34.5M 伺服器級全算力覆蓋，在結構化文字檢測與複雜場景精度上全面碾壓百億參數 VLM！** 首度推出 Tiny / Small / Medium 三檔模型，文字檢測與識別精度較前代呈現「代際躍升」（分別提升 4.9% 與 5.1%）。Medium 版本在 Intel Xeon CPU 結合 OpenVINO 最佳化下端到端推理僅需 1.4 秒（提速 5.2 倍），而 Tiny 版本在純前端瀏覽器單圖推理更可極限壓低至 97ms 級別。
+  * **解決痛點 / 推薦場景**：**完美解決了大型多模態模型 (VLM) 推理昂貴、幻覺漏字，以及傳統 OCR 在「極端邊緣設備」與「特殊工業場景（如 PCB 電路板、數碼管、點陣字元、CAD 圖紙）」辨識率低落的致命痛點。** 面對複雜的繁體中文混排、古籍、模糊與傾斜文本也能展現極高魯棒性。是企業打造**高併發伺服器文檔解析**、**IoT 邊緣運算設備**與**純網頁端文字辨識 (Web OCR)** 的工業級開源霸主。
 
 * **[PaddleOCR-VL-1.6 (生成式文件解析開源霸主)](https://github.com/PaddlePaddle/PaddleOCR)** `[2026-05-28]` 🔥
   * **核心優勢**：**打破傳統 OCR 僅能「認字」的極限，以 0.9B 極輕量 VLM 刷新 OmniDocBench 96.3% 新 SOTA，實現全頁面結構化解析！** 捨棄傳統切割拼湊，採用「版面分析 (Layout Analysis) ＋ 視覺語言模型 (VLM)」雙階段架構。不僅能精準捕捉文字，更能完美還原複雜表格、數學公式 (LaTeX)、圖表數據與生僻古籍，並直接輸出高質量的結構化 Markdown 或 JSON，且完全相容舊版架構實現零成本替換。
@@ -451,12 +466,6 @@ service_type: AI Consulting
   * **解決痛點 / 推薦場景**：**完美解決了傳統 DiT 模型「解析度/影片長度增加導致顯存 O(N²) 暴力膨脹」，以及「強化學習對齊訓練成本過高」的致命痛點。** 提供涵蓋極速 0.1 秒推理 (SANA-Sprint)、長影片生成 (LongSANA) 到低精度強化學習後訓練 (Sol-RL) 的全棧工具。極度推薦企業用於打造**即時互動設計畫布 (Real-time Canvas)**、**具身智能 (Embodied AI) 虛擬模擬環境**，以及需要極低算力門檻的**邊緣運算 (Edge AI) 視覺生成服務**。
   * **資源**：[🐙 GitHub 官方開源](https://github.com/NVlabs/Sana) | [🌐 官方線上 Demo](https://nv-sana.mit.edu/) | [🤗 Hugging Face 模型集](https://huggingface.co/collections/Efficient-Large-Model/sana)
   <br>`[線性擴散模型]` `[世界模型]` `[極低顯存門檻]` `[實時影片生成]`
-
-* **[Remotion Skills (AI 代碼驅動影片框架)](https://github.com/remotion-dev/skills)** `[持續更新]` 🔥
-  * **核心優勢**：**顛覆「黑盒文生影片」，用 AI 寫 React 程式碼來「精確渲染」影片的工程化革命！** 建立在知名的 React 影片框架 Remotion 之上，將影片視為「隨時間變化的 UI」。它內建專為大模型設計的動畫模式庫與 MCP 協議，讓 AI 代理能直接聽懂自然語言指令（如：做一個 30 秒科技風產品介紹），並自動輸出 100% 確定性、可編輯、支援版本控制的 TypeScript/React 影片代碼。
-  * **解決痛點 / 推薦場景**：**完美解決了主流生成式 AI 影片無法精確控制排版、無法修改錯字，以及傳統圖形化剪輯軟體無法自動化批量生產的痛點。** 告別手動拖曳時間軸，極度適合企業開發者打造**自動化 RPA 影片生產工廠 (如每日新聞摘要、電商財報可視化)**、**社群媒體短影音批量生成**，是將影片製作從「手工藝」升級為「軟體工程」的開源首選。
-  * **資源**：[🐙 Remotion 主專案](https://github.com/remotion-dev/remotion) | [🐙 Remotion Skills (AI技能包)](https://github.com/remotion-dev/skills)
-`[程式碼生影片]` `[Agent原生支援]` `[零誤差渲染]` `[自動化剪輯工廠]`
 
 * **[SVOR (Stable Video Object Removal)](https://github.com/xiaomi-research/svor)** `[2026-03]` 🔥 `[影片物件消除]` `[物理感知]` `[高容錯]`
   * **核心優勢**：**CVPR 2026 物理感知視頻實例消除挑戰賽冠軍神作，徹底終結影片消除的「陰影殘留」與「閃爍抖動」！** 由小米大模型應用團隊研發，首創 MUSE (窗口化聯合策略) 與 DA-Seg (去噪感知分割) 模組。透過時間窗口內的多影格聯合分析，即使輸入的 AI 識別遮罩有缺陷，也能穩定追蹤高速動態物件並智能修補邊界。
