@@ -50,6 +50,16 @@ service_type: AI Consulting
 | **YOLOv8** | 🇺🇸 **Ultralytics** | **生態系最完善**。雖然不是最新，但在社群中的教學、部署套件、ONNX/TensorRT 轉換資源最為豐富。 | 工業級穩定部署、初學者專案<br>`[生態豐富]` `[極易部署]` |
 | **OV-DINO** | 🇺🇸 **國際學術界** | **開源工業開放詞彙目標檢測**。不需要預先定義好類別，直接用自然語言提示 (Prompt) 就能找出畫面中對應的物體。 | 零樣本 (Zero-shot) 偵測、通用場景<br>`[Open-Vocabulary]` `[前沿技術]` |
 
+* **[CCL (Contextual Consistency Learning)](https://openaccess.thecvf.com/content/CVPR2026/papers/Li_Consistency_Beyond_Contrast_Enhancing_Open-Vocabulary_Object_Detection_Robustness_via_Contextual_CVPR_2026_paper.pdf)** `[2026-03-29]` 🔥 `[開放詞彙檢測]` `[訓練側增強]` `[零推理延遲]` `[跨場景泛化]`
+  * **核心優勢**：**打破「換個工位、光源或治具模型就飄移」的產線易碎惡夢，首創訓練側「造背景 + 壓特徵」的跨場景不變性增強範式！** 這項由哈工大深圳、鵬城實驗室與香港中文大學團隊發表於 CVPR 2026 的硬核成果，直擊開放詞彙目標檢測 (OVOD) 在工業落地時，模型極易將背景紋理與環境噪聲錯誤綁定到目標本體的致命盲區。CCL 另闢蹊徑，完全不改動上線模型結構與推理延遲：先透過「背景生成模組 (CBDG)」利用 SAM 分割前景並結合大模型與 Stable Diffusion 批量量產「同缺陷、不同治具/光照背景」的擾動樣本對；再藉由「上下文一致性損失 (CCLoss)」在視覺與文本雙重維度強制約束模型特徵，大幅將開放世界檢測指標 (OmniLabel) 強勢拉升 16.3% AP。
+  * **解決痛點 / 推薦場景**：**完美解決了 PCB 質檢、金屬表面外觀、電池片及倉儲揀選等高度柔性產線中，因「批次切換、夾具變更、相機角度微調導致 Domain Shift，使線下漂亮指標一上線就崩潰」的剛需痛點。** 由於其具備「推理零負擔」與「隨插即用」的插件式可遷移特質（實測在 GLIP 與 FIBER 底座上抗背景干擾能力直接翻倍），企業能以極低成本無痛升級現有檢測器。是打造**高泛化跨工位智慧質檢系統**、**拒絕頻繁補數據重訓的工業級數據閉環管線**的次世代防翻車首選方案。
+  * **資源**：[📄 論文 (CVF 原文)](https://openaccess.thecvf.com/content/CVPR2026/papers/Li_Consistency_Beyond_Contrast_Enhancing_Open-Vocabulary_Object_Detection_Robustness_via_Contextual_CVPR_2026_paper.pdf) | [📝 跨場景泛化技術解讀](https://mp.weixin.qq.com/s/tvA28GTA8kzEOSkLsFvQoA)
+
+* **[ViT³ (ViT with Test-Time Training)](https://github.com/LeapLabTHU/ViTTT)** `[2025-12-16]` 🔥 `[視覺長序列建模]` `[線性複雜度]` `[極限省顯存]` `[CVPR 2026 Best Paper Finalist]`
+  * **核心優勢**：**打破 Vision Transformer 的 $O(N^2)$ 算力死結，首創「梯度下降非線性壓縮」將推論速度暴力拉升 4.6 倍、顯存狂降 90.3% 的次世代視覺骨幹神作！** 這項由清華大學與阿里巴巴團隊聯手打造、入圍 CVPR 2026 最高榮譽（入圍率 < 0.1%）的史詩級工作，徹底顛覆了傳統 Linear Attention 易漏細節與 Mamba 隱狀態容量有限的 Failure Mode。ViT³ 引入「臨場學習 (Test-Time Training)」範式，將當前輸入的 K/V Token 視為迷你數據集，在推論當下對內部微型網路（首選 3×3 深度卷積 DWConv）進行單輪全批次自監督訓練，用非線性自適應權重完美鎖住「全域上下文 + 局部感受野」，成功在 $O(N)$ 線性複雜度下解鎖 Transformer 的極致表達力。
+  * **解決痛點 / 推薦場景**：**完美解決了超高畫質影像、長影片分析、多模態長上下文及高解析度擴散模型（DiT）在邊緣設備或高併發場景下「Token 數量一拉高，顯存直接原地爆炸」的硬體高牆。** 論文推出非層級（ViT³）、四階段層級通用骨幹（H-ViT³）與擴存生成（DiT³）三大變體。實測在 1248×1248 超高畫質場景下（高達 6084 個 Token），其壓榨硬體的省流表現極具統治力。極度適合用於**4K/8K 超高畫質影音智慧安防監控**、**大尺寸醫學影像病灶微小特徵追蹤**，以及追求**極致性價比的端側 AI 部署與離線視覺檢索管線**。
+  * **資源**：[🐙 GitHub 官方開源](https://github.com/LeapLabTHU/ViTTT) | [📄 論文 (arXiv:2512.01643)](https://arxiv.org/pdf/2512.01643) | [📝 慢思考與 TTT 拓撲深度解讀](https://geonuk-kimmm.github.io/UniSpector) *(註：相關技術解讀同步收錄於前沿開集社群)*
+
 * **[ViCrop-Det](https://arxiv.org/abs/2604.26806)** `[2026-04-29]` 🔥
   * **核心優勢**：**打破小目標檢測的算力魔咒，首創「免訓練、即插即用」的空間注意力熵 (SAE) 智能裁剪框架。** 這款由華中科技大學提出的神作，巧妙利用 DETR 檢測器內建的交叉注意力分布作為「內生探針」，透過計算香農熵精準揪出模型「不確定且重要」的區域（即小目標藏身處）進行局部高解析度重檢測。僅需微幅增加約 20% 計算量，即可在 VisDrone 數據集上穩定提升近 3 個百分點的 mAP，以極高的推理幀率 (38.6 FPS) 徹底碾壓 SAHI 等暴力全圖切片方法。
   * **解決痛點 / 推薦場景**：**完美解決了 Transformer 檢測器在密集場景中「注意力被空曠背景稀釋導致微小目標蒸發」，以及傳統 SAHI 切片法「計算量線性暴增」的致命痛點。** 由於無需重新訓練且不更動網路架構，極度適合企業直接掛載於現有模型上，部署於**無人機航拍 (UAV) 密集微小物件偵測**、**自駕車遠距離行人辨識**，以及**衛星遙感影像大圖分析**等計算資源受限但需極高精度的邊緣運算場景。<br>`[免訓練即插即用]` `[小目標檢測]` `[碾壓SAHI]` `[邊緣運算首選]`
@@ -73,6 +83,11 @@ service_type: AI Consulting
 | **YOLOv10** | 🇨🇳 **清華大學** | **徹底消滅 NMS**。首次在 YOLO 家族中移除後處理的非極大值抑制 (NMS)，大幅降低推理延遲。 | 即時自動駕駛、無人機視覺<br>`[無後處理]` `[超低延遲]` |
 | **VisionReasoner** | 🇨🇳 **開源社群** | **統一視覺感知與推理**。利用強化學習技術，標榜效能可對標 Qwen2.5-VL 等大型視覺模型。 | 複雜場景理解、視覺問答<br>`[強化學習]` `[大模型對標]` |
 | **MCL** | 🇨🇳 **AAAI 2025** | **遙感影像專家**。專為空拍、衛星圖設計的半監督目標檢測框架 (Multi-clue Consistency Learning)。 | 農業監測、空拍圖分析<br>`[遙感特化]` `[半監督學習]` |
+
+* **[HR-SemNet (High-Resolution Network for Small Object Detection)](https://doi.org/10.1109/TIP.2026.3654770)** `[2026-03]` 🔥 `[小目標神作]` `[無人機巡檢]` `[計算量腰斬]` `[極致輕量]`
+  * **核心優勢**：**徹底顛覆傳統 YOLO 瘋狂加深網路的老路，首創「高解析度主幹 + 局部上下文語義補丁」，用 5% 的參數量實現超越大模型的越級打怪！** 發表於頂級期刊 IEEE TIP 2026 的里程碑神作。該模型一針見血地指出微小目標在深層下採樣容易被抹平、且深層全局語義過強會引發背景噪訊的「相對過擬合」痛點。HR-SemNet 另闢蹊徑，主幹網路大膽瘦身，僅保留 P1/P2 兩級超高解析度特徵以鎖定幾何邊界，並在內部瓶頸層逐步嵌入輕量化 LCSM 模組。實測在不破壞小目標空間細節的條件下，比 YOLOv8-P2 基準直接暴漲 3.0 點 AP，而運算量 (GFLOPs) 狂砍 49.9%，模型參數量更是不可思議地縮減了 94.9%（僅剩 5.9M）！
+  * **解決痛點 / 推薦場景**：**完美解決了無人機高空巡檢 (UAV)、衛星遙感影像分析、高密度交通監控等嚴苛場景下「微小目標在低解析度層形體消失」以及「背景噪訊導致誤檢飆高」的工業級致命痛點。** 由於徹底消滅了深層網路的冗餘計算，該架構極度適合部署於算力受限的邊緣運算盒子 (Edge AI)、嵌入式設備或穿戴式智慧硬體，是目前處理極密集、低對比度、僅數十像素微小物體的次世代輕量化首選。
+  * **資源**：[📄 官方論文 (IEEE TIP)](https://doi.org/10.1109/TIP.2026.3654770) | [📊 dblp 條目](https://dblp.org/rec/journals/tip/PengCLCYX26) | [📝 中文技術解讀](https://mp.weixin.qq.com/s/AW6z4V29PrKSTCSh99RGRg)
 
 -----
 
@@ -106,8 +121,58 @@ service_type: AI Consulting
 
 > **無監督異常檢測是突破 AOI 產線良率瓶頸的關鍵。** 導入 PatchCore 等特徵對齊架構，僅需 50 張正常樣本即可將瑕疵檢出率提升至 98% 以上。此方法有效解決工業製造中缺陷樣本稀缺的問題，降低 60% 漏檢風險。傳統 AOI (自動光學檢測) 高度依賴大量瑕疵樣本來訓練模型。但在真實工業場景中，收集數千張「特定種類」的瑕疵圖往往不切實際。近年來，異常檢測技術已轉向**少樣本 (Few-shot)** 與 **零樣本 (Zero-shot)** 學習。以下為 2025-2026 年最具代表性的開源方案：
 
+* **[Rethinking Transfer Learning for Industrial Inspection: DINOv3 vs. ImageNet Pretraining Across RGB and X-ray Tasks](https://arxiv.org/abs/2605.23472)** `[2026-05]` 🔥 `[工業選型指南]` `[遷移學習重新審視]` `[反直覺硬核實測]`
+  * **核心優勢**：**一針見血戳破視覺基礎模型「全能萬用」的神話，為產線 AOI 演算法選型提供最清醒的硬體算力與天花板帳本！** 這篇發表於 CVPR 2026 (Findings) 的里程碑論文，不談學術站隊，直接將當前最強自監督基礎模型 DINOv3 與傳統 ImageNet 監督預訓練丟進真實工業任務（Severstal 鋼板劃傷、Rubber Rings 橡膠缺陷、GDXray 鑄件氣孔等）進行硬碰硬實測。研究給出兩大反直覺技術定性：第一，在可見光 (RGB) 表面缺陷上，DINOv3 紅利極度依賴「全參數微調」，「凍結 Backbone 躺贏」完全是偽命題；第二，在 X-ray 等非可見光強模態偏移任務中，DINOv3 明顯翻車，傳統 ImageNet 預訓練反而從頭到尾展現驚人的穩健度。
+  * **解決痛點 / 推薦場景**：**完美解決了自動光學檢測 (AOI) 團隊在專案早期「盲目追新押錯預訓練路線，導致後期天價標註人力、產線節奏與 GPU 算力全面返工」的骨灰級痛點。** 這是資安架構師與演算法工程師在決定模型底座時的「避坑指南」：如果你的專案是**可見光表面瑕疵檢測且算力允許放開骨幹全微調**，果斷選 DINOv3 以換取超高收斂上限；如果是**焊縫透照、安檢、無損探傷 (NDT) 等工業透視場景**，請堅守 ImageNet 監督預訓練，那才是工程上最保險、最不易翻車的解法。
+  * **資源**：[📄 官方論文 (arXiv:2605.23472)](https://arxiv.org/abs/2605.23472) | [📝 實驗復盤與遷移學習資料包](https://mp.weixin.qq.com/s/pbPTSgD97i-DfK_hu0SNBQ) *(註：參考資料來源與導讀對應)*
+
+* **[Omni-AD: A Large-scale and Versatile Benchmark for Industrial Anomaly Detection](https://omni-ad.github.io)** `[2026-06-25]` 🔥 `[工業異常通用基準]` `[真實產線數據]` `[雙協議評測]` `[大模型質檢噩夢]`
+  * **核心優勢**：**徹底打破 IAD 領域效能飽和僵局，首創相容傳統無監督與多模態大模型 (MLLM) 雙協議的 3.5 萬張真實產線巨量基準！** 由浙江大學、海康機器人、西交大與中大（深圳）發表的 CVPR 2026 燈塔級工作。數據庫直接覆蓋 16 個工業賽道、150 個真實流水線產品類別（規模達 MVTec 的 10 倍）。最破壞性的創新在於它填補了 MLLM 在工業質檢上的評測空白，定義了「缺陷判別、細粒度分類、視覺定位 (Visual Grounding)」三級遞進任務，並經人工與 U-Net 雙重循環像素級精細標註，成為檢驗 AI 演算法是否具備真實產線落地能力的硬核試金石。
+  * **解決痛點 / 推薦場景**：**完美解決了傳統工業異常檢測（IAD）基準在實驗室指標動輒破 99% 飽和、導致選型失效，以及多模態大模型在開放世界泛化強、一進產線「精準定位」卻集體崩潰的致命盲區。** 橫向評測揭露了殘酷的現實：最強的 Qwen3-VL-Thinking (30B) 在零樣本定位任務上的 F1 分數僅 26.20%（人類專家為 79.32%），而經典 PatchCore 的 AUPRO 也在這直接跌破 82%。這套大規模通用基準極度適合**企業進行大模型質檢方案與檢索演算法的選型初篩**、**中大型智慧製造廠建構跨品類少樣本預訓練模型底座**，是演算法團隊跨越「線下指標漂亮，上線誤檢漏檢不斷」工程鴻溝的剛需利器。
+  * **資源**：[📄 論文 (CVF Open Access)](https://openaccess.thecvf.com/content/CVPR2026/papers/Shi_Omni-AD_A_Large-scale_and_Versatile_Benchmark_for_Industrial_Anomaly_Detection_CVPR_2026_paper.pdf) | [🌐 專案主頁](https://omni-ad.github.io)
+
 ### 1. 結合 LLM 與多模態的零樣本檢測 (Zero-shot AD)
 利用大語言模型或 CLIP 龐大的常識庫，在「沒看過瑕疵樣本」的情況下，直接透過文字描述或視覺特徵揪出異常。
+
+* **[Fine-VAD (Fine-Grained Video Anomaly Detection)](https://teacher.bupt.edu.cn/zhuangzirui/zh_CN/index.htm)** `[2026-06]` 🔥 `[細粒度異常檢測]` `[影片安防]` `[CLIP多級對齊]` `[漸進式學習]`
+  * **核心優勢**：**打破傳統 VAD「只能抓錯、無法指認」的極限，首創「漸進式跨粒度學習」的影片理解神作！** 這篇 CVPR 2026 來自北京郵電大學的重磅論文，徹底拋棄了「一上來就逼模型硬背細分類」的低效煉丹法。透過凍結的 CLIP 圖像編碼器搭配時序適配器 (Temporal Adapter)，它巧妙引導模型經歷「粗粒度 (正常/異常) → 中粒度 (K-Means 宏類別) → 細粒度 (具體異常)」的三層語意洗禮。這套降維打擊策略在 UCF-Crime 權威基準上將 mAP 狂暴拉升近 47.7%，且依然保持 43.25 FPS 的即時推論速度！
+  * **解決痛點 / 推薦場景**：**完美解決了智慧城市與園區監控中「光知道有異常還不夠，必須精確分辨是縱火、鬥毆還是車禍才能派單應變」的實戰痛點，並強勢克服了異常行為類內變異大、類間極易混淆的死穴。** 這套不依賴海量細粒度標註的學習範式，極度適合用來打造**城市級智慧安防監控系統 (City Security)**、**工廠/工地高危險工安行為預警**，以及**長影片弱監督理解的自動化 AI 巡檢大腦**。
+  * **資源**：[📄 官方論文 (CVPR 2026)](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhang_Fine-VAD_Towards_Fine-Grained_Video_Anomaly_Detection_via_Progressive_Cross-Granularity_Learning_CVPR_2026_paper.pdf) | [🌐 作者實驗室主頁 (追蹤開源動態)](https://teacher.bupt.edu.cn/zhuangzirui/zh_CN/index.htm)
+
+* **[WinCLIP (Zero-/Few-Shot Anomaly Classification and Segmentation)](https://github.com/caoyunkang/WinClip)** `[2023-06]` 🔥 `[零樣本AOI]` `[CLIP特徵升維]` `[狀態提示詞]` `[冷啟動救星]`
+  * **核心優勢**：**打破工業 AOI 瑕疵檢測「冷啟動無缺陷樣本」的死局，首創基於 CLIP 的零/少樣本異常分割框架！** 這篇 CVPR 2023 的開創性神作，巧妙解決了通用 CLIP 模型「只見全局物體、不見局部微小瑕疵」的缺陷。透過引入「多尺度窗口化 (Windowing)」提取特徵，並結合涵蓋破損、污染等描述的「狀態提示詞 (State Prompts)」，WinCLIP 能在完全不看過任何缺陷樣本的條件下，精準定位異常區域。其進階版 WinCLIP+ 僅需 1~4 張「正常良品」照片作為參照記憶，AUROC 即可強勢突破 95%。
+  * **解決痛點 / 推薦場景**：**完美解決了新產品剛投產時「缺陷樣本極度稀缺、無法訓練專用模型」的致命痛點。** 徹底改變過去「先收壞樣本才能上線」的傳統思維，讓模型能力變成開箱即用的配置。極度推薦給面臨**少量多樣 (High-Mix Low-Volume) 生產線的 AOI 團隊**，是工廠新料號冷啟動、初期異常預先篩檢，以及建構「跨品類通用質檢平台」的最佳起手式。
+  * **資源**：[📄 官方論文 (CVPR 2023)](https://openaccess.thecvf.com/content/CVPR2023/papers/Jeong_WinCLIP_Zero-Few-Shot_Anomaly_Classification_and_Segmentation_CVPR_2023_paper.pdf) | [🐙 GitHub (非官方開源復現)](https://github.com/caoyunkang/WinClip)
+
+* **[CoPS (Conditional Prompt Synthesis for Zero-Shot Anomaly Detection)](https://arxiv.org/abs/2508.03447)** `[2026-07]` 🔥 `[零樣本跨域]` `[條件化動態提示]` `[工業醫學雙全能]` `[SAGA空間感知]`
+  * **核心優勢**：**徹底打破 CLIP 靜態提示詞無法泛化未知缺陷的魔咒，首創「看圖說話、現場合成提示詞」的自適應工業異判神作！** 這項由中科大、清華與華中科大等頂尖團隊發表的 CVPR 2026 最新前沿成果，直擊傳統 AdaCLIP 和 AnomalyCLIP 提示詞「寫死」、無法應對產線多樣化真實特徵的痛點。CoPS 透過「顯式狀態 Token 合成 (ESTS)」提取精準的正常/異常局部視覺原型，並利用 VAE 隱式採樣融合跨類別語義 Token，將冰冷的文字模板升級為可隨輸入影像動態調整的「條件化提示詞」。在工業與醫學 8 大主流資料集上（包含 MVTec-AD、VisA 與 BrainMRI）橫掃全場，創下平均分類 AUROC 92.5%、分割 AUROC 94.1% 的歷史新高紀錄。
+  * **解決痛點 / 推薦場景**：**完美解決了工業與醫學「冷啟動」場景下，因未知缺陷、長尾分佈形態、強大跨類別域偏移，導致傳統多模態模型「看得懂概念，卻框不準局部極小瑕疵」的致命盲區。** 透過其空間感知全局–局部對齊機制 (SAGA)，能將粗粒度的原型匹配完美過渡到細粒度像素級定位，可清晰抓出螺絲微小劃痕或大腦 MRI 病灶。極度適合用於**高度多樣少量（High-Mix Low-Volume）的工件表面瑕疵柔性初篩**、**高精確度醫療影像（HeadCT / BrainMRI）全自動病灶快速篩查**，以及缺乏大量缺陷樣本的**次世代多模態視覺 Agent 質檢管線**。
+  * **資源**：[📄 論文](https://arxiv.org/abs/2508.03447) | [📝 深度技術解讀](https://mp.weixin.qq.com/s/pbPTSgD97i-DfK_hu0SNBQ)
+
+* **[GS-CLIP (Geometry-Aware Prompt and Synergistic View Representation Learning)](https://github.com/zhushengxinyue/GS-CLIP)** `[2026-03-29]` 🔥
+  * **核心優勢**：**首創「文本幾何翻譯 + 視覺雙流並行」兩階段框架，打破 2D 投影的有損壓縮盲區，全面制霸零樣本 3D 異常檢測！** 這篇由蘇州大學與清華大學 AIR 團隊聯手發表的 CVPR 2026 重量級神作，徹底解決了現有方法將 3D 點雲壓平至 2D 時，關鍵立體幾何細節大量丟失的致命缺陷。GS-CLIP 在文本端透過「幾何缺陷蒸餾模組 (GDDM)」動態將 3D 局部與全域形狀特徵翻譯為提示詞，讓 CLIP 預先理解幾何結構；在視覺端則利用 Depth-LoRA 技術結合「協同精煉模組 (SRM)」，完美實現外觀紋理（RGB）與整體結構（Depth）的雙流深度融合。在 MVTec3D-AD、Real3D-AD 等四大權威數據集上全面碾壓 PointAD，O-AUROC 平均強勢提升 1.8% 以上。
+  * **解決痛點 / 推薦場景**：**完美解決了智慧製造 AOI 質檢中「商業機密與數據隱私導致缺陷樣本極度稀缺」，以及傳統單模態投影易因「光照偽影或幾何特徵微小」造成嚴重漏檢的痛點。** 無論是餅乾表面的細微凹坑，還是汽車精密零件、電纜接頭的微小劃痕，GS-CLIP 都能精確分割異常區、抑制正常區誤報，且在跨數據集（cross-dataset）遷移下效能幾乎不掉點。極度適合用於**工業精密元器件缺陷無人化柔性抽檢**、**零樣本開放世界 3A 級品管系統建構**，以及需要直接將 2D 大模型超能力無損遷移至 3D 點雲感知的工業級開發團隊。
+  * **資源**：[🐙 GitHub 官方開源](https://github.com/zhushengxinyue/GS-CLIP) | [📄 官方論文 (CVF)](https://openaccess.thecvf.com/content/CVPR2026/papers/Deng_GS-CLIP_Zero-shot_3D_Anomaly_Detection_by_Geometry-Aware_Prompt_and_Synergistic_CVPR_2026_paper.pdf) | [📝 深度解讀](https://mp.weixin.qq.com/s/pbPTSgD97i-DfK_hu0SNBQ)
+
+* **[[CVPR 2026] LAVIDA (No Need For Real Anomaly: MLLM Empowered Zero-Shot Video Anomaly Detection Framework)](https://github.com/VitaminCreed/LAVIDA)** `[2026-07-11]` 🔥
+  * **核心優勢**：**徹底顛覆「先採集真實異常才能訓練」的傳統範式，首創利用語義分割數據集「現場合成偽異常」的零樣本視頻檢測史詩級神作！** 這篇由北京郵電大學與西北工業大學發佈於 CVPR 2026 的代表性工作，大膽拋棄了對真實視頻異常（VAD）數據的依賴。框架引入多模態大模型（MLLM）深厚的語義推理能力，並針對時空稀疏性創新設計「視覺 Token 逆向注意力壓縮機制」，在過濾高達 93% 冗餘背景 Token 的同時，將隱藏的異常特徵完美突出。後端串聯多尺度語義投影器與 SAM2 掩碼解碼器，直接重新定義了開放世界中的視頻幾何感知能力。
+  *  **解決痛點 / 推薦場景**：完美解決了傳統安防、產線監控中「異常屬於極小機率事件、樣本收集極度困難」，以及異常定義高度依賴上下文（如奔跑在操場與在銀行含義截圖相反）的工業級痛點。 依靠「不用真實異常也能訓」的底層逻辑，模型在開放世界中展現出令人震驚的泛化實力：在 UBnormal、ShanghaiTech、UCF-Crime 與 XD-Violence 四大時序榜單上零樣本全線奪冠（XD-Violence AP 直衝 90.62%），且在 UCSD Ped2 像素級空間定位上更是以 87.68% AUC 狂勝過往 SOTA 超過 12 個百分點。極度推薦用於**開放世界無人智慧安防系統**、**多樣少量工業產線突發事故追蹤**，以及需要**極低硬體負載與抗干擾能力的多模態 Agent 視覺管線開發**。
+  * **資源** Preserved：[🐙 GitHub 官方開源](https://github.com/VitaminCreed/LAVIDA) | [📄 官方論文 (arXiv:2508.03447)](https://arxiv.org/abs/2508.03447) | [📝 深度技術解讀](https://mp.weixin.qq.com/s/tvA28GTA8kzEOSkLsFvQoA)
+
+* **[AG-VAS (Anchor-Guided Zero-Shot Visual Anomaly Segmentation)](https://github.com/xiaozhen228/AG-VAS)** `[2026-03-05]` 🔥 `[零樣本二值分割]` `[語義錨點黑科技]` `[開箱即用]` `[強泛化]`
+  * **核心優勢**：**打破 CLIP 的效能天花板，首創「看一眼就知道哪裡不對勁」並直接輸出像素級二值分割掩碼的次世代大模型神作！** 這篇由中科院自動化所發佈於 CVPR 2026 的頂會工作，精準解決了傳統 AnomalyCLIP、WinCLIP 等方法「定位模糊、需要通風報信（啟發式閾值/經驗調參）」的致命硬傷。AG-VAS 在大模型詞表中革命性地擴展了三個可學習的錨點 Token (`[SEG]`, `[NOR]`, `[ANO]`)，將抽象的「孔洞、劃痕」等異常轉化為具體視覺實體，並結合「語義–像素對齊模塊 (SPAM)」完美抹平高層語意與像素特徵的巨大鴻溝，不需經驗閾值即可直接生成極致乾淨的二值化 Anomaly Mask。
+  * **解決痛點 / 推薦場景**：**完美解決了工業缺陷檢測與醫療影像中「新類別樣本極度稀缺、機密隱私受限」，以及傳統多模態模型極易「混淆前景/背景與過度分割」的痛點。** 由於內建了專為分割打造的 Anomaly-Instruct20K 指令微調數據集，模型具備恐怖的跨域泛化能力——在完全未接觸醫療圖的情形下，直接越級吊打 LISA 等基線。在 MVTec-AD、KSDD2 和 ColonDB 等 6 大工業/醫學數據集上創下 AP 與 IoUano 的壓倒性 SOTA（正常圖像拒絕率高達 87.7%）。極度適合需要**零樣本、多模式互動式分割（如先描述再分割、對話中分割）**，以及追求**真正工業級、即插即用自動化質檢線**的演算法團隊。
+  * **資源**：[🐙 GitHub 官方開源](https://github.com/xiaozhen228/AG-VAS) | [📄 論文 (arXiv:2603.01305)](https://arxiv.org/abs/2603.01305) | [📝 技術深度解讀](https://mp.weixin.qq.com/s/pbPTSgD97i-DfK_hu0SNBQ)
+
+* **[UniSpector (Spectral-Contrastive Visual Prompting)](https://geonuk-kimmm.github.io/UniSpector)** `[2026-04-23]` 🔥 `[開集缺陷識別]` `[視覺提示大模型]` `[免重訓冷啟動]` `[SOTA 霸主]`
+  * **核心優勢**：**打破傳統視覺提示模型的嵌入坍塌魔咒，首創「空域-頻域雙域編碼 + 角度間隔對比約束」的工業級開集缺陷識別神作！** 這項由全球電池巨頭 LG Energy Solution 發表於 CVPR 2026 的里程碑工作，直擊現有 GroundingDINO、YOLO-World 等文本/視覺提示模型在工業質檢落地時「無法對缺陷細分類、跨產品域直接失效、以及類內差異大導致特徵四散漏檢」的致命短板。UniSpector 革命性提出 SSPE 編碼器，引入 2D 傅立葉頻域分支（徑向頻譜）消除缺陷旋轉與光照偏差；並首創 CPE 對比正則模組，借鑑 ArcFace 引入角間隔損失，強制提示嵌入形成有序的「角流形」，讓同類緻密聚類、異類強制拉開。每類僅需 1~3 張提示圖即可達效能飽和，整體開集檢測 AP⁵⁰ᵇ 狂飆至 40.9%，相對最強基線（T-Rex2）暴產 19.7% 的碾壓級性能跨越！
+  * **解決痛點 / 推薦場景**：**極大程度攻克了智慧製造品質管控中「產線一換批次/光源/載具模型就不穩」、未知缺陷「只能判斷異常卻無法細分類溯源維修」、以及「每次出新瑕疵都要海量標註與完整重訓」的骨灰級落地痛點。** 論文同步開源了首個視覺提示開集缺陷專用基準 **InsA**（包含 7 套數據集、360 類缺陷）。得益於推理解耦設計（提示嵌入可離線預計算快取），在線僅做目標檢測/分割，且對高斯模糊容錯與人工粗標框具備極強魯棒性。極度適合用於 **PCB / 電池片 / 金屬表面外觀的跨工位柔性檢測**、**零樣本/小樣本工業開集瑕疵隨插即用質檢線**，以及追求**兼顧已知缺陷高精度與未知缺陷強泛化**的次世代工業級 AOI 系統。
+  * **資源**：[🐙 Project & Code](https://geonuk-kimmm.github.io/UniSpector) | [📄 論文 (arXiv:2604.02905)](https://arxiv.org/abs/2604.02905) | [📊 InsA 基準數據](https://geonuk-kimmm.github.io/UniSpector)
+
+* **[ADSeeker (Knowledge-Grounded Reasoning Framework)](https://arxiv.org/pdf/2508.03088)** `[2026-07-11]` 🔥 `[多模態異常推理]` `[多模態 RAG]` `[零樣本 SOTA]` `[稀疏特徵定位]`
+  * **核心優勢**：**首創結合「圖文對齊知識庫 + 鑰匙配鎖多模態檢檢索」的工業異常推理框架，為視覺大模型換上具備技術解釋力的「質檢專家大腦」！** 這項發表於 CVPR 2026 的重量級突破，徹底顛覆了傳統大模型在工業質檢中「只能看圖盲猜、定位模糊且極易產生技術幻覺」的骨灰級硬傷。ADSeeker 核心打造了 SEEK-M&V 首個圖文對齊的工業缺陷知識庫，並透過雙映射矩陣的 Q2K RAG 技術，在聯合特徵空間進行 Key-Lock 多模態精準檢索，避免傳統 RAG 視覺細節與文本語義對不齊的窘境。更驚豔的是，它採用層次化稀疏提示（HSP）搭配 $\ell_1$ 稀疏懲罰，強制模型收斂注意力、只提煉與異常強相關的特徵分量，讓零樣本異常檢測（ZSAD）在多個工業與醫學數據集上刷新全面超越前人的 SOTA 紀錄（平均 AUROC 達 94.0%）[cite: 1]。
+  * **解決痛點 / 推薦場景**：**完美解決了通用多模態大模型（MLLM）在產線落地時「缺乏工業領域缺陷常識」，以及無法說出技術成因，只會無腦輸出「圖像中有一處異常」粗糙廢話的致命短板[cite: 1]。** 模型藉由 AD Expert 模組將查詢圖與正負文本做細粒度比對，產生精準的像素級異常定位分數[cite: 1]，引導解碼器給出諸如「劃痕長度、微位移成因」等老師傅等級的專家推理敘述[cite: 1]。在 MMAD 異常推理基準中，其判別與分類性能相對傳統 Qwen2.5-VL 暴力拉升[cite: 1]。由於其運算開銷較大（~28 GiB VRAM / ~6.14s），工程落地極度適合用於**需要高階邏輯推理與成因判因的離線復判、抽檢分析工站**[cite: 1]，或是作為**多 SKU、小批量且異常樣本稀缺產線的知識增強系統**[cite: 1]。
+  * **資源**：[📄 論文 (arXiv)](https://arxiv.org/pdf/2508.03088) | [📊 MMAD 基準數據集](https://www.selectdataset.com/dataset/bc4b8d954262947d3ffe1370029e4eb0/MMAD)
 
 * **[JUDO](https://github.com/woodavid31/JUDO)** `[2026-05]` 🔥
   * **核心優勢**：**打破通用大模型產線翻車魔咒，首創「對照式定位＋領域知識內化＋GRPO 推理對齊」的工業異常多模態推理器。** 這款 ICLR 2026 頂會神作基於 Qwen2.5-VL-7B 打造，徹底拋棄外掛 RAG 容易引發幻覺與邏輯偏離的弱點。它透過輸入「正常標準件與待檢件」進行視覺並置對照 (SegJux)，將工業質檢標準深植於模型權重 (DomInj)，並利用多層獎勵函數 (GRPO) 嚴格約束空間定位與工藝邏輯。在 MMAD 基準測試中，以 81.20% 的平均準確率強勢擊敗 GPT-4o。
@@ -144,6 +209,26 @@ service_type: AI Consulting
 
 ### 2. 少樣本與無監督學習前沿突破 (Few-shot & Unsupervised)
 解決現場只能取得「正常良品圖」或極少量瑕疵圖的痛點。
+
+* **[InvAD (Inversion-based Reconstruction-Free Anomaly Detection)](https://invad-project.com/)** `[2026-04]` 🔥 `[擴散模型]` `[免重建]` `[極速推論]` `[工業AOI]`
+  * **核心優勢**：**徹底拋棄傳統擴散模型「加噪再去噪」的笨重重建老路，首創潛空間反演 (Latent Inversion) 評分，僅需 3 步即可狂飆 88.1 FPS 的極速判異！** 傳統擴散模型用於 AD 任務時，推論速度極慢且極度依賴噪聲強度調參 (易受產線良品波動干擾)。InvAD 革命性地改走 DDIM 潛空間反演，將模型化身為「正常分佈的尺」——不再辛苦重建影像，而是直接計算潛變量偏離正常先驗的密度。不僅實現免調參 (Tuning-free)，更支援多類別統一推論。
+  * **解決痛點 / 推薦場景**：**完美解決了工業 AOI 中「擴散模型推論太慢無法跟上產線節拍」以及「反光、油污、正常加工紋路批次差導致誤檢飆高」的致命痛點。** 在最接近金屬結構件真實場景的 MPDD 資料集上，創下 96.5% 圖像級 AU-ROC 與 120 FPS 的恐怖效能。極度適合部署為**智慧工廠 24/7 產線的前級高速異常篩檢與告警**、**金屬加工件表面微小瑕疵 (劃傷/壓痕) 判異**，是真正能讓擴散模型在邊緣設備落地的工業視覺新星。
+  * **資源**：[🌐 官方專案主頁](https://invad-project.com/) | [📄 官方論文 (arXiv:2504.05662)](https://arxiv.org/abs/2504.05662)
+
+* **[AnomalyVFM (Transforming Vision Foundation Models into Zero-Shot Anomaly Detectors)](https://maticfuc.github.io/anomaly_vfm/)** `[2026-01]` 🔥 `[零樣本冷啟動]` `[純視覺VFM]` `[虛擬產線數據]` `[極速推論]`
+  * **核心優勢**：**打破 CLIP 語言提示的局限，首創將純視覺大模型 (VFM) 轉化為零樣本工業檢測霸主的黑科技！** 徹底拋棄傳統視覺語言模型 (VLM) 依賴文字描述缺陷的弱點（文字往往難以精準描述微小劃傷或紋理斷裂）。AnomalyVFM 創新採用 FLUX 合成並透過 DINOv2 嚴格過濾的「虛擬產線」缺陷數據，搭配深層注入 Transformer 的 LoRA 低秩適配器。在 9 大工業數據集上創下 94.1% 圖像級 AUROC 的驚人成績，且 A100 單卡推論僅需 20.5ms，速度與精度全面輾壓 Bayes-PFL 等對手。
+  * **解決痛點 / 推薦場景**：**完美解決工業 AOI 產線頻繁換料號、換工藝時「完全沒有瑕疵樣本可訓練」的冷啟動致命痛點。** 它直接從強大的純視覺骨幹 (如 RADIO, DINOv3) 中萃取對「不尋常紋理與邊緣形變」的敏銳度。極度適合部署為**智慧工廠新產線的首檢預篩與異常告警系統**、**多品類/小批量 (High-Mix Low-Volume) 的柔性製造視覺大腦**，以及要求極高節拍與低延遲的**邊緣運算質檢站**。
+  * **資源**：[🐙 GitHub 官方源碼](https://github.com/maticfuc/anomaly_vfm) | [📄 官方論文 (arXiv:2601.20524)](https://arxiv.org/abs/2601.20524) | [🌐 專案主頁](https://maticfuc.github.io/anomaly_vfm/)
+
+* **[[ICCV 2025] TF-IDG (Training-Free Industrial Defect Generation with Diffusion Models)](https://openaccess.thecvf.com/content/ICCV2025/papers/Xu_Training-Free_Industrial_Defect_Generation_with_Diffusion_Models_ICCV_2025_paper.pdf)** `[2025-10]` 🔥 `[免訓練黑科技]` `[One-Shot資料增廣]` `[產線冷啟動]` `[台灣原生強權]`
+  * **核心優勢**：**徹底終結傳統瑕疵生成依賴大量樣本與微調的宿命，首創「免訓練、單張參考圖」即可量產高保真瑕疵數據的工業級救星！** 由國立臺灣大學資工系與華碩團隊聯手發表的 ICCV 2025 重量級神作。該技術完全不需要對擴散模型進行任何權重微調，純粹在推理階段透過創新的 Sinkhorn 特徵對齊策略（最優傳輸理論）與自適應缺陷遮罩引導機制（AAM），精準復現精密工件如 PCB、晶體管等細長或微米的複雜缺陷細節。同時，內建的雙路紋理保持模組（TP）消除了邊緣「貼圖感」，讓生成的瑕疵與背景自然光影完美融合。
+  * **解決痛點 / 推薦場景**：**完美解決了智慧製造與自動光學檢測（AOI）產線在料號切換、冷啟動初期「完全沒有缺陷樣本可供訓練模型」的產線頭號痛點。** 過去的方法至少需要幾十張圖來微調 GAN 或 LoRA，而 TF-IDG 在 1-shot（僅一張良品底圖＋一張瑕疵參考圖）設定下，下游分類模型的準確率就直接暴漲 20+ 個百分點，越少樣本優勢越恐怖。生成的影像自帶高精度 Mask，可隨插即用地接入 YOLO、U-Net 或 GLASS 等主流檢測模型，是打造**柔性製造智慧工廠**、**小批量多 SKU 工檢平台**，以及需要**算力門檻極低、消費級顯卡就能跑的純本地私有化資料清洗與增廣管線**的工業級大腦首選。
+  * **資源**：[🐙 GitHub 官方開源](https://github.com/rubymiaomiao/TF-IDG) | [📄 官方論文 (PDF)](https://openaccess.thecvf.com/content/ICCV2025/papers/Xu_Training-Free_Industrial_Defect_Generation_with_Diffusion_Models_ICCV_2025_paper.pdf)
+
+* **[FastRef (Fast Prototype Refinement for Few-shot Industrial Anomaly Detection)](https://github.com/liyufei25/FastRef)** `[2026-03-29]` 🔥
+  * **核心優勢**：**首創「特徵遷移 + 異常抑制」雙向迭代嵌套優化框架，推理階段 2 輪迭代即時收斂的少樣本隨插即用神作！** 這項發表於 CVPR 2026 的前沿成果，徹底打破了傳統 PatchCore、WinCLIP 等方法在冷啟動階段高度依賴「靜態原型」而導致未知缺陷重構偏差變小、進而頻繁漏檢的局限性。FastRef 創新地在推理階段動態引入查詢影像（Query Image）的統計特徵，一邊透過具備閉式解（closed-form）的變換矩陣 W 進行高效特徵遷移，一邊利用最優傳輸（Optimal Transport）演算法中的 Sinkhorn 迭代，精準激活異常區域權重並進行「避障式更新」，完美剔除不符合正常分佈的污染特徵。
+  * **解決痛點 / 推薦場景**：**完美解決了工業自動化質檢產線在「冷啟動階段、樣本極度稀缺」時，傳統靜態原型易被瑕疵干擾、背景誤報率高且邊緣勾勒模糊的痛點。** 該演算法最具破壞性的賣點在於其**工業級的高相容性與即插即用（Plug-and-Play）特質**，能直接無痛嵌入 PatchCore、WinCLIP、AnomalyDINO 等主流管線。實測在 MVTec、MPDD、ViSA 等四大權威資料集上的 1/2/4-shot 評測中全面洗榜，在複雜的 ViSA 場景下更創下 Image-AUROC +7.3% 的驚人跨越。極度適合用於**多樣少量生產線的柔性缺陷初篩**、**新品上線的少樣本極速部署**以及對推論即時性有嚴苛要求的**邊緣運算即時 AOI 質檢管線**。
+  * **資源**：[🐙 GitHub](https://github.com/liyufei25/FastRef) | [📄 論文](https://arxiv.org/abs/2603.01305) *(註：實際 arXiv 連結請以官方發布為準)* | [📝 深度解讀](https://mp.weixin.qq.com/s/kiZLqZupxWTB8nB-2bzU6w)
 
 * **[FoundAD (少樣本異常檢測基礎編碼器)](https://arxiv.org/abs/2510.01934)** `[2025-10]` 🔥
   * **核心優勢**：**打破工業質檢對提示詞與重型解碼器的依賴，僅靠輕量投影器徹底釋放視覺大模型「天生」的異常感知力！** 慕尼黑工業大學與 MVTec 聯合發布的 ICLR 2026 神作。它證明了凍結的 DINOv2/v3 特徵空間本身就隱含「自然圖像流形」，只需外掛一個僅 11.8M 參數的輕量非線性投影器，即可將偏離流形的特徵拉回並計算殘差分數。完全不需文字提示 (Prompt) 或龐大記憶庫，在 MVTec-AD 1-shot 設定下飆出 96.1% I-AUROC，且單卡推理高達 7.8 FPS，顯存佔用不到 1.4GB。
@@ -208,6 +293,16 @@ service_type: AI Consulting
 
 > **YOLOv11 架構在邊緣設備上的推論效能達到全新里程碑。** 在 NVIDIA Jetson Orin 平台上實測，其 mAP 達 54.3% 時仍可維持 120 FPS 的即時處理速度。這為自駕車與高頻工業自動化提供了延遲小於 10ms 的完美解決方案。目標偵測不僅是畫出邊界框 (Bounding Box)，目前的趨勢是結合語言模型與強化學習，實現「開放詞彙 (Open-Vocabulary)」與「極端場景特化」。
 
+* **[SAM 3D (3Dfy Anything in Images)](https://github.com/facebookresearch/sam-3d-objects)** `[2026-05]` 🔥 `[單圖3D重建]` `[SAM家族升維]` `[DPO對齊]` `[亞秒級極速生成]`
+* **核心優勢**：**打破 2D 到 3D 的數據壁壘，單張照片秒建高品質、可互動的三維場景！** Meta 於 CVPR 2026 榮獲提名的劃時代神作，將「分割萬物 (SAM)」的感知能力正式升維至 3D 空間。完美借鑑大語言模型 (LLM) 的「預訓練 → 真實數據微調 → DPO 偏好對齊」三階段煉丹法，結合 DINOv2 語意與稀疏潛流匹配 (Sparse Latent Flow)。模型不僅能像人類一樣「腦補」物體被遮擋的背面幾何形狀，還能精準還原高保真材質紋理。更透過模型蒸餾將推理極限壓縮至 4 步，達成驚人的亞秒級極速重建。
+* **解決痛點 / 推薦場景**：**完美解決了傳統 3D 生成「極度依賴多視角拍攝」，且「遇到真實雜亂場景 (In-the-wild) 容易穿模、幾何崩壞」的致命痛點。** 模型原生支援輸出通用三角網格 (Triangle Mesh) 與 3D 高斯潑濺 (3DGS)，能無縫導入 Blender、Maya 與現代主流遊戲引擎。極度適合**遊戲與 XR 開發團隊進行 3D 資產極速量產**、賦予**具身智能機器人 (Embodied AI)** 空間幾何的直覺感知，以及作為**自駕車複雜場景理解**的工業級 3D 基礎模型。
+* **資源**：[🐙 GitHub 官方開源 (Objects)](https://github.com/facebookresearch/sam-3d-objects) | [📄 官方論文 (arXiv:2511.16624)](https://arxiv.org/abs/2511.16624) | [🌐 官方專案與線上 Demo](https://ai.meta.com/sam3d/)
+
+* **[MonoSAOD (Monocular 3D Object Detection)](https://github.com/VisualAIKHU/MonoSAOD)** `[2026-04]` 🔥 `[單目3D偵測]` `[稀疏標註]` `[偽標籤治理]` `[工業級過濾]`
+  * **核心優勢**：**打破低標註場景的「雜訊污染」魔咒，首創物理感知增強與嚴苛偽標籤篩選的單目 3D 偵測神作！** 徹底推翻了過往半監督學習「高置信度即為好標籤」的盲點。透過獨創的 RAPA 模組，確保生成的 3D 幾何、尺度與空間關係完全符合現實物理約束；並利用 PBF (偽標籤緩衝過濾器) 作為「數位復檢工位」，嚴格把關深度不確定性與原型一致性，在僅有 30% 標註數據的極限下，效能強勢輾壓傳統 Co-student 等算法。
+  * **解決痛點 / 推薦場景**：**完美解決了真實工業 AOI 與自駕感知中「標註成本極高」，且「錯誤偽標籤進入訓練閉環導致模型越練越崩潰」的致命痛點。** 它的核心落地價值在於「資料治理的工程化」——不盲目擴充髒數據，而是確保餵給模型的每一筆資料都乾淨且物理自洽。極度適合**樣本極度稀缺的工業裝配/幾何公差檢測**、**單目相機 3D 測距與姿態估計**，以及**低成本自駕車邊緣感知系統**。
+  * **資源**：[🐙 GitHub 官方專案](https://github.com/VisualAIKHU/MonoSAOD) | [📄 官方論文 (arXiv:2604.01646)](https://arxiv.org/abs/2604.01646)
+
 * **[LocateAnything-3B (全能視覺定位與多模態檢測)](https://github.com/NVlabs/Eagle)** `[2026-05]` 🔥
   * **核心優勢**：**NVIDIA 顛覆視覺定位的 CVPR 2026 神作！首創「平行框解碼 (PBD)」徹底打破大模型自迴歸生成座標的龜速與誤差，單卡 H100 狂飆 12.7 BPS！** 捨棄傳統將座標拆成 Token 逐一生成的作法，LocateAnything 將邊界框視為不可分割的「幾何原子單元」一步到位預測。結合高達 7.85 億的巨量邊界框訓練標註與獨創的 Hybrid 模式（在極速並行與嚴謹自迴歸間動態切換、遇錯重解），在 UI 元素定位與 LVIS 高精度基準上強勢輾壓 Qwen3-VL 與 Rex-Omni。
   * **解決痛點 / 推薦場景**：**完美解決了傳統視覺大模型 (VLM) 應用於 AI Agent 與具身智能時「看得懂卻找得極慢、座標框亂跳前後矛盾」的致命痛點。** 僅 3B 參數，只需 16GB 消費級顯存（如 RTX 3090/4090）即可流暢本地部署。極度推薦開發者用於打造毫秒級反應的**電腦操作智能體 (Computer Use Agent)**、**精準點擊 UI 的 RPA 自動化導航副駕**，以及需要極低延遲的**具身機器人 (Embodied AI) 視覺抓取中樞**。
@@ -235,6 +330,11 @@ service_type: AI Consulting
   * **核心優勢**：**解救演算法工程師的 MOT 隨插即用神器，一行程式碼無縫接軌任意檢測模型！** 徹底打破過去跟蹤演算法與特定檢測器深度耦合、官方程式碼難以魔改的泥淖。內建 SORT、ByteTrack (高低置信度雙階段關聯) 與 OC-SORT (抗遮擋霸主) 等主流演算法。高度模組化設計，只要你的模型（YOLO, RT-DETR 等）能吐出檢測框與置信度，它就能接手產出具備唯一 ID 的連續軌跡。
   * **解決痛點 / 推薦場景**：**完美解決了傳統跟蹤演算法「換個檢測模型就要重寫底層」以及「論文程式碼難以落地」的致命痛點。** 原生支援 CLI 指令，一鍵即可無腦處理本地視訊、攝影機或 RTSP 串流，並內建標準 HOTA 效能評估工具。極度適合需要快速部署**安防監控即時串流分析**、**高動態體育賽事轉播 (SportsMOT)**，以及**自駕車與機器人視覺**等工業級即時追蹤場景。
   * **資源**：[🐙 GitHub 官方開源](https://github.com/roboflow/trackers) | [📄 官方完整文件](https://trackers.roboflow.com) | [🌐 瀏覽器線上 DEMO](https://huggingface.co/spaces/Roboflow/Trackers)
+
+* **[SEATrack (Simple, Efficient, and Adaptive Multimodal Tracker)](https://openaccess.thecvf.com/content/CVPR2026/papers/Su_SEATrack_Simple_Efficient_and_Adaptive_Multimodal_Tracker_CVPR_2026_paper.pdf)** `[2026-06]` 🔥 `[多模態追蹤]` `[PEFT極致輕量]` `[極端場景特化]` `[邊緣算力首選]`
+  * **核心優勢**：**打破多模態追蹤參數暴漲的死局，僅需 0.6M 可訓練參數即霸榜 CVPR 2026 的極速跟蹤神作！** 徹底推翻傳統「盲目堆疊融合模塊」的套路，首創「先對齊後融合」的新範式。透過僅 0.14M 參數的 AMG-LoRA 動態對齊 RGB 與其他模態（熱紅外/深度/事件）的匹配響應，消除了跨模態注意力衝突；並結合 HMoE 分層混合專家模塊實現高效全局建模。推論速度高達 63.5 FPS，顯存僅需 1GB，效能卻強勢輾壓參數量大 25 倍的對手 (如 SDSTrack)。
+  * **解決痛點 / 推薦場景**：**完美解決純 RGB 視覺在「夜間、強光、大霧」等惡劣天候下容易死機跟丟，以及傳統多模態模型「吃顯存、容易引發災難性遺忘」的致命痛點。** 面對目標短暫離開視野 (OV) 或幀丟失 (FL)，其自適應互引導機制能瞬間用可靠模態補位。極度適合部署於算力嚴苛的**無人機 (UAV) 惡劣天候全天候巡檢**、**自駕車夜視感知大腦**，以及**軍工級熱紅外線目標鎖定與安防追蹤系統**。
+  * **資源**：[📄 CVPR 2026 官方論文](https://openaccess.thecvf.com/content/CVPR2026/papers/Su_SEATrack_Simple_Efficient_and_Adaptive_Multimodal_Tracker_CVPR_2026_paper.pdf) | [🔍 GitHub 潛在開源搜尋](https://github.com/search?q=SEATrack+Multimodal+Tracker)
 
 * **[FT-FSOD (Parallel Decoder)](https://github.com/Intellindust-AI-Lab/FT-FSOD)** `[CVPR 2026]` 🔥 `[跨域少樣本]` `[並行解碼器]` `[自動化微調]`
   * **核心優勢**：**打破跨域微調的過度擬合魔咒，僅靠輕量解碼器魔改與漸進式微調，強勢輾壓 SAM 3！** 論文證實，面對巨大域偏移（如工業瑕疵、醫療影像），一味把模型做大是錯的！透過首創的「混合集成解碼器 (HED)」引入並行預測多樣性，搭配 plateau-aware 漸進式微調策略，幾乎**零額外參數**即可徹底解決少樣本訓練極易震盪與收斂困難的致命缺陷。
@@ -313,6 +413,16 @@ service_type: AI Consulting
 
 ### 2. 領域特化與多模態分割模型
 
+* **[VGGT-S (VGGT-Segmentor)](https://github.com/buaa-colalab/VGGT-S)** `[2026-04]` 🔥 `[跨視角分割]` `[幾何增強]` `[Ego-Exo對齊]` `[免配對預訓練]`
+  * **核心優勢**：**打破多視角像素匹配的漂移魔咒，首創將「幾何點投影」作為粗提示的跨視角分割神作！** 這篇由北航發表的 CVPR 2026 Oral 論文，巧妙地避開了直接進行像素級匹配易失效的陷阱。它凍結了強大的 VGGT 幾何基礎模型編碼器，不強求精確的點對點對齊，而是將投影點當作「幾何錨點提示 (Geometric Prompts)」，再搭配輕量級的聯合分割頭 (Union Segmentation Head) 進行特徵融合與遮罩細化 (Mask Refinement)。在無配對數據 (Correspondence-free) 預訓練下，IoU 效能依然狂碾 DOMR 等現有 SOTA 超過 10 幾個百分點。
+  * **解決痛點 / 推薦場景**：**完美解決了「第一人稱 (Ego) 視角極易被手部遮擋」與「第三人稱 (Exo) 視角目標過小且背景相似物干擾多」，導致傳統模型在跨視角轉換時形狀崩壞的致命痛點。** 只要給定一個視角的目標遮罩，模型就能靠著空間幾何直覺，在另一個截然不同的視角精準框出同一物體。極度推薦給開發**具身智能機器人 (Embodied AI) 模仿學習與雙臂操作**、**AR/VR 遠端專家空間協作系統**，以及需要多相機聯合感知的**無人機與地面視角協同監控**的工程團隊。
+  * **資源**：[🐙 GitHub 官方開源](https://github.com/buaa-colalab/VGGT-S) | [📄 官方論文 (arXiv:2604.13596)](https://arxiv.org/abs/2604.13596)
+
+* **[DiCLIP (Diffusion Enhanced CLIP for Weakly Supervised Segmentation)](https://github.com/zwyang6/DiCLIP)** `[2026-06]` 🔥 `[弱監督分割 WSSS]` `[知識遷移]` `[訓練降本 90%]` `[生成式賦能]`
+  * **核心優勢**：**徹底終結弱監督語義分割「只亮核心局部、邊界殘缺不全」的先天盲區，用 1/10 的訓練成本逼近全監督 96.6% 的效能極限！** 復旦大學團隊最新力作，精準指出傳統 CLIP 偏向全局語意、缺乏像素空間細節的「近視眼」痛點。DiCLIP 革命性地將 Stable Diffusion (SD) 的 self-attention map 視為天然的空間老師，首創 ACR 遞歸精化與 VCE 視覺增強機制，將豐富的幾何局部一致性注入 CLIP 中。同時利用 SD 離線生成單類別乾淨圖像建立 Key-Value Cache 視覺知識庫，將傳統的 patch-text 對齊強勢升級為「視覺檢索範式」。
+  * **解決痛點 / 推薦場景**：**完美解決了傳統弱監督分割 (WSSS) 依賴海量像素級 Mask 標註導致「成本高昂、冷啟動極慢」的工業致命痛點。** 由於 SD 全程凍結且不參與重訓，整體線上訓練時間暴砍至 WeCLIP 的 42.6% 與 WeakCLIP 的 9.9%，在單張消費級顯卡上即可極速收斂（4.8G 顯存、115 分鐘完訓）。極度適合需要**低成本快速原型驗證的語義分割專案**、缺乏人工標註心力的**自動駕駛開放世界邊緣案例感知**，以及探索**「生成式模型賦能基礎視覺模型」**的次世代多模態研究。
+  * **資源**：[🐙 GitHub](https://github.com/zwyang6/DiCLIP) | [📄 論文](https://arxiv.org/abs/2606.23050) *(註：實際 arXiv 頁面依官方為準)*
+
 * **[CaptionFormer](https://www.gabriel.fiastre.fr/captionformer/)** `[2026-06]` 🔥
   * **核心優勢**：**首創端到端整合「像素級分割、跨幀追蹤與自然語言描述 (DVOC)」的統一架構，並神來一筆運用 VLM (Gemini 2.0) 自動合成海量影片軌跡標註，將訓練成本狂降至傳統方法的十分之一 (僅需 ~208 GPU hours)！** 巧妙地將缺乏描述的 LVIS/LV-VIS 標註轉化為高品質的時空軌跡數據集，讓模型在單一管線中學會精準的「時間與物理一致性」。
   * **解決痛點 / 推薦場景**：**完美解決了傳統影片理解任務中「人工逐幀標註成本爆炸」與「多模組拼接（檢測+追蹤+生成分開做）導致時空語意斷層」的致命痛點。** 藉由創新的時序聚合 (Temporal Aggregation) 技術，模型能精確掌握同一個物體「在哪裡、去了哪、正在做什麼」。是打造**零樣本長影片語意檢索 (Zero-shot Video Retrieval)**、**機器人動態場景感知**、**高階智慧安防監控**與**互動式 AI 影片編輯**的次世代神作。
@@ -373,6 +483,11 @@ service_type: AI Consulting
 
 ### 1. 基於視覺大模型 (VLM) 的高精度 OCR
 處理手寫字跡、模糊掃描檔與不規則表單的最佳解法。
+
+* **[Unlimited-OCR (無限 OCR)](https://github.com/baidu/Unlimited-OCR)** `[2026-06]` 🔥 `[長文件解析]` `[R-SWA注意力]` `[恆定顯存]` `[端到端SOTA]`
+  * **核心優勢**：**打破長文件 OCR 記憶體暴增與降速死局，首創「恆定 KV Cache」的近無限解析黑科技！** 百度團隊針對傳統端到端大模型 (如 DeepSeek-OCR) 處理長文時效能斷崖式下跌的問題，受人類「邊看邊抄」的軟遺忘機制啟發，創新提出 R-SWA (參考滑動窗口注意力)。將解碼器切分為「全局可見的視覺參考段」與「固定寬度 (n=128) 的文字滑動窗口」。這讓模型在輸出超過 6000+ tokens 時，吞吐量依然穩如泰山 (7848 TPS)，並在 OmniDocBench v1.6 權威基準強勢奪下端到端 SOTA。
+  * **解決痛點 / 推薦場景**：**完美解決了企業在進行「數十頁學術論文、厚重說明書、財務年報或書籍數位化」時，因顯存無限膨脹導致系統崩潰或推論極度緩慢的致命痛點。** 徹底終結過去必須「逐頁切分、反覆重置模型狀態」的工程補丁。極度適合用於**構建大模型 RAG 企業級巨型文檔清洗管線**、**自動化圖書掃描建檔**，以及對推論成本與 TPS 吞吐量要求極嚴苛的**高併發文檔解析雲端服務**。
+  * **資源**：[🐙 GitHub 官方開源](https://github.com/baidu/Unlimited-OCR) | [📄 官方論文 (arXiv:2606.23050)](https://arxiv.org/abs/2606.23050)
 
 * **[Chandra OCR 2](https://github.com/datalab-to/chandra)** `[2026-04-16]` 🔥
     * **[Chandra OCR](https://github.com/datalab-to/chandra)** `[2025-10-21]`：標榜超越 DeepSeek-OCR 的革命性突破，支援本地部署。[📝 真實評測](https://zhuanlan.zhihu.com/p/1969019468937144099)
