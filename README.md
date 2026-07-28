@@ -1,7 +1,7 @@
 ---
 layout: default
-title: 2026 電腦視覺資源懶人包 (Computer Vision) | YOLO, OCR & Diffusion | Deep Learning 101
-description: 2026 電腦視覺 (CV) 開源模型選型指南。收錄 YOLOv11、AOI 異常檢測、高精度 OCR (DeepSeek/MinerU)、Stable Diffusion 影片生成與免標註圖像分割等工業級視覺實戰資源。
+title: 2026 電腦視覺資源最新動態與資源彙整懶人包 (Computer Vision) | YOLO, OCR & Diffusion | Deep Learning 101
+description: 持續追蹤 2026 電腦視覺 (CV) 開源模型選型指南、最新發布、動態與進展。收錄 YOLOv11、AOI 異常檢測、高精度 OCR (DeepSeek/MinerU)、Stable Diffusion 影片生成與免標註圖像分割等工業級視覺實戰資源。
 permalink: /Computer-Vision
 lang: zh-Hant
 schema_type: service
@@ -14,12 +14,22 @@ service_type: AI Consulting
 
 # 👁️ 電腦視覺 (CV)・必讀資源總整理
 
+> **編者按：** 本頁面彙整目前最主流、持續追蹤 2026 電腦視覺 (CV) 開源模型選型指南、最新發布、動態與進展。
+
+> 如果您需要關注/追蹤更新/尋找更詳細的筆記，歡迎 ⭐ 及 Watch 我們的 **GitHub Repository**
+> 👉 [**GitHub: Computer-Vision-Paper**](https://github.com/Deep-Learning-101/Computer-Vision-Paper) 👈🏻
+
 > 📌 **技術速覽**
 > 2026年工業視覺聚焦於多模態融合與少樣本 (Few-shot) 檢索。**Deep Learning 101** 彙整 YOLOv11、擴散模型及高精度 OCR 等開源技術，實務上可協助企業突破傳統 AOI 光影過殺瓶頸，提升產線良率至 99%，並降低 80% 的資料標註成本。
 
-> 如果您想尋找更詳細的筆記，歡迎訪問 **GitHub Repository**：
-> 👉 [**GitHub: Computer-Vision-Paper**](https://github.com/Deep-Learning-101/Computer-Vision-Paper) (歡迎 Star ⭐)
+> ### 📅 [2026-07-25 更新快訊](https://deep-learning-101.github.io/UPDATE)
+>- **MV3DT** `[2026-07]` 🔥 多視角3D追蹤、去中心化架構、自動標定、DeepStream
+>- **VisualAD** `[2026-03-09]` 🔥 零樣本異常檢測、視覺純化、多領域 SOTA [CVPR 2026]
+>- **EReCu** `[2026-03-12]` 🔥 無監督偽裝目標檢測
+>- **MAGIC** `[2026-03]` 🔥 少樣本缺陷生成全新 SOTA，打通「學術優雅」與「產線現實」的擴散模型神作！
+>- **MoECLIP** `[2026-03-29]` 🔥 裝上一群分工明確的專家，解鎖零樣本異常檢測（ZSAD）全新工業級霸主！
 
+---
 
 {% include ai-share.html %}
 
@@ -422,7 +432,7 @@ service_type: AI Consulting
 ---
 
 ## Segmentation
-**✂️ Segmentation (圖像分割)**
+**✂️ Segmentation (圖像分割/實例分割/实例分割)**
 
 > **零樣本 (Zero-shot) 分割模型徹底改變了醫療與遙測影像的標註流程。** 應用 SAM (Segment Anything Model) 架構，可將多邊形標註時間從平均 3 分鐘縮減至 2 秒內，整體人力成本驟降 85%，且維持與人工標註達 95% 的 IoU 重合度。自從 Meta 推出 Segment Anything (SAM) 以來，圖像分割已經進入「提示即分割 (Promptable Segmentation)」的時代。
 
@@ -943,10 +953,10 @@ A: 結合最新的 3D Gaussian Splatting 與輕量化語音驅動模型，端到
         "@type": "Organization",
         "name": "Deep Learning 101, Taiwan",
         "url": "https://deep-learning-101.github.io/"
-      }        
-    },
+      },
       "datePublished": "2026-03-29",
-      "dateModified": "2026-07-25",      
+      "dateModified": "2026-07-28"
+    },
     {
       "@type": "FAQPage",
       "mainEntity": [
