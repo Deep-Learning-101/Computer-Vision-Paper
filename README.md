@@ -1,7 +1,7 @@
 ---
 layout: default
-title: 2026 電腦視覺資源最新動態與資源彙整懶人包 (Computer Vision) | YOLO, OCR & Diffusion | Deep Learning 101
-description: 持續追蹤 2026 電腦視覺 (CV) 開源模型選型指南、最新發布、動態與進展。收錄 YOLOv11、AOI 異常檢測、高精度 OCR (DeepSeek/MinerU)、Stable Diffusion 影片生成與免標註圖像分割等工業級視覺實戰資源。
+title: 2026 電腦視覺開發指南：YOLOv11 選型、高精度 OCR 與 Diffusion 落地實戰
+description:  CV 不知道選哪個模型？持續更新 2026 最新開源視覺框架：YOLOv11 工業 AOI 檢測、MinerU 高精度文件 OCR、ComfyUI Flux 影像生成，以及免標註圖像分割實戰資源。
 permalink: /Computer-Vision
 lang: zh-Hant
 schema_type: service
