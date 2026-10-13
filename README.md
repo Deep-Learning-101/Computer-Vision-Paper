@@ -22,21 +22,11 @@ service_type: AI Consulting
 > 📌 **技術速覽**
 > 2026年工業視覺聚焦於多模態融合與少樣本 (Few-shot) 檢索。**Deep Learning 101** 彙整 YOLOv11、擴散模型及高精度 OCR 等開源技術，實務上可協助企業突破傳統 AOI 光影過殺瓶頸，提升產線良率至 99%，並降低 80% 的資料標註成本。
 
-> ### 📅 2026-08-17 更新快訊
-> - **[REF+CFA](https://openaccess.thecvf.com/content/CVPR2026/html/Gao_Anomaly-Related_Residual_Fields_for_Cross-domain_Anomaly_Detection_CVPR_2026_paper.html)** `[2026-06]` 🔥 [CVPR 2026] [跨域異常檢測] [擴散非平穩殘差場] [無監督遷移]
-> - **[VL-DINO](https://github.com/HaoZ416/VL-DINO)** `[2026-06-10]` 🔥 [開放詞表檢測] [CLIP雙線並用] [肥訓練瘦推理] [長尾類別SOTA]
-> - **[RMAE-ProGRess](https://openaccess.thecvf.com/content/CVPR2026/html/Bhurtel_RMAE-ProGRess_Advancing_Semantic_Segmentation_in_Unstructured_Environments_CVPR_2026_paper.html)** `[2026-06-03]` 🔥 [CVPR 2026] [非結構化語義分割] [LCA輕量通道注意力] [越野與遙感特化]
-> - **[SOPSeg](https://github.com/wchh-2000/SOPSeg)** `[2026-06]` 🔥 [CVPR 2026] [遥感小目標實例分割] [區域自適應放大RAM] [定向提示OPM]
-> - **[SFS-DETR](https://openaccess.thecvf.com/content/CVPR2026F/html/Jia_SFS-DETR_Spatial-Frequency_Selection_for_UAV_Object_Detection_CVPRF_2026_paper.html)** `[2026-06]` 🔥 [CVPR 2026] [無人機小目標檢測] [空間-頻率自適應選擇] [96 FPS即時感知]
-> - **[DEUS](https://openaccess.thecvf.com/content/CVPR2026/html/Heo_Detecting_Unknown_Objects_via_Energy-based_Separation_for_Open_World_Object_CVPR_2026_paper.html)** `[2026-03]` 🔥 [CVPR 2026] [開放世界目標檢測] [ETF雙子空間] [能量分離EUS]
-> - **[DAMO-YOLO](https://github.com/tinyvision/DAMO-YOLO)** `[2025-06]` 🔥 [工業落地SOTA] [TinyNAS搜尋] [Efficient RepGFPN] [AlignedOTA標籤分配]
-> - **[SenseNova-Vision](https://github.com/OpenSenseNova/SenseNova-Vision)** `[2026-07]` 🔥 [視覺任務大一統] [統一多模態生成UMM] [免專屬預測頭] [7B-MoT]
-> - **[O2MAG](https://github.com/echrao/O2MAG)** `[2026-03]` 🔥 [CVPR 2026] [免訓練缺陷擴樣] [三路注意力嫁接TriAG] [異常引導優化AGO]
-> - **[Stream3D](https://github.com/kaichen-z/STREAM3D)** `[2026-05]` 🔥 [流式3D重建與生成] [自適應證據記憶] [免訓練機制] [CVPR 2026]
+> ### 📅 [更新快訊](https://deep-learning-101.github.io/UPDATE)
 
-
-
-> ### 📅 [2026-07-25 更新快訊](https://deep-learning-101.github.io/UPDATE)
+>- **SAM-V** `[2026-09]` 🔥多視圖實例分割、SAM+VGG'T幾何感知提示、跨視角一致性、機器人感知
+>- **YOLO27** `[2026-09]` 🔥 60mAP破關、雙設計架構、NMS-free、4尺寸7任務、權重未發布
+>- **FiNDR** `[2026-09]` 🔥 無固定詞表、細粒度識'別推理增強LMM、VLM名稱過濾、視覺-語言原型耦合
 >- **MV3DT** `[2026-07]` 🔥 多視角3D追蹤、去中心化架構、自動標定、DeepStream
 >- **VisualAD** `[2026-03-09]` 🔥 零樣本異常檢測、視覺純化、多領域 SOTA [CVPR 2026]
 >- **EReCu** `[2026-03-12]` 🔥 無監督偽裝目標檢測
@@ -386,6 +376,14 @@ service_type: AI Consulting
 
 > **YOLOv11 架構在邊緣設備上的推論效能達到全新里程碑。** 在 NVIDIA Jetson Orin 平台上實測，其 mAP 達 54.3% 時仍可維持 120 FPS 的即時處理速度。這為自駕車與高頻工業自動化提供了延遲小於 10ms 的完美解決方案。目標偵測不僅是畫出邊界框 (Bounding Box)，目前的趨勢是結合語言模型與強化學習，實現「開放詞彙 (Open-Vocabulary)」與「極端場景特化」。
 
+* **[YOLO27](https://docs.ultralytics.com/models/yolo27)** `[2026-09]` 🔥 `[60mAP破關]` `[雙設計架構]` `[NMS-free]` `[4尺寸7任務]` `[權重未發布]`
+  * **核心優勢**：**YOLO 家族首次「一個家族、兩套設計」，YOLO27l 以 60.4 mAP（800 輸入 61.2）成為 Ultralytics 首個跨過 60 關口的模型！** N／S 路線走精簡 CNN＋雙尺度檢測頭：丟掉 medium 預測圖，只保留 fine（小目標）與 coarse（大目標）兩支，融合特徵加固定縮放保持平衡，檢測頭計算量大砍；早期高解析特徵級加寬，小目標定位與回歸直接受益。M／L 路線走 query-based＋端到端 NMS-free：transformer decoder 直接輸出最終檢測結果，部署少一環後處理（27m 沿用 YOLO26 式卷積骨幹，27l 頸部 FPN／PAN 不變、骨幹換成只在最深層引入自注意力的 UltraViT）。訓練工程亮點 Foreground Alignment Supervision：訓練期加一條輕量輔助分支做前景／背景判別，把 one-to-many 監督與 one-to-one 推理頭的精度差距從 YOLO26n／s 的 0.9／0.8 mAP 壓到 0.4 mAP，推理前移除、零開銷。28 個模型＝4 尺寸（n／s／m／l）×7 任務（檢測、實例分割、語義分割、深度估計、分類、姿態、OBB），同一 `YOLO()` 接口自動選管線。
+  * **解決痛點 / 推薦場景**：**Ultralytics 首次用架構分工終結「一套範式打天下」的妥協。** N／S 專攻邊側即時性：n 檔 42.3 mAP、GPU 僅 0.62ms、參數 3.0M，CPU（ONNX FP32）16.1ms 讓無獨顯場景也能打；M／L 專攻精度旗艦：l 檔 60.4 mAP（GPU 2.32ms）、800 輸入 61.2 mAP（2.9ms），m 檔 55.8 mAP 是 GPU 部署的甜點區。五檔收斂為四檔，選型成本直接下降。極度適合**邊緣端即時檢測**（n／s：無人機、Jetson、樹莓派）、**高精度工業視覺**（l 檔）、**多任務統一底座**（7 任務同一接口，發布後把 `yolo26n.pt` 換成 `yolo27n.pt` 即無縫升級）。（⚠️ 權重、組態、實作程式碼皆未發布，官方口徑「年內發布、無確定日期」；基準為預覽數據，發布前可能變動；當下生產請用 YOLO26）
+  * **資源**：[📖 官方預覽文件](https://docs.ultralytics.com/models/yolo27) | [📝 YOLO27 waitlist](https://www.ultralytics.com/yolo/yolo27)
+  * **附註（官方預覽基準）**：COCO val mAP 50-95；GPU＝RTX PRO 6000＋TensorRT 11 FP16；CPU＝AMD EPYC 9655＋ONNX Runtime FP32；速度量測選 NMS-free 頭（`nms=False`）。n：42.3／16.1ms／0.62ms／3.0M／7.2B；s：49.6／33.2ms／0.79ms／11.8M／28.2B；m：55.8／67.2ms／1.39ms／22.8M／65.0B；l：60.4／149.6ms／2.32ms／72.3M／165.3B；l@800：61.2／—／2.9ms。
+  * **附註（原文觀點／實測）**：原文稱 YOLO Vision 2026 於當地時間 9/13 舉行，同場發布 YOLO27 Enterprise（工業領域預訓練）與 YOLOE-27（開放詞彙）；原文沙箱實測：ultralytics 8.4.106 已預留 YOLO27 接口但 `yolo27n.pt` 權重不存在，改以同接口 YOLO26n 跑通整條推理鏈路（CPU 95.5ms、檢出 4 人＋1 公交車），發布當天換模型名即可切換。
+
+
 * **[Stream3D](https://github.com/kaichen-z/STREAM3D)** `[2026-05]` 🔥 `[流式3D重建與生成]` `[自適應證據記憶]` `[免訓練機制]` `[CVPR 2026]` `[恒定顯存]`
   * **核心優勢**：**打破「重建忠實觀測 vs. 生成先驗補全」的二選一瓶頸，哈佛、MIT 與港科大團隊開源首個將單目連續影片流轉化為高一致性 3D 資產的免訓練流式框架！** 論文發表於 CVPR 2026 Workshops（arXiv:2605.21472），首創「探測（Probe）➔ 保留（Retain）➔ 選擇（Select）」的自適應證據記憶機制（Adaptive Evidential Memory）：透過單步去噪預熱讀取交叉注意力圖計算證據分數（Evidence Score），為每個 3D 查詢 Token 維護固定大小的 Top-D 證據記憶庫（記憶容量固定為 $Q \times D$，與影片總長度 $T$ 無關，徹底消除顯存線性膨脹）；生成階段由 Token 投票選出覆蓋率最高的 Top-K（預設 K=8）關鍵歷史視角進行置信度加權融合，底層生成器（支援 SAM3D、TRELLIS.2）全程保持凍結。在 GSO 基準測試中，Chamfer Distance 降至 0.048（相對單視角 SAM3D 大降 48.9%），IoU 飆升 11.1 個百分點至 0.775，外觀與幾何指標全面超越流式重建模型 StreamVGGT（CD 0.048 vs 0.064）與潛狀態傳遞基線 KV-Cache（CD 下降 42.9%、PFID 下降 39.6%）。
   * **解決痛點 / 推薦場景**：完美解決了傳統視圖條件 3D 生成器處理開放式長影片流時「逐幀獨立生成導致時間不一致與幾何閃爍腦補」、「保留全歷史幀引發顯存與算力爆炸」，以及「潛變量狀態（KV-Cache/FlowEdit）跨視角難以對齊且長序列誤差累積」的三大骨灰級痛點。 內建 Fast Inference 模式，單 Chunk 耗時在 H100 上可由 85 秒壓至 55 秒。極度適合**單目相機動態視訊即時 3D 重建與資產生成**、**具身智能（Embodied AI）機器人連續環境感知與未見表面幾何補全**，以及**空間計算/自駕車長序列開放視角一致性建模**。
@@ -486,6 +484,13 @@ service_type: AI Consulting
 > **零樣本 (Zero-shot) 分割模型徹底改變了醫療與遙測影像的標註流程。** 應用 SAM (Segment Anything Model) 架構，可將多邊形標註時間從平均 3 分鐘縮減至 2 秒內，整體人力成本驟降 85%，且維持與人工標註達 95% 的 IoU 重合度。自從 Meta 推出 Segment Anything (SAM) 以來，圖像分割已經進入「提示即分割 (Promptable Segmentation)」的時代。
 
 ### 1. SAM 家族與通用分割基石
+
+* **[SAM-V](https://github.com/gong208/SAM-V)** `[2026-09]` 🔥
+  * **核心優勢**：**把多視圖幾何先驗直接注入 SAM，在掩碼解碼之前就解決跨視角身份對應！** Meta 與 UIUC 合作，SAM（2D 分割先驗）＋VGGT（前饋多視圖幾何）端到端融合：圖像層把兩路密集特徵拼接投影成統一表示；提示層用視角專屬相機 token 加提示點位置的局部 VGGT 特徵，經交叉注意力豐富稀疏點提示，讓提示同時知道「我是誰、在哪、從哪個視角看」。掩碼解碼器一次前向對所有視圖聯合解碼，無需離線掩碼匹配、無需顯式 3D 重建。IGGT 3D 追蹤基準 ScanNet++ 上超越最強基線 PanSt3R：O-IoU 提升 5 個點、幀級召回提升 12 個點；零樣本 ScanNet 全指標領先。
+  * **解決痛點 / 推薦場景**：**換個視角，SAM 就認不出同一個物體。** 傳統兩條路都有硬傷：3D 點雲分割依賴重建品質且 3D 標註稀缺；逐視圖 2D 分割再離線匹配則死在跨幀身份歧義。SAM-V 走第三條路：幾何條件前置注入。桌面 16 物體場景裡，PanSt3R 完全漏掉烏克麗麗、相機、刀（開詞彙類別不在列表裡就檢測不出），SAM-V 從點提示出發不依賴類別列表，16 個全部分割出來。極度適合**機器人抓取的多視角目標定位**、**室內 3D 感知的實例級重建**、**大視角變化的跨視圖追蹤**。
+  * **資源**：[🐙 GitHub](https://github.com/gong208/SAM-V) | [📄 論文](https://arxiv.org/abs/2609.25490) | [🤗 預訓練權重](https://huggingface.co/Frank-Gong123/SAM-V)
+`[多視圖實例分割]` `[SAM+VGGT]` `[幾何感知提示]` `[跨視角一致性]` `[機器人感知]`
+
 
 * **[ConceptSeg-R1](https://github.com/NTU-AI4X/ConceptSeg-R1)** `[2026-05]` 🔥
   * **核心優勢**：**打破 SAM/SAM 3 「只懂標籤、不懂邏輯關係」的語義瓶頸，首創由元強化學習 (Meta-GRPO) 驅動的可提示概念分割框架！** 該神作將「分割概念」分為上下文無關 (CI)、上下文依賴 (CD) 與上下文推理 (CR) 三大層次。透過內建的「捷徑路由器 (Shortcut Router)」，它能將多模態大模型 (MLLM) 複雜的深度邏輯推理狀態，翻譯為 SAM 3 能直接讀取的「隱式概念組 (Implicit Concept Groups)」，讓模型學會從視覺演示中歸納規則，實現真正的跨圖表徵與邏輯演繹。
@@ -882,6 +887,13 @@ service_type: AI Consulting
 **🖼️ 基礎圖像識別 (Image Recognition)**
 
 在追求酷炫的生成式 AI 之前，理解圖像分類的底層架構仍然是電腦視覺的必修課。以下是從 CNN 時代走向 Transformer 時代的三大奠基之作：
+
+* **[FiNDR](https://github.com/demidovd98/findr)** `[CVPR 2026]` 🔥 `[無固定詞表]` `[細粒度識別]` `[推理增強LMM]` `[VLM名稱過濾]` `[視覺-語言原型耦合]`
+  * **核心優勢**：**首個推理增強 LMM 的無固定詞表細粒度識別框架，先讓模型「給世界命名」，再用這些名字完成分類！** MBZUAI 團隊提出三階段全自動管線：(1) 推理型 LMM 從少量未標註發現集生成數據集級元信息（分類群、應區分的粒度、專家身份），再逐圖產生候選類名；(2) VLM 計算候選名文本嵌入與發現集圖像嵌入的平均余弦相似度，把「語言上成立」的名字過濾成「視覺上對得上」的名字；(3) 文本原型＋視覺原型（偽標註樣本增強平均）耦合成輕量多模態分類器，輸出人類可讀的細粒度類名。全程無預定義詞表、無人工標註、無監督訓練。
+  * **解決痛點 / 推薦場景**：**徹底擺脫傳統細粒度識別「先等人工整理好類別名單」的前提假設。** 傳統方法連 zero-shot 都還要預先給候選類名，開放世界裡根本寫不出這份名單；舊的無詞表方法（FineR）則依賴僵硬大詞表或脆弱的多階段啟發式管線，誤差逐級傳遞。FiNDR 在 CUB-200、Stanford Cars、Stanford Dogs、Oxford Flowers、Oxford Pets 五個基準上刷新無詞表 SOTA，相對前代最高提升 18.8%，甚至超過使用人工 ground-truth 類名的 zero-shot 參考線——證明人工標籤表不是性能上限。極度適合**開放世界圖像分類**（野外物種監測、新品 SKU 上架、未知缺陷類別發現）、**冷啟動視覺系統**（每類僅需 3 張未標註圖即可啟動發現），以及**多正確名稱並存的場景**（拉丁學名 vs 俗名、地區市場命名差異）。
+  * **資源**：[🐙 GitHub 官方源碼](https://github.com/demidovd98/findr) | [📄 arXiv 論文 (CVPR 2026)](https://arxiv.org/abs/2512.18897v1) | [📄 CVPR 2026 官方論文頁](http://openaccess.thecvf.com/content/CVPR2026/papers/Demidov_Thinking_Beyond_Labels_Vocabulary-Free_Fine-Grained_Recognition_using_Reasoning-Augmented_LMMs_CVPR_2026_paper.pdf)
+  * **附註（原文數據，未獨立查證）**：原文表格：五數據集平均 cACC 67.9、sACC 70.6；vs E-FineR 的 cACC +9.5pp、sACC +4.3pp；Flowers-102 cACC 64.8→79.8、Pets-37 cACC 71.7→86.5；消融：加入 meta-category 後 Birds/Cars/Pets cACC +1.1/+2.1/+5.2pp；Qwen2.5-VL 顯式推理提示下 sACC 76.65，接近 Gemini2.5-Flash 內部推理的 78.04；視覺-文本原型混合係數 0.7。另原文把流程寫成四步，官方 repo 為三階段（發現→篩選→耦合＋推理），條目採官方框架。
+
 
 * **[EUPE (Efficient Universal Perception Encoder)](https://arxiv.org/pdf/2603.22387)** `[2026-03]` 🔥 `[通用視覺編碼器]` `[多任務聚合]` `[邊緣運算]`
   * **核心優勢**：**終結視覺基礎模型「嚴重偏科」的開源神作，單一輕量編碼器完美聚合 CLIP、DINO 與 SAM 的多領域超能力！** Meta Reality Labs 創新提出「先擴展再縮小」的兩階段蒸餾範式（先由巨型代理教師融合跨域知識，再固定解析度蒸餾給輕量學生模型），徹底突破了過往高效編碼器無法兼顧「全局語意理解」與「像素級密集預測」的瓶頸，各項基準測試效能全面輾壓 NVIDIA 的 RADIO 系列。
