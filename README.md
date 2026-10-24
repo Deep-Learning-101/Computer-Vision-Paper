@@ -24,6 +24,8 @@ service_type: AI Consulting
 
 > ### 📅 [更新快訊](https://deep-learning-101.github.io/UPDATE)
 
+>- **[Kanana-2-Vision Encoder (Kakao 自研 VLM 專用視覺編碼器：426M／98M)](https://huggingface.co/collections/kakaocorp/kanana-2-vision-encoder)** `[2026-10-21]` 🔥 `[視覺編碼器]` `[VLM]` `[Native Resolution]` `[韓文 OCR]` `[Kanana Open License]`
+>- **[MOSS-Image (OpenMOSS 開源文生圖：5B DiT 專攻文字渲染與版面控制)](https://github.com/OpenMOSS/MOSS-Image)** `[2026-10-16]` 🔥 `[文字渲染]` `[版面控制]` `[Apache 2.0]` `[ComfyUI]`
 >- **SAM-V** `[2026-09]` 🔥多視圖實例分割、SAM+VGG'T幾何感知提示、跨視角一致性、機器人感知
 >- **YOLO27** `[2026-09]` 🔥 60mAP破關、雙設計架構、NMS-free、4尺寸7任務、權重未發布
 >- **FiNDR** `[2026-09]` 🔥 無固定詞表、細粒度識'別推理增強LMM、VLM名稱過濾、視覺-語言原型耦合
@@ -770,6 +772,12 @@ service_type: AI Consulting
 ### 3. ComfyUI 實用工具與精準控制
 專注於解決 AI 生成過程中的臉部崩壞、手部變形與硬體限制。
 
+* **[MOSS-Image (OpenMOSS 開源文生圖：5B DiT 專攻文字渲染與版面控制)](https://github.com/OpenMOSS/MOSS-Image)** `[2026-10-16]` 🔥 `[文字渲染]` `[版面控制]` `[Apache 2.0]` `[ComfyUI]`
+  * **核心優勢**：**補上開源文生圖最大短板：中英長文字渲染＋精確版面控制。** OpenMOSS 團隊 10 月 16 日開源的 5B 參數單流 DiT，從零預訓練、專為「圖文並茂」設計：自測新基準 LongLongTextBench（中英長文本渲染）開源模型第一、文字覆蓋率 96.3%；JSON 座標輸入精確控制文字與物件排版，支援 4K token 長提示；另有意圖感知的 agentic prompt enhancer，把模糊需求自動翻成內容＋版面規格。權重 Apache 2.0（Base＋SFT 雙版），HF 與 ModelScope 上架，SGLang／vLLM-Omni／ComfyUI day-0 支援，Gradio demo 與 LoRA 訓練指南齊全。技術報告 10-19 上 arXiv（arXiv:2610.23374），repo 四天約千星。
+  * **解決痛點 / 推薦場景**：**解決了開源 T2I「生成密集文字就走鐘、排版只能碰運氣」的致命痛點。** 舊方法：FLUX／SD 系列排版靠 prompt 機率，海報上中文長文字幾乎不可用；想要可靠的圖文設計，只能被閉源模型綁架。甜點區：海報、資訊圖表、白板圖解、商品包裝這類「資訊密集圖形」，直接給 JSON 版面規格精準控制，改文字改框不用重抽。極度適合**中文內容團隊做圖文素材、電商廣告排版**，以及需要可複現版面的研究與開發場景。
+  * **資源**：[🐙 GitHub](https://github.com/OpenMOSS/MOSS-Image) | [📄 論文](https://arxiv.org/abs/2610.23374) | [🤗 HF：MOSS-Image-Base](https://huggingface.co/OpenMOSS-Team/MOSS-Image-Base) | [🤗 HF：MOSS-Image-SFT](https://huggingface.co/OpenMOSS-Team/MOSS-Image-SFT) | [🌐 專案主頁](https://openmoss.github.io/MOSS-Image)
+  * **附註（未獨立查證）**：LongLongTextBench（96.3%）與 RealLayoutArena 皆為作者自測，論文僅摘要層級核實、未逐項核對 PDF；架構細節（如文本編碼器選型、VAE 配置）引自官方 repo／模型卡，我未逐項核對論文；論文提交 10-16、權重同日開源，10-19 為 arXiv 公開日（窗口內為公告日而非發布日）。
+
 * **[RefineAnything](https://github.com/limuloo/RefineAnything)** `[2026-04]` 🔥 `[局部精修]` `[背景凍結]` `[Qwen-Image底座]`
   * **核心優勢**：**完美終結 AI 生圖「修臉壞背景、改字大走鐘」的局部修復黑科技！** 基於 Qwen2.5-VL 多模態架構，首創反直覺的「Focus-and-Refine (裁剪-放大-修復-無縫貼回)」策略。它將高解析度運算資源 100% 集中在瑕疵區域，搭配專屬的邊界一致性損失函數，實現了背景結構相似性 (SSIMbg) 高達 0.9997 的驚人表現（背景近乎紋絲不動）。
   * **解決痛點 / 推薦場景**：**徹底解決了傳統擴散模型 (Diffusion Models) 進行局部重繪 (Inpainting) 時，容易導致「換臉」失真、手部越修越畸形、文字 Logo 無法還原，甚至意外竄改非編輯區背景的致命痛點。** 這是打造**電商產品細節無痕替換**、**廣告海報文字與 Logo 修正**，以及**人物崩壞特徵救援工作流**的工業級首選。
@@ -887,6 +895,12 @@ service_type: AI Consulting
 **🖼️ 基礎圖像識別 (Image Recognition)**
 
 在追求酷炫的生成式 AI 之前，理解圖像分類的底層架構仍然是電腦視覺的必修課。以下是從 CNN 時代走向 Transformer 時代的三大奠基之作：
+
+* **[Kanana-2-Vision Encoder (Kakao 自研 VLM 專用視覺編碼器：426M／98M)](https://huggingface.co/collections/kakaocorp/kanana-2-vision-encoder)** `[2026-10-21]` 🔥 `[視覺編碼器]` `[VLM]` `[Native Resolution]` `[韓文 OCR]` `[Kanana Open License]`
+  * **核心優勢**：**Kakao 親自下場做的 VLM 專用視覺編碼器：426M（medium）／98M（tiny）雙尺寸，42 項基準、9 類別平均雙雙拿下第一。** 基於 Kanana-2-0.9B，砍掉文字生成模組、純特徵提取，為「訓練 VLM」這個單一任務優化。技術兩招：Native Resolution（可變解析度、保持長寬比，不硬縮放）＋ Sliding Window Attention／Grouped Query Attention 壓高解析度運算成本。官方對照表（同款 kanana-2-1.3b-instruct＋patch merger、相同訓練評估條件）：medium 對 AIMv2、Perception Encoder、SigLIP2、Qwen3.5（300–415M 級），9 類別平均 55.62（對手 47.31–51.54）；tiny 對 MobileCLIP2、PE-Core、SigLIP2-base、Qwen3.5-0.8B（86–98M 級），平均 51.81（對手 44.20–49.62）。強項在文件與 grounding：KoOCRBench 86.80、CountBenchQA 79.88（對手最高 61.05）、RefCOCO 平均 76.14。
+  * **解決痛點 / 推薦場景**：**解決了「開源 vision encoder 選擇少、訓 VLM 只能拿 CLIP／SigLIP 湊合」的痛點。** 舊方法：SigLIP／AIMv2 是通用對齊編碼器，韓文 OCR 與細粒度 grounding 偏弱；自己從頭訓 encoder 成本太高。甜點區：Kanana Open License 對自家服務開發營運免另取商業授權、transformers 一行載入，適合**要訓韓文／文件理解 VLM 的團隊**，以及**想換掉 SigLIP、試試原生解析度編碼器的研究者**。
+  * **資源**：[🤗 HF 模型集](https://huggingface.co/collections/kakaocorp/kanana-2-vision-encoder)（[medium 426M](https://huggingface.co/kakaocorp/kanana-2-vision-encoder-medium)｜[tiny 98M](https://huggingface.co/kakaocorp/kanana-2-vision-encoder-tiny)；Kanana Open License）| [📝 官方部落格（韓文）](https://tech.kakao.com/posts/840)
+  * **附註（未獨立查證）**：基準皆為官方自測、未經第三方獨立驗證；「平均第一」不等於每項都贏（medium 的 MMBench-EN、WildVision、KoFoodQA 等為對手勝）。授權細節：自家服務開發營運免另取商業授權；但以 API／雲端轉售存取權、SI／on-premise 轉售、on-device 嵌入轉售需另向 Kakao 取得商業授權；散布須標示 Powered by Kanana。部落格為韓文，僅核實標題、作者、發布時間。
 
 * **[FiNDR](https://github.com/demidovd98/findr)** `[CVPR 2026]` 🔥 `[無固定詞表]` `[細粒度識別]` `[推理增強LMM]` `[VLM名稱過濾]` `[視覺-語言原型耦合]`
   * **核心優勢**：**首個推理增強 LMM 的無固定詞表細粒度識別框架，先讓模型「給世界命名」，再用這些名字完成分類！** MBZUAI 團隊提出三階段全自動管線：(1) 推理型 LMM 從少量未標註發現集生成數據集級元信息（分類群、應區分的粒度、專家身份），再逐圖產生候選類名；(2) VLM 計算候選名文本嵌入與發現集圖像嵌入的平均余弦相似度，把「語言上成立」的名字過濾成「視覺上對得上」的名字；(3) 文本原型＋視覺原型（偽標註樣本增強平均）耦合成輕量多模態分類器，輸出人類可讀的細粒度類名。全程無預定義詞表、無人工標註、無監督訓練。
