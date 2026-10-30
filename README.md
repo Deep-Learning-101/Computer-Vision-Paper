@@ -24,6 +24,8 @@ service_type: AI Consulting
 
 > ### 📅 [更新快訊](https://deep-learning-101.github.io/UPDATE)
 
+>- **[Unlimited OCR 2 (無限 OCR 2：百頁文件一次解析)](https://github.com/baidu/Unlimited-OCR)** `[2026-10-27]` 🔥 `[長文件解析]` `[SR-SWA注意力]` `[恆定顯存]` `[百頁文件]` `[MIT開源]` `[VLM文件解析]`
+>- **[Hi3D V1.0 (前身 Sparc3D：參考圖＋粗網格→高解析幾何細化)](https://github.com/hi3d-official/Hi3Dv1.0)** `[2026-10-23]` 🔥 `[3D幾何細化]` `[Image-to-3D]` `[Sparse VAE]` `[1536³]` `[Hi3D Open License]` `[推論限定]`
 >- **[Kanana-2-Vision Encoder (Kakao 自研 VLM 專用視覺編碼器：426M／98M)](https://huggingface.co/collections/kakaocorp/kanana-2-vision-encoder)** `[2026-10-21]` 🔥 `[視覺編碼器]` `[VLM]` `[Native Resolution]` `[韓文 OCR]` `[Kanana Open License]`
 >- **[MOSS-Image (OpenMOSS 開源文生圖：5B DiT 專攻文字渲染與版面控制)](https://github.com/OpenMOSS/MOSS-Image)** `[2026-10-16]` 🔥 `[文字渲染]` `[版面控制]` `[Apache 2.0]` `[ComfyUI]`
 >- **SAM-V** `[2026-09]` 🔥多視圖實例分割、SAM+VGG'T幾何感知提示、跨視角一致性、機器人感知
@@ -617,6 +619,13 @@ service_type: AI Consulting
 ### 1. 基於視覺大模型 (VLM) 的高精度 OCR
 處理手寫字跡、模糊掃描檔與不規則表單的最佳解法。
 
+* **[Unlimited OCR 2 (無限 OCR 2：百頁文件一次解析)](https://github.com/baidu/Unlimited-OCR)** `[2026-10-27]` 🔥 `[長文件解析]` `[SR-SWA注意力]` `[恆定顯存]` `[百頁文件]` `[MIT開源]` `[VLM文件解析]`
+  * **核心優勢**：**把長文件 OCR 從「幾十頁」推進到「幾百頁一次解析」，關鍵是每步解碼成本不再隨頁數膨脹。** 百度在 v1 的 R-SWA 基礎上提出 SR-SWA（Sparse Reference Sliding Window Attention，稀疏參考滑動窗口注意力）：把超長序列的圖文注意力壓縮成固定大小的工作參考集（官方以 512 tokens 為例；配置為 128 tokens 局部窗口＋32 tokens 分塊取 top-16，即 16×32＝512）。多頁模式每頁 273 個圖像 tokens，100 頁即 27,300 個輸入 tokens，但每步解碼延遲與顯存佔用幾乎維持恆定，官方稱此為有限上下文窗口內的「無限視野解析」。
+  * **解決痛點 / 推薦場景**：**解決了「整本書、整套財報、整卷法務檔案必須逐頁切分、跨頁表格斷裂、章節結構丟失」的痛點。** 舊方法：逐頁解析再拼接，跨頁延續的表格、重複表頭、章節層級與前後引用全部靠後處理硬湊；通用大模型則在百頁規模直接被上下文與 KV 顯存拖垮。甜點區：整本書籍、學術論文集、財務年報、法務卷宗、掃描檔案館的端到端結構化解析（文字、公式、表格、閱讀順序、標題層級一次輸出），極度適合**企業 RAG 知識庫的巨型文件清洗管線**與**高併發文件解析服務**。推論支援 Transformers（快速測試）與 SGLang（官方建議的 serving 路線，頁窗口排程每窗 10 頁）。
+  * **量化基準（皆百度官方自報，尚未有獨立複現）**：MPDocBench（公開基準，433 份文件、3,246 頁）84.6 分，次名 Qwen3.8-Max 78.3；MarathonDocBench（百頁基準，100 份 100–300 頁文件、共 18,000 頁，百度隨模型一併釋出）77.1 分，次名 Kimi-K3 33.7、Gemini-3.8-Flash 28.6、Qwen3.8-Max 22.9。分項（MPDocBench／MarathonDocBench）：文字 94.8／89.6、公式 89.4／87.9、閱讀順序 92.3／85.3、表格 87.8／74.8、標題層級 60.1／48.2。100 頁設定下每步解碼加速：相對全注意力 7.0 倍、相對 v1 的 R-SWA 5.6 倍。
+  * **資源**：[🐙 GitHub 官方開源](https://github.com/baidu/Unlimited-OCR) | [🤗 HF 模型卡](https://huggingface.co/baidu/Unlimited-OCR-2) | [📄 論文（Unlimited OCR Works，arXiv:2606.23050，v1 論文；v2 技術細節以模型卡為準）](https://arxiv.org/abs/2606.23050)
+  * **附註（未獨立查證）**：參數量 3B 級與 MIT 授權來自次級報導彙整，官方模型卡本次查驗段落未明示參數量；MarathonDocBench 資料集釋出日期各來源不一（HF 模型卡發布紀錄為 2026-10-27，另有報導稱 2026-10-26），不影響模型發布日 2026-10-27 的認定。對手分數皆出自百度自家榜單圖表，且百頁測試的對手落差可能混雜「解析品質」與「輸入處理（頁數上限、上下文處理）」兩種因素；前代 v1 在 MarathonDocBench 榜單上的 0.0 並非實測分數，而是 v1 僅支援最多 40 頁、未被納入評測的排除標記，不可解讀為 v1 得零分。SR-SWA 為有損摘要，極遠距離的細節（如第 3 頁註腳影響第 190 頁判讀）仍可能遺失；SGLang 小窗口也會削弱跨窗合併品質，官方建議 mem-fraction-static 取 0.7 而非 0.75 以保 32 併發以上穩定。
+
 * **[Unlimited-OCR (無限 OCR)](https://github.com/baidu/Unlimited-OCR)** `[2026-06]` 🔥 `[長文件解析]` `[R-SWA注意力]` `[恆定顯存]` `[端到端SOTA]`
   * **核心優勢**：**打破長文件 OCR 記憶體暴增與降速死局，首創「恆定 KV Cache」的近無限解析黑科技！** 百度團隊針對傳統端到端大模型 (如 DeepSeek-OCR) 處理長文時效能斷崖式下跌的問題，受人類「邊看邊抄」的軟遺忘機制啟發，創新提出 R-SWA (參考滑動窗口注意力)。將解碼器切分為「全局可見的視覺參考段」與「固定寬度 (n=128) 的文字滑動窗口」。這讓模型在輸出超過 6000+ tokens 時，吞吐量依然穩如泰山 (7848 TPS)，並在 OmniDocBench v1.6 權威基準強勢奪下端到端 SOTA。
   * **解決痛點 / 推薦場景**：**完美解決了企業在進行「數十頁學術論文、厚重說明書、財務年報或書籍數位化」時，因顯存無限膨脹導致系統崩潰或推論極度緩慢的致命痛點。** 徹底終結過去必須「逐頁切分、反覆重置模型狀態」的工程補丁。極度適合用於**構建大模型 RAG 企業級巨型文檔清洗管線**、**自動化圖書掃描建檔**，以及對推論成本與 TPS 吞吐量要求極嚴苛的**高併發文檔解析雲端服務**。
@@ -863,6 +872,12 @@ service_type: AI Consulting
 * **[FlowAct-R1](https://grisoon.github.io/FlowAct-R1/)**：基於流匹配技術的高效能數字人生成框架。
 
 ### 2. 完整互動系統與 3D 建模 (Interactive System & 3D)
+
+* **[Hi3D V1.0 (前身 Sparc3D：參考圖＋粗網格→高解析幾何細化)](https://github.com/hi3d-official/Hi3Dv1.0)** `[2026-10-23]` 🔥 `[3D幾何細化]` `[Image-to-3D]` `[Sparse VAE]` `[1536³]` `[Hi3D Open License]` `[推論限定]`
+  * **核心優勢**：**第一個生產驗證過的開源 AI 3D 幾何模型：輸入一張參考圖＋粗網格，三級漸進把幾何細化到有效 1536³ 稀疏提取網格。** 建基於 Sparc3D（NeurIPS 2025，arXiv:2505.14521）的稀疏表示架構：漸進採樣稀疏 latent、自剪枝稀疏 VAE 解碼、再提取網格；三 pass 為 64³→512³、128³→1024³、192³→1536³（transformer_512／transformer_1024）。訓練資料從 50 萬擴到約 200 萬精選 3D 資產。程式碼＋權重（safetensors，8 個 runtime 檔）全釋出，Python API（`Sparc3DPipeline`）與 CLI 即裝即用；DINOv2＋CLIP 作條件編碼器。官方自稱多視角保真度與細節豐富度評測最高、90% 切片成功率。
+  * **解決痛點 / 推薦場景**：**解決了「開源 3D 生成幾何品質粗糙、商用模型又封閉」的痛點。** 舊方法：image-to-3D 開源管線細節糊、結構崩；商用 3D 模型（Hi3D 自家 V3.0 走 2048³ 商業路線）不給權重。甜點區：幾何細化專用（非端到端生成），可接任何粗網格來源（官方 demo 用 Hunyuan3D-2 mini 當上游、可換），極度適合**3D 列印、電商產品建模、工業設計、VR／動畫**等要高精度幾何的團隊做私有部署。授權提醒：自訂的 Hi3D Open License 1.0 商用允許，但月活 20 萬或月營收 100 萬美元以上須另簽授權、商用整合須標示 Powered by Hi3D 1.0，不是無條件的 OSI 式開源；且只給推論碼，訓練碼與評測 harness 未釋出。
+  * **資源**：[🐙 GitHub：hi3d-official/Hi3Dv1.0](https://github.com/hi3d-official/Hi3Dv1.0) | [🤗 HF 模型卡（含技術報告 PDF）](https://huggingface.co/hi3d-official/Hi3Dv1.0) | [📄 Sparc3D 論文（arXiv:2505.14521，NeurIPS 2025）](https://arxiv.org/abs/2505.14521) | [💻 上游 Sparc3D repo](https://github.com/lizhihao6/Sparc3D)
+  * **附註（未獨立查證）**：評測數字（多視角保真最高、90% 切片成功）皆官方自報；repo 不含訓練碼與評測 harness，無法複現比較表。1536³ 僅在 96GB H20 上驗證過，小卡可行性未定；無 CPU 推論路徑。PR 通稿同時宣傳的 Hi3D V3.0（2048³）、Hi3D Agent、Hi3D MCP 為商業產品線，非本次開源範圍。repo 建於 10-16，公開發布為 10-23。
 
 * **[OpenTalking](https://github.com/datascale-ai/opentalking)** `[2026-05]` 🔥
   * **核心優勢**：**打通從 Demo 到生產部署的最後一哩路，工業級「全鏈路」實時數字人編排框架！** 它不重複造底層模型的輪子，而是專注於產線編排，將 LLM 流式對話、句級 TTS、口型同步渲染與 WebRTC 低延遲傳輸完美串接。首創「樂高式」可插拔設計，無縫相容輕量級 Wav2Lip 到高質量 FlashTalk，更原生支援華為昇騰 910B 等企業級 NPU 私有化部署。
