@@ -24,6 +24,8 @@ service_type: AI Consulting
 
 > ### 📅 [更新快訊](https://deep-learning-101.github.io/UPDATE)
 
+>- * **[Xiaomi-Lens-0 (SeerRay-Lab)](https://github.com/SeerRay-Lab/Xiaomi-Lens-0)** `[2026-10]` 🔥 `[指代實例分割]` `[Qwen3.5-4B底座]` `[Mask Token]` `[視覺Latent推理]` `[Apache 2.0]`
+>- * **[WeVisOne-VL (Tencent 微信視覺)](https://github.com/Tencent/WeVisOne-VL)** `[2026-10]` 🔥 `[視覺大一統]` `[物體級像素級通吃]` `[Qwen3-VL底座]` `[座標Token]` `[免SAM]` `[Apache 2.0]`
 >- **[Unlimited OCR 2 (無限 OCR 2：百頁文件一次解析)](https://github.com/baidu/Unlimited-OCR)** `[2026-10-27]` 🔥 `[長文件解析]` `[SR-SWA注意力]` `[恆定顯存]` `[百頁文件]` `[MIT開源]` `[VLM文件解析]`
 >- **[Hi3D V1.0 (前身 Sparc3D：參考圖＋粗網格→高解析幾何細化)](https://github.com/hi3d-official/Hi3Dv1.0)** `[2026-10-23]` 🔥 `[3D幾何細化]` `[Image-to-3D]` `[Sparse VAE]` `[1536³]` `[Hi3D Open License]` `[推論限定]`
 >- **[Kanana-2-Vision Encoder (Kakao 自研 VLM 專用視覺編碼器：426M／98M)](https://huggingface.co/collections/kakaocorp/kanana-2-vision-encoder)** `[2026-10-21]` 🔥 `[視覺編碼器]` `[VLM]` `[Native Resolution]` `[韓文 OCR]` `[Kanana Open License]`
@@ -416,6 +418,11 @@ service_type: AI Consulting
   * **解決痛點 / 推薦場景**：**完美解決了真實工業 AOI 與自駕感知中「標註成本極高」，且「錯誤偽標籤進入訓練閉環導致模型越練越崩潰」的致命痛點。** 它的核心落地價值在於「資料治理的工程化」——不盲目擴充髒數據，而是確保餵給模型的每一筆資料都乾淨且物理自洽。極度適合**樣本極度稀缺的工業裝配/幾何公差檢測**、**單目相機 3D 測距與姿態估計**，以及**低成本自駕車邊緣感知系統**。
   * **資源**：[🐙 GitHub 官方專案](https://github.com/VisualAIKHU/MonoSAOD) | [📄 官方論文 (arXiv:2604.01646)](https://arxiv.org/abs/2604.01646)
 
+* **[WeVisOne-VL (Tencent 微信視覺)](https://github.com/Tencent/WeVisOne-VL)** `[2026-10]` 🔥 `[視覺大一統]` `[物體級像素級通吃]` `[Qwen3-VL底座]` `[座標Token]` `[免SAM]` `[Apache 2.0]`
+  * **核心優勢**：**一個模型從框打到 alpha matte：檢測、指代定位、指向、計數、OCR、分割、去背全用同一套「結構化 next-token 預測」搞定。** 騰訊微信視覺團隊開源，基於 Qwen3-VL，2B/4B 雙規模，權重、推論與評測管線全開。關鍵設計有二：座標不用數字文本硬湊，改用 `<0>` 到 `<1000>` 專用 token，一個座標一個 token；每個框後面接 `<OBJ>` token，把它的隱藏狀態連同預測框與多層 ViT 特徵餵給僅 9.6M 參數的像素解碼器，直接出遮罩與 alpha matte，不必外掛 SAM。目標不存在時回 `None` 不硬猜：WeRef-Bench 拒絕率 96.4%（LocateAnything 73.0%），RefCOCOg 拒絕率 67.4%，而 LocateAnything 與 Rex-Omni 在該項都不到 1%。
+  * **解決痛點 / 推薦場景**：**過去一個視覺應用要縫四五個模型：開放檢測 YOLO-World、分割 SAM、OCR PaddleOCR、計數再一個，介面、部署、維護成本全是乘法。** WeVisOne-VL 官方報告在 30 多個基準對最強基線幾乎全勝（4B：LVIS 55.3 vs 50.7、Dense200 71.3 vs 58.7、RefCOCOg 81.8 vs 77.6、PixMo-Count 89.6 vs 82.8、TotalText 52.0 vs 43.3、ReasonSeg 71.2 vs 65.0、去背 MAD 7.3 vs 15.4），難計數場景差距更大（MixCount 40.4 vs 15.2）。訓練走三階段課程 SFT 加混合任務 RL，背後是知識圖譜驅動的 Data Engine：專家模型標註、VLM 驗證，累計標註逾 1 億張圖，連把遮罩轉 alpha matte 的 Mask2Alpha 標註器都一併開源。極度適合**多任務視覺平台**、**電商去背與商品圖處理**、**文件與場景 OCR 定位**、**具身感知統一前端**。⚠️ 全部數字出自官方技術報告（貪婪解碼、單圖上限 1,960 個視覺 token），尚無第三方復現；OCR 指標是「定位加辨識」的 F1，與純辨識準確率不可直接比；微調程式碼尚未釋出，目前只能推論與評測。
+  * **資源**：[🐙 GitHub](https://github.com/Tencent/WeVisOne-VL) | [📄 論文 (arXiv:2610.31329)](https://arxiv.org/abs/2610.31329) | [🤗 2B 權重](https://huggingface.co/tencent/WeVisOne-VL-2B) | [🤗 4B 權重](https://huggingface.co/tencent/WeVisOne-VL-4B) | [🌐 專案頁](https://tencent.github.io/WeVisOne-VL)
+
 * **[LocateAnything-3B (全能視覺定位與多模態檢測)](https://github.com/NVlabs/Eagle)** `[2026-05]` 🔥
   * **核心優勢**：**NVIDIA 顛覆視覺定位的 CVPR 2026 神作！首創「平行框解碼 (PBD)」徹底打破大模型自迴歸生成座標的龜速與誤差，單卡 H100 狂飆 12.7 BPS！** 捨棄傳統將座標拆成 Token 逐一生成的作法，LocateAnything 將邊界框視為不可分割的「幾何原子單元」一步到位預測。結合高達 7.85 億的巨量邊界框訓練標註與獨創的 Hybrid 模式（在極速並行與嚴謹自迴歸間動態切換、遇錯重解），在 UI 元素定位與 LVIS 高精度基準上強勢輾壓 Qwen3-VL 與 Rex-Omni。
   * **解決痛點 / 推薦場景**：**完美解決了傳統視覺大模型 (VLM) 應用於 AI Agent 與具身智能時「看得懂卻找得極慢、座標框亂跳前後矛盾」的致命痛點。** 僅 3B 參數，只需 16GB 消費級顯存（如 RTX 3090/4090）即可流暢本地部署。極度推薦開發者用於打造毫秒級反應的**電腦操作智能體 (Computer Use Agent)**、**精準點擊 UI 的 RPA 自動化導航副駕**，以及需要極低延遲的**具身機器人 (Embodied AI) 視覺抓取中樞**。
@@ -532,6 +539,11 @@ service_type: AI Consulting
   * [**Grounded SAM 2**](https://github.com/IDEA-Research/Grounded-SAM-2)：結合文字 grounding 技術，在影片中追蹤特定物件。
 
 ### 2. 領域特化與多模態分割模型
+
+* **[Xiaomi-Lens-0 (SeerRay-Lab)](https://github.com/SeerRay-Lab/Xiaomi-Lens-0)** `[2026-10]` 🔥 `[指代實例分割]` `[Qwen3.5-4B底座]` `[Mask Token]` `[視覺Latent推理]` `[Apache 2.0]`
+  * **核心優勢**：**讓 VLM 自己「吐」出遮罩：每個 `<|mask|>` token 的隱狀態就是該實例的視覺 latent，輕量解碼器拿它去和視覺編碼器的 patch 特徵逐點比對、拼回全解析度遮罩，不用外掛 SAM、也不用額外的分割編碼器。** 小米 SeerRay-Lab 開源，基於 Qwen3.5-4B，輸出格式 `<bbox>[座標]</bbox><mask><|mask|></mask>` 一框一罩嚴格配對；mask 監督直接回傳共享主幹，語言理解和像素定位練的是同一套表徵。連推理過程都能接地：`<|mask|>` 可以出現在思考鏈中間，數到哪個、指到哪個就即時解出那個的遮罩（官方稱 Thinking with Visual Latents）。
+  * **解決痛點 / 推薦場景**：**傳統 VLM 只會說和畫框，真要像素級遮罩得再縫一個 SAM，框和罩還經常對不上（檢得出、分不出）。** 官方技術報告（arXiv:2610.23279）：指代表達分割八個 RefCOCO 系列切分 cIoU 全第一、平均 81.4，贏過對照組裡未公開釋出的 Qwen3-VL-Seg 4B（約 78.6）與 SAM 3（約 71.7）；指代理解八切分七個第一、比 Qwen3.5 主幹平均高 5.6 分；COCO 多實例定位 F1 63.9 居首，ReasonSeg 與具身指代 RoboRefIt 四項指標全第一，CountQA 50.6（主幹 43.8）。同步釋出 LensBench（1,200 組、4,800 條指令，含航拍／駕駛／全景）。訓練兩階段（先凍主幹只練解碼器、再全參數微調），訓練程式碼、權重、推論與評測全開。極度適合**具身操作的語言指物**、**遙感與行業場景的指代分割微調**、**需要邊推理邊定位的視覺 Agent**。⚠️ 官方自評、未經第三方復現；自家 LensBench 也顯示弱項：隱含指令 cIoU 從 71.4 掉到 54.7，全景多目標更掉到 48.9，密集與迂迴指代仍弱；部署要用它的專用套件，vLLM 服務要拆文字與 mask 兩個程序，不是 stock transformers 直接套用。
+  * **資源**：[🐙 GitHub](https://github.com/SeerRay-Lab/Xiaomi-Lens-0) | [📄 技術報告 (arXiv:2610.23279)](https://arxiv.org/abs/2610.23279) | [🤗 模型權重](https://huggingface.co/SeerRay-Lab/Xiaomi-Lens-0) | [🤗 LensBench](https://huggingface.co/datasets/SeerRay-Lab/LensBench) | [🌐 專案頁](https://seerray-lab.github.io/Xiaomi-Lens-0/)
 
 * **[RMAE-ProGRess (LCA / LCAR)](https://openaccess.thecvf.com/content/CVPR2026/html/Bhurtel_RMAE-ProGRess_Advancing_Semantic_Segmentation_in_Unstructured_Environments_CVPR_2026_paper.html)** `[2026-06-03]` 🔥 `[CVPR 2026]` `[非結構化語義分割]` `[LCA輕量通道注意力]` `[越野與遙感特化]` `[即插即用]`
   * **核心優勢**：**打破傳統 CNN/ViT 在非幾何場景的性能瓶頸，美國霍華德大學 CoE-AIML 團隊提出專為非結構化環境打造的語義分割 SOTA 架構！** 針對越野、碎石、泥地與陰影交界等無規則邊界的環境，創新採用「RMAE 編碼器（裁剪 ViTMAE 並跳層提取特徵，參數量大減至 29.9M~58.5M）➔ F2P 頸部（多尺度金字塔翻譯）➔ ProGRess 解碼器（PLF 遞歸融合 ➔ LCAR 逐像素門控 ➔ BFF 最終聚合）」三層架構。其核心 LCA（輕量通道注意力）完全捨棄傳統 SE/CBAM 的全局池化（pooling-free），利用 1×1 卷積在像素級保留 $H \times W$ 空間解析度進行局部通道重標定；LCAR 則在深層注入殘差穩住抽象語義。在 RELLIS-3D 達到 **57.41% mIoU**、RELLIS-3DC 達到 **78.95% mIoU**、RUGD 達到 **45.63% mIoU**，保持極具競爭力的參數量與顯存佔用。
